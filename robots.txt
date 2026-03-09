@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://dynamogrizzly-creator.github.io/dynamogrizzly.github.io/sitemap.xml
+Sitemap: https://dynamogrizzly-creator.github.io/sitemap.xml
 
 # Crawl-delay per essere gentili
 Crawl-delay: 10
