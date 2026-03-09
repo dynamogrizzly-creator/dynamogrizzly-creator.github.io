@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <url>
+    <loc>https://dynamogrizzly-creator.github.io/dynamogrizzly.github.io/</loc>
+    <lastmod>2026-03-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+
+    <!-- Immagini per Google Images -->
+    <image:image>
+      <image:loc>https://dynamogrizzly-creator.github.io/dynamogrizzly.github.io/assets/images/dodgeball-ravenna-grizzlies-hero.webp</image:loc>
+      <image:title>Ravenna Grizzlies – Dodgeball Ravenna</image:title>
+      <image:caption>Squadra di dodgeball Ravenna Grizzlies in azione</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dynamogrizzly-creator.github.io/dynamogrizzly.github.io/assets/images/gallery/dodgeball-ravenna-salto-spettacolare.webp</image:loc>
+      <image:title>Dodgeball Ravenna – salto spettacolare</image:title>
+      <image:caption>Atleta dei Ravenna Grizzlies in salto durante la partita</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dynamogrizzly-creator.github.io/dynamogrizzly.github.io/assets/images/gallery/dodgeball-ravenna-femminile-attacco.webp</image:loc>
+      <image:title>Dodgeball Ravenna – squadra femminile Grizzlies</image:title>
+      <image:caption>La squadra femminile dei Ravenna Grizzlies in attacco</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dynamogrizzly-creator.github.io/dynamogrizzly.github.io/assets/images/gallery/dodgeball-ravenna-grizzlies-huddle-squadra.webp</image:loc>
+      <image:title>Dodgeball Ravenna – huddle Grizzlies</image:title>
+      <image:caption>I Ravenna Grizzlies in huddle pre-partita</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://dynamogrizzly-creator.github.io/dynamogrizzly.github.io/assets/images/gallery/dodgeball-ravenna-grizzlies-attacco.webp</image:loc>
+      <image:title>Dodgeball Ravenna – attacco Grizzlies</image:title>
+      <image:caption>Giocatore dei Ravenna Grizzlies in fase di attacco</image:caption>
+    </image:image>
+  </url>
+
+</urlset>
