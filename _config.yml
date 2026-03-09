@@ -27,7 +27,6 @@ og_image: "/assets/images/dodgeball-ravenna-grizzlies-hero.webp"
 
 # Jekyll
 markdown:    kramdown
-permalink:   /:categories/:title/
 # timezone: Europe/Rome  # rimossa per compatibilità Windows
 
 # Plugin supportati da GitHub Pages
@@ -41,3 +40,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - node_modules
+
+# Includi cartella _pages
+include:
+  - _pages

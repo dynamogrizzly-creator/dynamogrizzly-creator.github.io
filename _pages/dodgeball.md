@@ -29,7 +29,7 @@ Le regole base sono semplici:
 
 ## Le varianti
 
-Il dodgeball si gioca in diverse varianti — le più diffuse in Italia sono:
+Il Dodgeball si gioca in diverse varianti — le più diffuse in Italia sono:
 
 **Foam** — si gioca con palle morbide in schiuma. È la variante più comune nei campionati italiani FIGeST, quella che pratichiamo noi ai Ravenna Grizzlies. Adatta a tutte le età e tutti i livelli.
 
@@ -39,15 +39,15 @@ Il dodgeball si gioca in diverse varianti — le più diffuse in Italia sono:
 
 ## Perché provarlo
 
-Il dodgeball allena riflessi, coordinazione, velocità e lavoro di squadra. Ma soprattutto è divertente — ogni partita è diversa dall'altra, e il livello di adrenalina è alto anche agli allenamenti.
+Il Dodgeball allena riflessi, coordinazione, velocità e lavoro di squadra. Ma soprattutto è divertente — ogni partita è diversa dall'altra, e il livello di adrenalina è alto anche agli allenamenti.
 
 Non serve nessuna esperienza pregressa. Ai **Ravenna Grizzlies** accogliamo principianti assoluti ogni settimana — in poche sessioni impari le basi e sei già in campo.
 
 ---
 
-## Il dodgeball in Italia
+## Il Dodgeball in Italia
 
-In Italia il dodgeball è organizzato dalla **FIGeST** (Federazione Italiana Giochi e Sport Tradizionali). Il campionato nazionale prevede categorie maschili, femminili, open e giovanili.
+In Italia il Dodgeball è organizzato dalla **FIGeST** (Federazione Italiana Giochi e Sport Tradizionali). Il campionato nazionale prevede categorie maschili, femminili, open e giovanili.
 
 I Ravenna Grizzlies competono in **Serie A Maschile**, **Serie A Femminile** e **Serie A Open**, con atleti convocati in Nazionale e un titolo europeo già conquistato nel 2024.
 

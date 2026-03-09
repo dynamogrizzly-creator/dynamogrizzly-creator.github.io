@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Unisciti ai Grizzlies"
-description: "Vuoi giocare a dodgeball a Ravenna? Entra nei Ravenna Grizzlies – allenamenti aperti a tutti, primo allenamento gratuito."
+description: "Vuoi giocare a Dodgeball a Ravenna? Entra nei Ravenna Grizzlies – allenamenti aperti a tutti, primo allenamento gratuito."
 keywords: "iscriversi dodgeball ravenna, allenamento dodgeball ravenna, provare dodgeball ravenna"
 tag: "Entra nella tana"
 og_image: "/assets/images/dodgeball-ravenna-grizzlies-hero.webp"
@@ -15,18 +15,30 @@ Che tu sia un principiante assoluto o un atleta con esperienza, c'è posto per t
 ## Gli allenamenti
 
 **Adulti**
+
 Martedì e Giovedì · 21:00–23:00
-Palestra Randi · Via G. Marconi 11, Ravenna
-[Vedi su Maps](https://maps.google.com/?q=Palestra+Randi+Via+Marconi+11+Ravenna)
+
+[📍 Palestra Randi · Via G. Marconi 11, Ravenna](https://www.google.com/maps/place/?q=place_id:ChIJoQKbpUv5fUcR0kr6QBPEe5E)
+
+---
 
 **Femminile**
+
 Martedì · 17:00–18:30
-Palestra Mattei · Marina di Ravenna
-[Vedi su Maps](https://maps.google.com/?q=Palestra+Mattei+Marina+di+Ravenna)
+
+[📍 Palestra Mattei · Marina di Ravenna](https://www.google.com/maps/place/?q=place_id:ChIJc3b9NfT7fUcRtuBO0MWw0M8)
+
+---
 
 **Giovanile** (U13, U15, U18)
-Lunedì · 18:00–19:30 · Palestra Liceo Classico · Via Nino Bixio 29, Ravenna
-Giovedì · 17:30–19:00 · Palestra Novello · Via A. De Gasperi 4, Ravenna
+
+Lunedì · 18:00–19:30
+
+[📍 Palestra Liceo Classico · Via Nino Bixio 29, Ravenna](https://www.google.com/maps/place/?q=place_id:ChIJEab5EGH5fUcRCwMxUXROxKY)
+
+Giovedì · 17:30–19:00
+
+[📍 Palestra Novello · Via A. De Gasperi 4, Ravenna](https://www.google.com/maps/place/?q=place_id:ChIJoTtELQD5fUcRfrC4u1-Taks)
 
 ---
 
@@ -65,7 +77,7 @@ Niente di speciale per il primo allenamento — scarpe da ginnastica e voglia di
 No. Partiamo dalle basi con chiunque.
 
 **C'è un limite di età?**
-Per gli adulti dai 16 anni in su. Per i più giovani c'è il settore giovanile U13/U15/U18.
+Nessun limite di età! Accettiamo tutti, dai più piccoli ai più anziani.
 
 **Quanto costa?**
 Contattaci per informazioni su quote e tesseramento. Il primo allenamento di prova è gratuito.
