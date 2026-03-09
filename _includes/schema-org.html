@@ -1,0 +1,58 @@
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": ["SportsOrganization", "SportsClub"],
+    "@id": "{{ site.url }}/#organization",
+    "name": "Ravenna Grizzlies – Dynamo Grizzly ASD",
+    "alternateName": ["Ravenna Grizzlies", "Dynamo Grizzly ASD", "Grizzlies Ravenna"],
+    "url": "{{ site.url }}/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}/assets/images/logo.png",
+      "width": 512,
+      "height": 512
+    },
+    "image": {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}/assets/images/dodgeball-ravenna-grizzlies-hero.webp",
+      "width": 1920,
+      "height": 1080
+    },
+    "description": "{{ site.description }}",
+    "foundingDate": "2024",
+    "sport": "Dodgeball",
+    "email": "{{ site.author.email }}",
+    "telephone": "+393289472121",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Via G. Marconi 11",
+      "addressLocality": "Ravenna",
+      "addressRegion": "Emilia-Romagna",
+      "postalCode": "48121",
+      "addressCountry": "IT"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 44.4184,
+      "longitude": 12.2035
+    },
+    "sameAs": [
+      "{{ site.social.instagram }}",
+      "{{ site.social.facebook }}"
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "{{ site.url }}/#website",
+    "url": "{{ site.url }}/",
+    "name": "{{ site.title }}",
+    "description": "{{ site.description }}",
+    "inLanguage": "it-IT",
+    "publisher": {
+      "@id": "{{ site.url }}/#organization"
+    }
+  }
+]
+</script>

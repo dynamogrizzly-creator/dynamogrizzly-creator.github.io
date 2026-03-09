@@ -1,0 +1,43 @@
+# ═══════════════════════════════════════
+#  RAVENNA GRIZZLIES — Jekyll Config
+# ═══════════════════════════════════════
+
+title:       "Ravenna Grizzlies – Dodgeball Ravenna"
+description: "Ravenna Grizzlies – Dynamo Grizzly ASD: la squadra di dodgeball di Ravenna. Serie A Maschile, Femminile e Open. Allenamenti aperti a tutti."
+url:         "https://dodgeballravenna.it"
+baseurl:     ""
+lang:        "it"
+
+# Autore
+author:
+  name:  "Dynamo Grizzly ASD"
+  email: "dynamo.grizzly@gmail.com"
+
+# Social
+social:
+  instagram: "https://www.instagram.com/ravenna.grizzlies"
+  facebook:  "https://www.facebook.com/DynamoGrizzlyASD"
+
+# SEO
+google_analytics:        "G-G9768Q9BNT"
+google_site_verification: "s3NSOQPORbTNdWezPvpsnldC3tiyUoQpa-GV9bZSYfg"
+
+# Immagine default OG
+og_image: "/assets/images/dodgeball-ravenna-grizzlies-hero.webp"
+
+# Jekyll
+markdown:    kramdown
+permalink:   /:categories/:title/
+# timezone: Europe/Rome  # rimossa per compatibilità Windows
+
+# Plugin supportati da GitHub Pages
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# Escludi dalla build
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules

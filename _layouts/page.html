@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<article class="page-content">
+  <div class="container">
+    <div class="page-header" data-reveal>
+      {% if page.tag %}<span class="section-tag">{{ page.tag }}</span>{% endif %}
+      <h1>{{ page.title }}</h1>
+      <div class="divider"></div>
+      {% if page.description %}<p class="page-lead">{{ page.description }}</p>{% endif %}
+    </div>
+    <div class="page-body" data-reveal>
+      {{ content }}
+    </div>
+  </div>
+</article>
