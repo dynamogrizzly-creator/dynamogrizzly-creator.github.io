@@ -1,59 +1,93 @@
 ---
-layout: page
-title: "Dodgeball a Ravenna"
-description: "Vuoi giocare a Dodgeball a Ravenna? Scopri dove si pratica, la storia dello sport in città e come i Ravenna Grizzlies stanno cambiando le cose."
-keywords: "dodgeball Ravenna, sport Ravenna, dodgeball in Romagna, pallavolo alternativa Ravenna"
+layout: default
+title: "Il Dodgeball a Ravenna | Ravenna Grizzlies"
+description: "La storia del dodgeball a Ravenna: dalle prime partite tra appassionati ai Ravenna Grizzlies, punto di riferimento locale per chi vuole scoprire questo sport."
+keywords: "dodgeball Ravenna, storia dodgeball Ravenna, sport Ravenna, Ravenna Grizzlies"
 og_image: "/assets/images/dodgeball-ravenna-grizzlies-hero.webp"
 permalink: /dodgeball-ravenna/
-tag: "Dodgeball a Ravenna"
 ---
 
-Il Dodgeball esiste in Italia da anni, ma a Ravenna è arrivato tardi. Adesso c'è — e sta crescendo velocemente.
+<!-- SIDEBAR (solo desktop) -->
+<nav class="section-sidebar" id="sectionSidebar" aria-label="Navigazione sezioni">
+  <ul>
+    <li><a href="#top"     class="sidebar-dot" data-section="top">    <span class="sidebar-line"></span><span class="sidebar-label">Inizio</span>  </a></li>
+    <li><a href="#storia"  class="sidebar-dot" data-section="storia"> <span class="sidebar-line"></span><span class="sidebar-label">La storia</span></a></li>
+    <li><a href="#numeri"  class="sidebar-dot" data-section="numeri"> <span class="sidebar-line"></span><span class="sidebar-label">I numeri</span> </a></li>
+  </ul>
+</nav>
 
----
 
-## La scena del Dodgeball a Ravenna
+<!-- PAGE HERO -->
+<section id="top" class="page-hero">
+  <div class="container">
+    <div class="page-hero-inner" data-reveal>
+      <span class="section-tag">Sport e territorio</span>
+      <h1>IL DODGEBALL<br><span>A RAVENNA</span></h1>
+      <div class="divider"></div>
+      <p class="page-lead">Da gioco scolastico a disciplina sportiva organizzata. La storia di come il dodgeball ha messo radici in città — e di come continua a crescere.</p>
+    </div>
+  </div>
+</section>
 
-Ravenna non è mai stata una città di Dodgeball. Lo sport era concentrato al nord, nelle grandi città, nei centri con tradizione. Poi nel 2024 sono arrivati i **Ravenna Grizzlies** e la situazione è cambiata.
+<!-- CORPO TESTO -->
+<section id="storia" class="section-article">
+  <div class="container">
+    <div class="article-body" data-reveal>
 
-In meno di un anno Ravenna è entrata nel circuito nazionale con tre squadre in Serie A — Maschile, Femminile e Open — e un settore giovanile attivo. Non è un caso: è il risultato di persone che hanno creduto nello sport e hanno costruito qualcosa di serio partendo da zero.
+      <p class="article-lead">Il dodgeball, conosciuto da molti come l'evoluzione sportiva della "palla avvelenata", è uno sport di squadra che unisce velocità, strategia e riflessi. Negli ultimi anni ha iniziato a diffondersi sempre di più anche in Italia, trasformandosi da semplice gioco scolastico a disciplina sportiva organizzata, capace di coinvolgere persone di tutte le età.</p>
 
----
+      <p>Anche a Ravenna questa crescita ha trovato terreno fertile. Tutto è iniziato con piccoli gruppi di appassionati che hanno deciso di portare in palestra uno sport diverso dal solito: dinamico, accessibile e soprattutto capace di creare subito spirito di squadra. Le prime partite erano semplici momenti di ritrovo tra persone curiose di provare qualcosa di nuovo — ma partita dopo partita, l'interesse è cresciuto.</p>
 
-## Perché il Dodgeball funziona a Ravenna
+      <p>Col tempo si è formata una vera e propria comunità di giocatori, persone accomunate dalla voglia di allenarsi, migliorare e condividere la passione per questo sport. Il dodgeball a Ravenna è cresciuto proprio così: grazie all'entusiasmo di chi ha deciso di investire tempo ed energie per farlo conoscere e renderlo una realtà stabile sul territorio.</p>
 
-Ravenna è una città sportiva, abituata a squadre di alto livello in discipline diverse. Il Dodgeball si è inserito in questo contesto in modo naturale — uno sport veloce, accessibile, che non richiede attrezzatura costosa o anni di preparazione.
+    </div>
 
-Chi viene agli allenamenti viene da sport diversi: pallavolo, basket, atletica, o nessuno sport. Il Dodgeball li mette tutti insieme perché le skills di base si imparano in fretta e il gioco diventa subito divertente.
+    <!-- HIGHLIGHT QUOTE -->
+    <blockquote class="article-quote" data-reveal>
+      <p>Non servono anni di esperienza. Basta scendere in campo, lanciare, schivare — e capire subito perché questa disciplina crea dipendenza.</p>
+    </blockquote>
 
----
+    <div class="article-body" data-reveal>
 
-## Dove si gioca a Dodgeball a Ravenna
+      <p>Da questo percorso sono nati i <strong>Ravenna Grizzlies</strong>, punto di riferimento locale per chi vuole avvicinarsi al dodgeball. Il progetto nasce con l'obiettivo di far crescere lo sport in città, offrendo allenamenti aperti sia a chi ha già esperienza sia a chi parte completamente da zero.</p>
 
-Il Dodgeball a Ravenna si pratica in tre palestre:
+      <p>Nel tempo la squadra è diventata non solo un gruppo sportivo, ma anche una comunità: un luogo dove allenarsi, mettersi alla prova e condividere l'energia e l'adrenalina che il dodgeball riesce a trasmettere. Tre squadre in Serie A — Maschile, Femminile e Open — più un settore giovanile attivo e atleti convocati in Nazionale: risultati che poche città raggiungono così in fretta.</p>
 
-**Palestra Randi** · Via G. Marconi 11 — allenamenti adulti
-**Palestra Liceo Classico** · Via Nino Bixio 29 — settore giovanile
-**Palestra Novello** · Via A. De Gasperi 4 — settore giovanile
-**Palestra Mattei** · Marina di Ravenna — squadra femminile
+      <p>Oggi il dodgeball a Ravenna continua a crescere grazie a chi sceglie di scendere in campo, provare questo sport e contribuire a scrivere i prossimi capitoli della sua storia.</p>
 
-Tutte le palestre sono in posizione centrale e facilmente raggiungibili.
+      <p class="article-closing">E il modo migliore per farne parte è semplice: <strong>entrare in campo e giocare con i Ravenna Grizzlies.</strong></p>
 
----
+    </div>
+  </div>
+</section>
 
-## Il livello del Dodgeball ravennate
+<!-- STATS BAR -->
+<section id="numeri" class="section-join-intro">
+  <div class="container">
+    <div class="join-highlight-row" data-reveal>
+      <div class="join-highlight-card">
+        <span class="join-highlight-icon">📅</span>
+        <strong>Fondati nel 2024</strong>
+        <p>Da zero a Serie A in un anno</p>
+      </div>
+      <div class="join-highlight-card join-highlight-card--accent">
+        <span class="join-highlight-icon">🏆</span>
+        <strong>Campioni Europei</strong>
+        <p>Misto Foam 2024</p>
+      </div>
+      <div class="join-highlight-card">
+        <span class="join-highlight-icon">🇮🇹</span>
+        <strong>4 in Nazionale</strong>
+        <p>Atleti convocati in azzurro</p>
+      </div>
+      <div class="join-highlight-card">
+        <span class="join-highlight-icon">⚡</span>
+        <strong>3 squadre in Serie A</strong>
+        <p>Maschile, Femminile e Open</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-In poco tempo Ravenna è diventata un punto di riferimento nel panorama nazionale. I Grizzlies competono ai massimi livelli e hanno già portato atleti in **Nazionale Italiana** — un risultato che poche città riescono a ottenere così in fretta.
-
-Questo significa che chi si allena a Ravenna si allena con standard alti, con atleti di livello nazionale come compagni di squadra.
-
----
-
-## Vuoi iniziare?
-
-Il modo più semplice è venire a un allenamento di prova — gratuito, senza impegno. Vedi come funziona, conosci il gruppo, capisci se fa per te.
-
-<div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
-  <a href="{{ site.baseurl }}/unisciti/" class="btn btn-primary">Vedi orari e sedi ⚡</a>
-  <a href="{{ site.baseurl }}/dodgeball/" class="btn btn-outline">Cos'è il Dodgeball →</a>
-</div>
+<!-- CTA -->
+{% include join-box.html %}

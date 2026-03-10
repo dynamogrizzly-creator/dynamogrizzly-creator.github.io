@@ -6,6 +6,18 @@ keywords: "dodgeball Ravenna, Ravenna Grizzlies, Dynamo Grizzly ASD, squadra dod
 og_image: "/assets/images/dodgeball-ravenna-grizzlies-hero.webp"
 ---
 
+<!-- SIDEBAR NAVIGAZIONE SEZIONI (solo desktop) -->
+<nav class="section-sidebar" id="sectionSidebar" aria-label="Navigazione sezioni">
+  <ul>
+    <li><a href="#hero"       class="sidebar-dot" data-section="hero">      <span class="sidebar-line"></span><span class="sidebar-label">Inizio</span>     </a></li>
+    <li><a href="#chi-siamo"  class="sidebar-dot" data-section="chi-siamo"> <span class="sidebar-line"></span><span class="sidebar-label">Chi siamo</span>   </a></li>
+    <li><a href="#allenamenti"class="sidebar-dot" data-section="allenamenti"><span class="sidebar-line"></span><span class="sidebar-label">Allenamenti</span> </a></li>
+    <li><a href="#lo-sport"   class="sidebar-dot" data-section="lo-sport">  <span class="sidebar-line"></span><span class="sidebar-label">Il Dodgeball</span></a></li>
+    <li><a href="#news"       class="sidebar-dot" data-section="news">       <span class="sidebar-line"></span><span class="sidebar-label">News</span>        </a></li>
+    <li><a href="#faq"        class="sidebar-dot" data-section="faq">        <span class="sidebar-line"></span><span class="sidebar-label">FAQ</span>         </a></li>
+  </ul>
+</nav>
+
 <!-- HERO -->
 <section id="hero" class="hero">
   <div class="hero-bg"></div>
@@ -18,7 +30,7 @@ og_image: "/assets/images/dodgeball-ravenna-grizzlies-hero.webp"
     <p class="hero-sub" data-reveal data-delay="2">Dynamo Grizzly ASD · Campionato Nazionale FIGeST · Ravenna</p>
     <div class="hero-cta" data-reveal data-delay="3">
       <a href="{{ site.baseurl }}/unisciti/" class="btn btn-primary">Entra nella tana ⚡</a>
-      <a href="{{ site.baseurl }}/allenamenti/" class="btn btn-outline">Vedi gli allenamenti</a>
+      <a href="#allenamenti" class="btn btn-outline">Orari e sedi ↓</a>
     </div>
   </div>
   <div class="hero-scroll" id="scrollIndicator">
@@ -61,7 +73,7 @@ og_image: "/assets/images/dodgeball-ravenna-grizzlies-hero.webp"
           <span class="badge badge-gold">🏆 Campioni Europei</span>
         </div>
         <div style="margin-top: 2rem;">
-          <a href="{{ site.baseurl }}/squadra/" class="btn btn-outline">Scopri la squadra →</a>
+          <a href="{{ site.baseurl }}/squadra/" class="btn btn-primary">Conosci i Grizzlies →</a>
         </div>
       </div>
       <div class="about-visual" data-reveal data-delay="1">
@@ -123,7 +135,7 @@ og_image: "/assets/images/dodgeball-ravenna-grizzlies-hero.webp"
       </div>
     </div>
     <div style="text-align:center; margin-top: 2.5rem;" data-reveal>
-      <a href="{{ site.baseurl }}/unisciti/" class="btn btn-outline">Unisciti ai Grizzlies →</a>
+      <a href="{{ site.baseurl }}/unisciti/" class="btn btn-primary">Orari, sedi e come iniziare →</a>
     </div>
   </div>
 </section>
@@ -137,7 +149,7 @@ og_image: "/assets/images/dodgeball-ravenna-grizzlies-hero.webp"
         <h2>NON HAI MAI<br>GIOCATO?</h2>
         <div class="divider"></div>
         <p>Il Dodgeball è veloce, adrenalinico e aperto a tutti. Non serve esperienza pregressa — in poche sessioni sei già in campo con noi.</p>
-        <a href="{{ site.baseurl }}/dodgeball/" class="btn btn-outline" style="margin-top:1.5rem">Scopri cos'è il Dodgeball →</a>
+        <a href="{{ site.baseurl }}/dodgeball/" class="btn btn-primary" style="margin-top:1.5rem">Scopri come funziona →</a>
       </div>
       <div class="dodgeball-preview-links">
         <a href="{{ site.baseurl }}/dodgeball/" class="preview-card">
@@ -170,7 +182,7 @@ og_image: "/assets/images/dodgeball-ravenna-grizzlies-hero.webp"
 </section>
 
 <!-- ULTIME NEWS -->
-<section class="section-news-preview">
+<section id="news" class="section-news-preview">
   <div class="container">
     <div class="section-header" data-reveal>
       <span class="section-tag">Aggiornamenti</span>
@@ -201,7 +213,7 @@ og_image: "/assets/images/dodgeball-ravenna-grizzlies-hero.webp"
       {% endif %}
     </div>
     <div style="text-align:center; margin-top: 2.5rem;" data-reveal>
-      <a href="{{ site.baseurl }}/news/" class="btn btn-outline">Tutte le news →</a>
+      <a href="{{ site.baseurl }}/news/" class="btn btn-primary">Tutte le news →</a>
     </div>
   </div>
 </section>
@@ -215,73 +227,75 @@ og_image: "/assets/images/dodgeball-ravenna-grizzlies-hero.webp"
       <div class="divider"></div>
     </div>
     <div class="faq-list" data-reveal>
+
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">Come posso iniziare a giocare a Dodgeball a Ravenna?<span class="faq-icon">+</span></button>
-        <div class="faq-answer"><p>Contattaci via email a <a href="mailto:dynamo.grizzly@gmail.com">dynamo.grizzly@gmail.com</a> o su WhatsApp al <a href="tel:+393289472121">328 947 2121</a>. Gli allenamenti adulti si tengono martedì e giovedì alle 21:00 — i primi allenamenti sono gratuiti!</p></div>
+        <button class="faq-question" aria-expanded="false">Devo avere esperienza per giocare?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>No. Gli allenamenti sono aperti anche a chi non ha mai toccato una palla da dodgeball. Le prime sessioni partono dai fondamentali — regole, postura, lancio, schivata. Puoi iniziare da zero senza problemi.</p></div>
       </div>
+
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">Il Dodgeball è adatto ai principianti assoluti?<span class="faq-icon">+</span></button>
-        <div class="faq-answer"><p>Assolutamente sì! Accogliamo atleti di ogni livello. Non serve nessuna esperienza pregressa — i nostri allenatori ti insegneranno tutto dall'inizio.</p></div>
+        <button class="faq-question" aria-expanded="false">Posso venire a provare un allenamento?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Sì, e te lo consigliamo. Il primo allenamento è gratuito e senza impegno — vieni, gioca, conosci il gruppo. È il modo più diretto per capire se il dodgeball fa per te.</p></div>
       </div>
+
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">C'è una squadra femminile di Dodgeball a Ravenna?<span class="faq-icon">+</span></button>
-        <div class="faq-answer"><p>Sì! La nostra squadra femminile compete in <strong>Serie A Femminile</strong> con campionesse europee. Allenamenti il <strong>martedì dalle 17:00 alle 18:30</strong> alla Palestra Mattei di Marina di Ravenna.</p></div>
+        <button class="faq-question" aria-expanded="false">Posso venire anche solo a guardare?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Certo. Se vuoi farti un'idea prima di scendere in campo, passa a vedere un allenamento. Nessun obbligo, nessuna pressione.</p></div>
       </div>
+
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">Cos'è il Dodgeball e come si gioca?<span class="faq-icon">+</span></button>
-        <div class="faq-answer"><p>Il Dodgeball è uno sport di squadra in cui due squadre si fronteggiano lanciandosi delle palle morbide. Veloce e adrenalinico! <a href="{{ site.baseurl }}/dodgeball/">Scopri di più →</a></p></div>
+        <button class="faq-question" aria-expanded="false">Che cos'è il Dodgeball?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>È uno sport di squadra veloce e imprevedibile: due squadre si affrontano cercando di eliminare gli avversari colpendoli con la palla o intercettando i loro lanci. Velocità, riflessi e tattica — ogni partita è diversa. <a href="{{ site.baseurl }}/dodgeball/">Scopri di più →</a></p></div>
       </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Serve una preparazione atletica particolare?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>No. Il dodgeball è accessibile a tutti i livelli di forma fisica. Con il tempo alleni naturalmente resistenza, coordinazione e riflessi — ma non serve arrivarci già allenato.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Che età bisogna avere?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Abbiamo un settore giovanile (U13, U15, U18) e squadre adulte aperte dai 16 anni in su. I giovani più promettenti vengono invitati ad allenarsi anche con gli adulti. Nessun limite massimo.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Serve attrezzatura speciale?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>No. Ti bastano abbigliamento sportivo e scarpe da palestra. Le palle da gioco le forniamo noi.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Il Dodgeball è pericoloso?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>I palloni usati nel dodgeball sportivo sono morbidi e progettati per essere sicuri. Come in qualsiasi sport di contatto indiretto esiste un minimo rischio fisico, ma gli allenamenti si svolgono in modo controllato. Impari gradualmente a tirare, schivare e prendere in modo corretto.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Dove si svolgono gli allenamenti?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>A Ravenna e Marina di Ravenna, in palestre diverse a seconda della squadra. Tutti gli indirizzi, i giorni e gli orari aggiornati li trovi nella <a href="{{ site.baseurl }}/unisciti/">pagina Contatti</a>.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Non conosco nessuno nella squadra — è un problema?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Per niente. La maggior parte delle persone è arrivata da sola al primo allenamento. Il dodgeball è uno sport che costruisce gruppo in fretta — dopo poche sessioni conosci tutti.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">E se non sono molto bravo con gli sport?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Non è un problema. Ogni giocatore contribuisce in modo diverso — c'è chi schiva bene, chi lancia preciso, chi prende al volo. Con un po' di allenamento tutti migliorano, e il bello è che lo si vede in fretta.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Ho paura di essere colpito troppo forte…<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>È normale come prima preoccupazione. I palloni da dodgeball sportivo sono morbidi e studiati apposta per questo. Durante gli allenamenti si lavora gradualmente sulla tecnica di lancio — nessuno arriva e tira a tutta forza dal primo giorno.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Come posso unirmi alla squadra?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Il modo più semplice è venire a un allenamento di prova. Se lo sport ti piace e vuoi continuare, lo staff ti spiega come formalizzare l'iscrizione. <a href="{{ site.baseurl }}/unisciti/">Tutti i dettagli qui →</a></p></div>
+      </div>
+
     </div>
   </div>
 </section>
 
 <!-- CONTATTI CTA -->
-<section id="contatti" class="section-contact">
-  <div class="container">
-    <div class="section-header" data-reveal>
-      <span class="section-tag">Unisciti a noi</span>
-      <h2>ENTRA NELLA<br>TANA</h2>
-      <div class="divider"></div>
-      <p>Sei di Ravenna e vuoi provare il Dodgeball?<br>Che tu sia principiante o atleta esperto, c'è posto per te.</p>
-    </div>
-    <div class="contact-grid" data-reveal>
-      <div class="contact-item">
-        <span class="contact-icon">📧</span>
-        <span class="contact-label">Email</span>
-        <div class="contact-value"><a href="mailto:dynamo.grizzly@gmail.com">dynamo.grizzly@gmail.com</a></div>
-      </div>
-      <div class="contact-item">
-        <span class="contact-icon">📱</span>
-        <span class="contact-label">Telefono / WhatsApp</span>
-        <div class="contact-value"><a href="tel:+393289472121">328 947 2121</a></div>
-      </div>
-      <div class="contact-item">
-        <span class="contact-icon">📍</span>
-        <span class="contact-label">Dove siamo</span>
-        <div class="contact-value">Ravenna e Marina di Ravenna</div>
-      </div>
-      <div class="contact-item">
-        <span class="contact-icon">📲</span>
-        <span class="contact-label">Seguici</span>
-        <div class="contact-value contact-socials">
-          <a href="{{ site.social.instagram }}" target="_blank" rel="noopener">Instagram</a>
-          <span>·</span>
-          <a href="{{ site.social.facebook }}" target="_blank" rel="noopener">Facebook</a>
-        </div>
-      </div>
-    </div>
-    <div class="join-box" data-reveal>
-      <div class="join-box-inner">
-        <img src="{{ site.baseurl }}/assets/images/logo.png" alt="Grizzlies" class="join-logo">
-        <div class="join-text">
-          <h3>VUOI PROVARE?</h3>
-          <p>Vieni a un allenamento di prova — gratuito, senza impegno.<br>Ti aspettiamo in palestra!</p>
-          <div class="join-actions">
-            <a href="mailto:dynamo.grizzly@gmail.com" class="btn btn-white">Scrivici ✉️</a>
-            <a href="tel:+393289472121" class="btn btn-outline-white">Chiamaci 📱</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+{% include join-box.html %}

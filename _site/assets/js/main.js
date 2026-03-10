@@ -274,3 +274,46 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 });
+
+// ============================================================
+// SECTION SIDEBAR — aggiorna pallino attivo allo scroll
+// ============================================================
+(function() {
+  const sidebar = document.getElementById('sectionSidebar');
+  if (!sidebar) return;
+
+  const dots = sidebar.querySelectorAll('.sidebar-dot');
+  const sections = Array.from(dots).map(d => document.getElementById(d.dataset.section)).filter(Boolean);
+
+  function updateActive() {
+    const scrollY = window.scrollY + window.innerHeight * 0.4;
+    let current = sections[0];
+    for (const section of sections) {
+      if (section.offsetTop <= scrollY) current = section;
+    }
+    dots.forEach(d => {
+      d.classList.toggle('active', d.dataset.section === current.id);
+    });
+  }
+
+  window.addEventListener('scroll', updateActive, { passive: true });
+  updateActive();
+})();
+
+// ============================================================
+// MOBILE PROGRESS BAR — aggiorna mentre si scrolla
+// ============================================================
+(function() {
+  const bar = document.getElementById('mobileProgressBar');
+  if (!bar) return;
+
+  function updateProgress() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+    bar.style.width = pct + '%';
+  }
+
+  window.addEventListener('scroll', updateProgress, { passive: true });
+  updateProgress();
+})();

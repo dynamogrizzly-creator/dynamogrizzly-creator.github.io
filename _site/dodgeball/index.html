@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- ═══ SEO PRIMARIO ═══ -->
-  <title>Cos'è il Dodgeball | Ravenna Grizzlies</title>
-  <meta name="description" content="Guida completa al dodgeball: regole, storia, varianti e perché è lo sport più divertente che puoi provare a Ravenna.">
-  <meta name="keywords" content="cos'è il dodgeball, regole dodgeball, dodgeball italia, come si gioca a dodgeball, dodgeball ravenna">
+  <title>Cos'è il Dodgeball – Lo Sport | Ravenna Grizzlies</title>
+  <meta name="description" content="Scopri cos'è il dodgeball: regole, mosse e tutto quello che devi sapere sullo sport praticato dai Ravenna Grizzlies.">
+  
   <meta name="author"  content="Dynamo Grizzly ASD">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#7B2FBE">
@@ -28,16 +28,16 @@
   <!-- ═══ OPEN GRAPH ═══ -->
   <meta property="og:type"        content="website">
   <meta property="og:url"         content="http://localhost:4000/dodgeball/">
-  <meta property="og:title"       content="Cos'è il Dodgeball">
-  <meta property="og:description" content="Guida completa al dodgeball: regole, storia, varianti e perché è lo sport più divertente che puoi provare a Ravenna.">
+  <meta property="og:title"       content="Cos'è il Dodgeball – Lo Sport">
+  <meta property="og:description" content="Scopri cos'è il dodgeball: regole, mosse e tutto quello che devi sapere sullo sport praticato dai Ravenna Grizzlies.">
   <meta property="og:image"       content="http://localhost:4000/assets/images/dodgeball-ravenna-grizzlies-hero.webp">
   <meta property="og:locale"      content="it_IT">
   <meta property="og:site_name"   content="Ravenna Grizzlies – Dodgeball Ravenna">
 
   <!-- ═══ TWITTER CARD ═══ -->
   <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="Cos'è il Dodgeball">
-  <meta name="twitter:description" content="Guida completa al dodgeball: regole, storia, varianti e perché è lo sport più divertente che puoi provare a Ravenna.">
+  <meta name="twitter:title"       content="Cos'è il Dodgeball – Lo Sport">
+  <meta name="twitter:description" content="Scopri cos'è il dodgeball: regole, mosse e tutto quello che devi sapere sullo sport praticato dai Ravenna Grizzlies.">
   <meta name="twitter:image"       content="http://localhost:4000/assets/images/dodgeball-ravenna-grizzlies-hero.webp">
 
   <!-- ═══ SCHEMA MARKUP JSON-LD ═══ -->
@@ -123,89 +123,131 @@
       </div>
     </a>
     <ul class="nav-links">
-      <li><a href="/#chi-siamo">La Squadra</a></li>
-      <li><a href="/#allenamenti">Allenamenti</a></li>
-      <li><a href="/#lo-sport">Il Dodgeball</a></li>
-      <li><a href="/news/">News</a></li>
-      <li><a href="/unisciti/" class="nav-cta">Unisciti ⚡</a></li>
+      <li class="nav-dropdown">
+        <a href="/squadra/" >La Squadra ▾</a>
+        <ul class="nav-dropdown-menu">
+          <li><a href="/squadra/" >Chi siamo</a></li>
+          <li><a href="/unisciti/" >Allenamenti</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown">
+        <a href="/dodgeball/" class="nav-active">Il Dodgeball ▾</a>
+        <ul class="nav-dropdown-menu">
+          <li><a href="/dodgeball/" class="nav-active">Cos'è il Dodgeball</a></li>
+          <li><a href="/dodgeball-ravenna/" >Dodgeball a Ravenna</a></li>
+        </ul>
+      </li>
+      <li><a href="/news/" >News</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+      <li><a href="/unisciti/" class="nav-cta ">Contatti ⚡</a></li>
     </ul>
     <button class="nav-burger" id="burger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </div>
   <div class="nav-mobile" id="mobileMenu">
-    <a href="/#chi-siamo">La Squadra</a>
-    <a href="/#allenamenti">Allenamenti</a>
-    <a href="/#lo-sport">Il Dodgeball</a>
-    <a href="/news/">News</a>
-    <a href="/unisciti/">Unisciti ⚡</a>
+    <a href="/squadra/" >La Squadra</a>
+    <a href="/dodgeball/" class="nav-active">Cos'è il Dodgeball</a>
+    <a href="/dodgeball-ravenna/" >Dodgeball a Ravenna</a>
+    <a href="/news/" >News</a>
+    <a href="/unisciti/">Contatti ⚡</a>
   </div>
 </nav>
+
+<!-- PROGRESS BAR (mobile) -->
+<div class="mobile-progress-bar" id="mobileProgressBar"></div>
+
+<!-- PAGE INDICATOR (mobile) -->
+<div class="mobile-page-indicator">
+  
+    <span class="mpi-sep">‹</span><span class="mpi-label">Il Dodgeball</span>
+  
+</div>
 
   <article class="page-content">
   <div class="container">
     <div class="page-header" data-reveal>
-      <span class="section-tag">Lo sport</span>
-      <h1>Cos'è il Dodgeball</h1>
+      
+      <h1>Cos'è il Dodgeball – Lo Sport</h1>
       <div class="divider"></div>
-      <p class="page-lead">Guida completa al dodgeball: regole, storia, varianti e perché è lo sport più divertente che puoi provare a Ravenna.</p>
+      <p class="page-lead">Scopri cos'è il dodgeball: regole, mosse e tutto quello che devi sapere sullo sport praticato dai Ravenna Grizzlies.</p>
     </div>
     <div class="page-body" data-reveal>
-      <h2 id="il-dodgeball-in-due-parole">Il dodgeball in due parole</h2>
+      <h1 id="cosè-il-dodgeball">Cos’è il Dodgeball</h1>
 
-<p>Il dodgeball è uno sport di squadra in cui due squadre si fronteggiano su un campo diviso da una linea centrale, cercando di colpire gli avversari con delle palle morbide ed evitare di essere colpiti. Veloce, adrenalinico e aperto a tutti — non serve essere atleti professionisti per divertirsi.</p>
+<p>Due squadre. Un campo diviso a metà. Sei palle. L’obiettivo? Colpire gli avversari ed eliminarli — o schivare tutto quello che ti tirano addosso.</p>
 
-<hr />
+<p>Il dodgeball è uno sport di squadra nato nei college americani, diventato negli ultimi vent’anni una disciplina sportiva seria con federazioni, campionati mondiali e migliaia di atleti in tutto il mondo. In Italia è gestito dalla FIGeST, e la competizione è vera: velocità, riflessi, strategia e tanto lavoro di squadra.</p>
 
-<h2 id="come-si-gioca">Come si gioca</h2>
-
-<p>Ogni squadra schiera i propri giocatori nella propria metà campo. All’inizio del match le palle sono posizionate sulla linea centrale — al segnale entrambe le squadre si lanciano a raccoglierle.</p>
-
-<p>Le regole base sono semplici:</p>
-
-<ul>
-  <li><strong>Sei eliminato</strong> se vieni colpito da una palla avversaria</li>
-  <li><strong>Sei eliminato</strong> se la tua palla viene catturata dall’avversario</li>
-  <li><strong>Rientri in campo</strong> se un tuo compagno cattura una palla al volo</li>
-  <li><strong>Vince</strong> la squadra che elimina tutti gli avversari</li>
-</ul>
+<p>Sì, è quello sport che forse hai visto in un film comico degli anni 2000. No, non è solo quello.</p>
 
 <hr />
 
-<h2 id="le-varianti">Le varianti</h2>
+<h2 id="le-basi-in-30-secondi">Le basi in 30 secondi</h2>
 
-<p>Il Dodgeball si gioca in diverse varianti — le più diffuse in Italia sono:</p>
+<p><strong>Squadre:</strong> 6 giocatori per parte in campo, da 6 a 12 in rosa.</p>
 
-<p><strong>Foam</strong> — si gioca con palle morbide in schiuma. È la variante più comune nei campionati italiani FIGeST, quella che pratichiamo noi ai Ravenna Grizzlies. Adatta a tutte le età e tutti i livelli.</p>
+<p><strong>Palle:</strong> 6 palle in schiuma morbida (poliuretano), 17,8 cm di diametro — leggere e sicure.</p>
 
-<p><strong>Sting</strong> — palle più dure e veloci, gioco più fisico e tecnico. Diffusa a livello internazionale.</p>
+<p><strong>Campo:</strong> 18 × 9 metri, diviso a metà. Non puoi andare nella metà avversaria.</p>
 
-<hr />
+<p><strong>Scopo:</strong> eliminare tutti i giocatori avversari lanciando le palle. Chi resta in campo vince il set.</p>
 
-<h2 id="perché-provarlo">Perché provarlo</h2>
+<p><strong>Come si viene eliminati:</strong> una palla ti colpisce e tocca terra. Semplice.</p>
 
-<p>Il Dodgeball allena riflessi, coordinazione, velocità e lavoro di squadra. Ma soprattutto è divertente — ogni partita è diversa dall’altra, e il livello di adrenalina è alto anche agli allenamenti.</p>
+<p><strong>Come si salva un compagno:</strong> se prendi al volo una palla avversaria senza farla toccare terra, chi l’ha lanciata è fuori — e un tuo compagno eliminato rientra in campo.</p>
 
-<p>Non serve nessuna esperienza pregressa. Ai <strong>Ravenna Grizzlies</strong> accogliamo principianti assoluti ogni settimana — in poche sessioni impari le basi e sei già in campo.</p>
-
-<hr />
-
-<h2 id="il-dodgeball-in-italia">Il Dodgeball in Italia</h2>
-
-<p>In Italia il Dodgeball è organizzato dalla <strong>FIGeST</strong> (Federazione Italiana Giochi e Sport Tradizionali). Il campionato nazionale prevede categorie maschili, femminili, open e giovanili.</p>
-
-<p>I Ravenna Grizzlies competono in <strong>Serie A Maschile</strong>, <strong>Serie A Femminile</strong> e <strong>Serie A Open</strong>, con atleti convocati in Nazionale e un titolo europeo già conquistato nel 2024.</p>
+<p><strong>Partita:</strong> due tempi da 20 minuti. Ogni set vinto vale un punto. Vince chi ne fa di più.</p>
 
 <hr />
 
-<h2 id="vuoi-provare-a-ravenna">Vuoi provare a Ravenna?</h2>
+<h2 id="un-po-di-storia">Un po’ di storia</h2>
 
-<p>Gli allenamenti adulti si tengono ogni <strong>martedì e giovedì alle 21:00</strong> alla Palestra Randi, Via G. Marconi 11, Ravenna. I primi allenamenti sono gratuiti e senza impegno.</p>
+<p>Il dodgeball moderno nasce negli Stati Uniti tra fine Ottocento e inizio Novecento come gioco universitario. Per decenni rimane confinato alle palestre scolastiche, ma dagli anni 2000 in poi esplode come sport vero: si formano federazioni nazionali, poi la WDBF (World Dodgeball Federation) a livello globale, e oggi si tengono Campionati Europei e Mondiali con squadre da ogni continente.</p>
 
-<div style="margin-top: 2rem; display: flex; gap: 1rem; flex-wrap: wrap;">
-  <a href="/unisciti/" class="btn btn-primary">Unisciti ai Grizzlies ⚡</a>
-  <a href="/#allenamenti" class="btn btn-outline">Vedi gli orari</a>
-</div>
+<p>In Italia lo sport è arrivato più tardi, ma la crescita è stata rapida. Oggi ci sono squadre in quasi tutte le regioni, e la scena competitiva è sorprendentemente seria.</p>
+
+<p>I Ravenna Grizzlies sono nati nel 2024 — ma con quattro atleti già in Nazionale e un titolo di Campioni Europei Misto Foam, ci siamo fatti notare in fretta.</p>
+
+<hr />
+
+<h2 id="come-funziona-davvero">Come funziona davvero</h2>
+
+<p>Se vuoi capire un po’ meglio cosa succede in campo, ecco le cose che fanno la differenza.</p>
+
+<h3 id="lapertura">L’apertura</h3>
+
+<p>Ogni set inizia con tutti e sei i giocatori schierati sulla linea di fondo. Le palle sono al centro. Al fischio, si corre a recuperarle — e inizia il caos. Le palle recuperate devono attraversare la linea di attacco (a 3 metri dal centro) prima di poter essere usate per colpire.</p>
+
+<h3 id="lanciare-e-schivare">Lanciare e schivare</h3>
+
+<p>Puoi lanciare in qualsiasi modo — di lato, dall’alto, dal basso. Se la palla ti colpisce su qualsiasi parte del corpo (capelli inclusi) e poi tocca terra, sei fuori.</p>
+
+<h3 id="bloccare">Bloccare</h3>
+
+<p>Puoi usare una palla che tieni in mano per bloccare un lancio avversario. Attenzione però: se durante il blocco perdi la palla e questa tocca terra prima che tu la riprenda, sei eliminato tu.</p>
+
+<h3 id="prendere-al-volo">Prendere al volo</h3>
+
+<p>La mossa più spettacolare. Se riesci a prendere al volo una palla avversaria, chi l’ha lanciata è eliminato e un tuo compagno torna in campo. Il rischio è alto, la soddisfazione anche.</p>
+
+<h3 id="il-vantaggio">Il vantaggio</h3>
+
+<p>Se una squadra accumula troppe palle senza lanciare, l’arbitro assegna il vantaggio e scatta un conto alla rovescia di 10 secondi. Scaduto il tempo senza lanci, le palle passano agli avversari. Niente tatticismi infiniti.</p>
+
+<hr />
+
+<h2 id="foam-o-cloth">Foam o Cloth?</h2>
+
+<p>Il dodgeball ufficiale si gioca in due varianti: <strong>Foam</strong> (palle in schiuma) e <strong>Cloth</strong> (palle rivestite in tessuto, con regole diverse — zona neutra, attacchi aerei e altro ancora). In Italia e nei campionati che disputiamo noi si gioca principalmente in <strong>Foam</strong>, ed è di questo che si parla in questa pagina.</p>
+
+<hr />
+
+<h2 id="vuoi-provare">Vuoi provare?</h2>
+
+<p>Adesso sai abbastanza. Il resto lo impari in palestra — e ci vuole meno di un allenamento per capire perché questo sport crea dipendenza.</p>
+
+<p><a href="/unisciti/">Scopri gli orari e unisciti ai Grizzlies →</a></p>
 
     </div>
   </div>
@@ -225,9 +267,25 @@
         <a href="/unisciti/">Unisciti</a>
       </p>
     </div>
+    <div class="footer-socials">
+      <a href="https://www.instagram.com/dodgeball_grizzlies/" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61564466342455" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@dodgeball_grizzlies" target="_blank" rel="noopener" class="footer-social-btn" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+      </a>
+      <a href="https://www.twitch.tv/dodgeball_insight" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Twitch">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/></svg>
+      </a>
+      <a href="https://www.youtube.com/@Dodgeball_Grizzlies" target="_blank" rel="noopener" class="footer-social-btn" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+      </a>
+    </div>
   </div>
 </footer>
-
 
   <script src="/assets/js/main.js"></script>
 </body>

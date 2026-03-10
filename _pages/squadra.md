@@ -7,7 +7,17 @@ og_image: "/assets/images/dodgeball-ravenna-grizzlies-hero.webp"
 permalink: /squadra/
 ---
 
-<section class="page-hero">
+<!-- SIDEBAR (solo desktop) -->
+<nav class="section-sidebar" id="sectionSidebar" aria-label="Navigazione sezioni">
+  <ul>
+    <li><a href="#top"       class="sidebar-dot" data-section="top">      <span class="sidebar-line"></span><span class="sidebar-label">Inizio</span>    </a></li>
+    <li><a href="#chi-siamo" class="sidebar-dot" data-section="chi-siamo"><span class="sidebar-line"></span><span class="sidebar-label">Chi siamo</span>  </a></li>
+    <li><a href="#galleria"  class="sidebar-dot" data-section="galleria"> <span class="sidebar-line"></span><span class="sidebar-label">Galleria</span>   </a></li>
+  </ul>
+</nav>
+
+
+<section id="top" class="page-hero page-hero--with-photo" style="--hero-photo: url('{{ site.baseurl }}/assets/images/gallery/dodgeball-ravenna-grizzlies-team-huddle.webp')">
   <div class="container">
     <div class="page-hero-inner" data-reveal>
       <span class="section-tag">Chi siamo</span>
@@ -18,7 +28,7 @@ permalink: /squadra/
   </div>
 </section>
 
-<section class="section-about-full">
+<section id="chi-siamo" class="section-about-full">
   <div class="container">
     <div class="about-grid" data-reveal>
       <div class="about-text">
@@ -86,26 +96,16 @@ permalink: /squadra/
       <div class="carousel-slide"><img data-src="{{ site.baseurl }}/assets/images/gallery/dodgeball-ravenna-femminile-attacco.webp" alt="Dodgeball Ravenna – attacco femminile" loading="lazy"></div>
       <div class="carousel-slide"><img data-src="{{ site.baseurl }}/assets/images/gallery/dodgeball-ravenna-allenamento-misto.webp" alt="Dodgeball Ravenna – allenamento misto" loading="lazy"></div>
       <div class="carousel-slide"><img data-src="{{ site.baseurl }}/assets/images/gallery/dodgeball-ravenna-grizzlies-huddle-squadra.webp" alt="Dodgeball Ravenna – huddle di squadra" loading="lazy"></div>
+      <div class="carousel-slide"><img data-src="{{ site.baseurl }}/assets/images/gallery/dodgeball-ravenna-grizzlies-team-huddle.webp" alt="Dodgeball Ravenna – Grizzlies cerchio di squadra" loading="lazy"></div>
+      <div class="carousel-slide"><img data-src="{{ site.baseurl }}/assets/images/gallery/dodgeball-ravenna-allenamento-adulti-misto.webp" alt="Dodgeball Ravenna – allenamento adulti misto Grizzlies" loading="lazy"></div>
+      <div class="carousel-slide"><img data-src="{{ site.baseurl }}/assets/images/gallery/dodgeball-ravenna-giovanile-apertura.webp" alt="Dodgeball Ravenna – settore giovanile apertura partita" loading="lazy"></div>
+      <div class="carousel-slide"><img data-src="{{ site.baseurl }}/assets/images/gallery/dodgeball-ravenna-giovanile-lancio.webp" alt="Dodgeball Ravenna – giovanile lancio in partita" loading="lazy"></div>
+      <div class="carousel-slide"><img data-src="{{ site.baseurl }}/assets/images/gallery/dodgeball-ravenna-giovanile-corsa.webp" alt="Dodgeball Ravenna – giovanile corsa in campo" loading="lazy"></div>
+      <div class="carousel-slide"><img data-src="{{ site.baseurl }}/assets/images/gallery/dodgeball-ravenna-giovanile-partita.webp" alt="Dodgeball Ravenna – giovanile partita ufficiale" loading="lazy"></div>
     </div>
     <button class="carousel-btn carousel-next" id="carouselNext" aria-label="Successiva">&#8250;</button>
   </div>
   <div class="carousel-dots" id="carouselDots"></div>
 </section>
 
-<section class="section-contact">
-  <div class="container">
-    <div class="join-box" data-reveal>
-      <div class="join-box-inner">
-        <img src="{{ site.baseurl }}/assets/images/logo.png" alt="Grizzlies" class="join-logo">
-        <div class="join-text">
-          <h3>VUOI UNIRTI A NOI?</h3>
-          <p>Entra nella tana — il primo allenamento è gratuito.</p>
-          <div class="join-actions">
-            <a href="{{ site.baseurl }}/unisciti/" class="btn btn-white">Scopri come →</a>
-            <a href="tel:+393289472121" class="btn btn-outline-white">Chiamaci 📱</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+{% include join-box.html %}

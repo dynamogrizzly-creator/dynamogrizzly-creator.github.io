@@ -37,7 +37,9 @@ html {
 
 body {
   font-family: var(--font-body);
-  background: var(--black);
+  background-color: var(--black);
+  background-image: radial-gradient(rgba(123,47,190,.18) 1px, transparent 1px);
+  background-size: 28px 28px;
   color: var(--cream);
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
@@ -101,52 +103,69 @@ p {
 
 /* --- BUTTONS --- */
 .btn {
-  display: inline-block;
-  padding: 0.9rem 2.4rem;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: 0.85rem 2rem;
   font-family: var(--font-body);
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  border-radius: 3px;
+  border-radius: 8px;
   border: none;
   cursor: pointer;
-  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+  transition: transform .25s, box-shadow .25s;
 }
+/* shimmer su hover per tutti i bottoni */
+.btn::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.12), transparent);
+  transition: left .4s;
+  pointer-events: none;
+}
+.btn:hover::after { left: 150%; }
 
 .btn-primary {
   background: linear-gradient(135deg, var(--purple) 0%, var(--blue) 100%);
   color: var(--white);
-  box-shadow: 0 4px 20px rgba(123,47,190,0.45);
+  box-shadow: 0 4px 20px rgba(123,47,190,.45), inset 0 1px 0 rgba(255,255,255,.15);
 }
-
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 32px rgba(123,47,190,0.65);
+  box-shadow: 0 8px 32px rgba(123,47,190,.65), inset 0 1px 0 rgba(255,255,255,.15);
 }
 
 .btn-outline {
-  background: transparent;
+  background: rgba(123,47,190,.08);
   color: var(--cream);
-  border: 1.5px solid rgba(240,238,255,0.3);
+  border: 1.5px solid rgba(123,47,190,.45);
+  box-shadow: inset 0 0 0 0 rgba(123,47,190,0);
+  transition: transform .25s, box-shadow .25s, background .25s, border-color .25s;
 }
-
 .btn-outline:hover {
-  border-color: var(--purple-mid);
-  background: rgba(123,47,190,0.12);
+  background: rgba(123,47,190,.18);
+  border-color: var(--purple);
   transform: translateY(-3px);
+  box-shadow: 0 6px 24px rgba(123,47,190,.3);
 }
 
 .btn-white {
   background: var(--white);
   color: var(--purple-dark);
   font-weight: 900;
+  box-shadow: 0 4px 16px rgba(0,0,0,.25), inset 0 1px 0 rgba(255,255,255,.8);
 }
-
 .btn-white:hover {
   background: var(--cream);
   transform: translateY(-3px);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 28px rgba(0,0,0,.35);
 }
 
 /* ============================================
@@ -239,6 +258,27 @@ p {
 
 .nav-links a:hover { color: var(--white); }
 .nav-links a:hover::after { width: 100%; }
+
+/* Pagina attiva */
+.nav-links a.nav-active {
+  color: var(--white);
+}
+.nav-links a.nav-active::after {
+  width: 100%;
+}
+
+/* Mobile active */
+.nav-mobile a.nav-active {
+  color: #fff;
+  border-left: 3px solid var(--purple);
+  padding-left: .8rem;
+}
+
+/* Unisciti attivo */
+.nav-cta--active {
+  box-shadow: 0 2px 20px rgba(123,47,190,.7) !important;
+  opacity: 1 !important;
+}
 
 .nav-cta {
   background: linear-gradient(135deg, var(--purple), var(--blue));
@@ -864,6 +904,7 @@ p {
     linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
   background-size: 40px 40px;
+  pointer-events: none;
 }
 
 .join-box-inner {
@@ -1321,10 +1362,21 @@ footer {
    NAVBAR DROPDOWN
    ============================================================ */
 .nav-dropdown { position: relative; }
+
+/* Ponte invisibile che copre il gap tra link e menu — impedisce il mouseleave */
+.nav-dropdown::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 12px;
+}
+
 .nav-dropdown-menu {
   display: none;
   position: absolute;
-  top: calc(100% + 8px);
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
   background: #13131f;
@@ -1450,4 +1502,992 @@ footer {
   .dodgeball-preview-grid { grid-template-columns: 1fr; gap: 3rem; }
   .page-hero { padding: 7rem 0 3rem; }
   .nav-dropdown-menu { display: none !important; } /* no dropdown su mobile, c'è il menu burger */
+}
+
+/* ============================================================
+   UNISCITI — HIGHLIGHT ROW
+   ============================================================ */
+.section-join-intro {
+  padding: 0;
+  background: var(--black);
+}
+.join-highlight-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(123,47,190,.2);
+  border-bottom: 1px solid rgba(123,47,190,.2);
+}
+.join-highlight-card {
+  padding: 2.5rem 2rem;
+  text-align: center;
+  border-right: 1px solid rgba(255,255,255,.06);
+  transition: background .25s;
+}
+.join-highlight-card:last-child { border-right: none; }
+.join-highlight-card--accent {
+  background: rgba(123,47,190,.12);
+  border-right-color: rgba(123,47,190,.2);
+}
+.join-highlight-icon { font-size: 2rem; display: block; margin-bottom: .8rem; }
+.join-highlight-card strong {
+  display: block;
+  font-size: .95rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: .4rem;
+  font-family: 'Barlow', sans-serif;
+}
+.join-highlight-card p { font-size: .82rem; color: var(--gray); margin: 0; line-height: 1.5; }
+
+/* ============================================================
+   UNISCITI — SCHEDULE SECTIONS
+   ============================================================ */
+.section-schedule {
+  padding: 6rem 0;
+}
+.section-schedule--dark { background: #0a0a14; }
+.section-schedule--light { background: #0f0f1e; }
+
+.schedule-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+.schedule-grid--reverse { direction: rtl; }
+.schedule-grid--reverse > * { direction: ltr; }
+
+.schedule-text .section-tag { margin-bottom: .8rem; display: inline-block; }
+.schedule-text h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+  line-height: 1;
+  margin: .4rem 0 1rem;
+  color: #fff;
+}
+.schedule-text p { color: var(--gray); font-size: 1.05rem; line-height: 1.75; margin-bottom: 2rem; }
+
+.schedule-meta { display: flex; flex-wrap: wrap; gap: .8rem; }
+.schedule-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  padding: .55rem 1.1rem;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 100px;
+  font-size: .88rem;
+  color: #fff;
+  font-weight: 600;
+}
+.schedule-badge--time {
+  background: rgba(123,47,190,.18);
+  border-color: rgba(123,47,190,.35);
+  color: #c084fc;
+}
+
+/* GYM CARDS */
+.schedule-card-wrap { display: flex; flex-direction: column; gap: 1.2rem; }
+.schedule-card-wrap--two { flex-direction: row; }
+
+.gym-card {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 20px;
+  padding: 2.2rem 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: border-color .25s, transform .25s;
+}
+.gym-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--purple), var(--blue));
+  opacity: 0;
+  transition: opacity .25s;
+}
+.gym-card:hover { border-color: rgba(123,47,190,.45); transform: translateY(-4px); }
+.gym-card:hover::before { opacity: 1; }
+.gym-card--purple { border-color: rgba(123,47,190,.25); }
+.gym-card--purple::before { opacity: .5; }
+.gym-card--small { flex: 1; padding: 1.6rem 1.4rem; }
+
+.gym-card-label {
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--purple);
+  font-weight: 700;
+  margin-bottom: .5rem;
+}
+.gym-card-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.2rem;
+  color: #fff;
+  margin: 0 0 .4rem;
+  line-height: 1;
+}
+.gym-card--small .gym-card-name { font-size: 1.6rem; }
+.gym-card-address { font-size: .9rem; color: var(--gray); margin: 0 0 1.2rem; line-height: 1.5; }
+.gym-card-link {
+  display: inline-block;
+  font-size: .85rem;
+  font-weight: 700;
+  color: var(--purple);
+  text-decoration: none;
+  transition: color .2s;
+}
+.gym-card-link:hover { color: #fff; }
+
+/* ============================================================
+   UNISCITI — CONTACT CTA
+   ============================================================ */
+.section-contact-cta {
+  padding: 6rem 0;
+  background: linear-gradient(135deg, #0d0d1a 0%, #13101f 100%);
+  border-top: 1px solid rgba(123,47,190,.2);
+  border-bottom: 1px solid rgba(123,47,190,.2);
+}
+.contact-cta-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+}
+.contact-cta-text h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.5rem, 4vw, 3.8rem);
+  line-height: 1;
+  margin: .4rem 0 1rem;
+}
+.contact-cta-text p { color: var(--gray); font-size: 1.05rem; line-height: 1.7; }
+
+.contact-cta-buttons { display: flex; flex-direction: column; gap: 1rem; }
+.contact-big-btn {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.4rem 2rem;
+  border-radius: 16px;
+  text-decoration: none;
+  color: #fff;
+  font-family: 'Barlow', sans-serif;
+  transition: transform .25s, box-shadow .25s;
+}
+.contact-big-btn:hover { transform: translateX(6px); }
+.contact-big-btn--whatsapp {
+  background: linear-gradient(135deg, #25d366, #128c47);
+  box-shadow: 0 4px 20px rgba(37,211,102,.25);
+}
+.contact-big-btn--whatsapp:hover { box-shadow: 0 8px 32px rgba(37,211,102,.4); }
+.contact-big-btn--email {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.15);
+}
+.contact-big-btn--email:hover { background: rgba(123,47,190,.2); border-color: rgba(123,47,190,.5); }
+.contact-big-btn-icon { font-size: 2rem; flex-shrink: 0; }
+.contact-big-btn strong { display: block; font-size: 1.05rem; font-weight: 700; }
+.contact-big-btn small { display: block; font-size: .85rem; opacity: .75; margin-top: .1rem; }
+
+/* ============================================================
+   UNISCITI — COSA PORTARE
+   ============================================================ */
+.section-bring {
+  padding: 6rem 0;
+  background: var(--black);
+}
+.bring-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.bring-item {
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 16px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: border-color .25s, transform .25s;
+}
+.bring-item:hover { border-color: rgba(123,47,190,.4); transform: translateY(-3px); }
+.bring-item--no {
+  background: rgba(123,47,190,.06);
+  border-color: rgba(123,47,190,.2);
+}
+.bring-emoji { font-size: 2.2rem; display: block; margin-bottom: 1rem; }
+.bring-item strong {
+  display: block;
+  font-size: .95rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: .5rem;
+}
+.bring-item p { font-size: .83rem; color: var(--gray); margin: 0; line-height: 1.55; }
+
+/* ============================================================
+   RESPONSIVE — unisciti template
+   ============================================================ */
+@media (max-width: 1024px) {
+  .join-highlight-row { grid-template-columns: repeat(2, 1fr); }
+  .join-highlight-card:nth-child(2) { border-right: none; }
+  .bring-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+  .join-highlight-row { grid-template-columns: 1fr 1fr; }
+  .schedule-grid { grid-template-columns: 1fr; gap: 3rem; }
+  .schedule-grid--reverse { direction: ltr; }
+  .schedule-card-wrap--two { flex-direction: column; }
+  .contact-cta-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .bring-grid { grid-template-columns: 1fr 1fr; }
+  .section-schedule { padding: 4rem 0; }
+  .section-contact-cta { padding: 4rem 0; }
+}
+@media (max-width: 480px) {
+  .join-highlight-row { grid-template-columns: 1fr; }
+  .join-highlight-card { border-right: none; border-bottom: 1px solid rgba(255,255,255,.06); }
+  .bring-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   ALLENAMENTI UNIFICATI — schedules-stack
+   ============================================================ */
+.section-all-schedules {
+  padding: 6rem 0;
+  background: #0a0a14;
+}
+
+.schedules-stack {
+  margin-top: 4rem;
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.schedule-row {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  grid-template-rows: auto auto;
+  gap: 0;
+  padding: 2.5rem 2.8rem;
+}
+
+.schedule-row-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .4rem;
+  padding-right: 2rem;
+  border-right: 1px solid rgba(255,255,255,.07);
+}
+.schedule-row-icon { font-size: 1.6rem; }
+.schedule-row-label h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.9rem;
+  color: #fff;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: .03em;
+}
+
+.schedule-row-slots {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 2.5rem;
+}
+
+.schedule-slot {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.slot-time-block {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  min-width: 180px;
+}
+.slot-days {
+  font-size: .82rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--gray);
+  font-weight: 600;
+}
+.slot-hours {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  font-family: 'Barlow', sans-serif;
+}
+
+.slot-gym {
+  display: flex;
+  flex-direction: column;
+  gap: .15rem;
+  text-decoration: none;
+  padding: .7rem 1.2rem;
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 10px;
+  background: rgba(255,255,255,.03);
+  transition: border-color .2s, background .2s;
+}
+.slot-gym:hover {
+  border-color: rgba(123,47,190,.45);
+  background: rgba(123,47,190,.08);
+}
+.slot-gym-name {
+  font-size: .92rem;
+  font-weight: 700;
+  color: #fff;
+}
+.slot-gym-address {
+  font-size: .78rem;
+  color: var(--purple);
+}
+
+.schedule-row-note {
+  grid-column: 2 / 3;
+  padding-left: 2.5rem;
+  padding-top: 1rem;
+  font-size: .83rem;
+  color: var(--gray);
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.schedules-divider {
+  height: 1px;
+  background: rgba(255,255,255,.07);
+  margin: 0 2.8rem;
+}
+
+/* ============================================================
+   RESPONSIVE — schedules-stack
+   ============================================================ */
+@media (max-width: 768px) {
+  .schedule-row {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.5rem;
+  }
+  .schedule-row-label {
+    flex-direction: row;
+    align-items: center;
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,.07);
+    padding-right: 0;
+    padding-bottom: 1rem;
+    margin-bottom: 1.2rem;
+  }
+  .schedule-row-slots { padding-left: 0; }
+  .schedule-row-note { grid-column: 1; padding-left: 0; }
+  .schedule-slot { flex-direction: column; align-items: flex-start; gap: .8rem; }
+  .schedules-divider { margin: 0 1.5rem; }
+}
+
+/* ============================================================
+   FOOTER SOCIALS
+   ============================================================ */
+.footer-socials {
+  display: flex;
+  gap: .6rem;
+  align-items: center;
+  flex-shrink: 0;
+}
+.footer-social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.1);
+  color: var(--gray);
+  transition: background .2s, color .2s, border-color .2s, transform .2s;
+  text-decoration: none;
+}
+.footer-social-btn svg { width: 18px; height: 18px; }
+.footer-social-btn:hover {
+  background: rgba(123,47,190,.2);
+  border-color: rgba(123,47,190,.5);
+  color: #fff;
+  transform: translateY(-2px);
+}
+@media (max-width: 768px) {
+  .footer-socials { justify-content: center; }
+}
+
+/* ============================================================
+   SCHEDULE ROW PHOTOS
+   ============================================================ */
+.schedule-row-photo {
+  grid-column: 2 / 3;
+  padding-left: 2.5rem;
+  padding-top: 1.2rem;
+}
+.schedule-row-photo img {
+  width: 100%;
+  max-height: 280px;
+  object-fit: cover;
+  border-radius: 14px;
+  display: block;
+}
+.schedule-row-photo--grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: .6rem;
+}
+.schedule-row-photo--grid img {
+  max-height: 160px;
+}
+
+@media (max-width: 768px) {
+  .schedule-row-photo { grid-column: 1; padding-left: 0; }
+  .schedule-row-photo--grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* ============================================================
+   PAGE HERO — con foto di sfondo (squadra)
+   ============================================================ */
+.page-hero--with-photo {
+  position: relative;
+  overflow: hidden;
+}
+.page-hero--with-photo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--hero-photo);
+  background-size: cover;
+  background-position: center top;
+  opacity: .18;
+  z-index: 0;
+}
+.page-hero--with-photo .container { position: relative; z-index: 1; }
+
+/* ============================================================
+   SCHEDULE BG CARDS — foto di sfondo per gruppo
+   ============================================================ */
+.schedules-bg-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
+.schedule-bg-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border: 1px solid rgba(255,255,255,.08);
+  transition: transform .3s, border-color .3s;
+}
+.schedule-bg-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(123,47,190,.5);
+}
+
+/* Foto di sfondo via CSS custom property */
+.schedule-bg-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--card-photo);
+  background-size: cover;
+  background-position: center;
+  transition: transform .5s;
+  z-index: 0;
+}
+.schedule-bg-card:hover::before {
+  transform: scale(1.04);
+}
+
+/* Overlay gradiente — nero trasparente in alto, nero pieno in basso */
+.schedule-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(8,8,16,.3) 0%,
+    rgba(8,8,16,.6) 40%,
+    rgba(8,8,16,.92) 100%
+  );
+  z-index: 1;
+}
+
+/* Contenuto sopra overlay */
+.schedule-bg-content {
+  position: relative;
+  z-index: 2;
+  padding: 2rem 1.8rem;
+}
+
+.schedule-bg-header {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  margin-bottom: 1.4rem;
+}
+.schedule-bg-icon { font-size: 1.5rem; }
+.schedule-bg-header h3 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.2rem;
+  color: #fff;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: .04em;
+}
+
+.schedule-bg-slots {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  margin-bottom: 1.2rem;
+}
+.schedule-bg-slot {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+}
+.slot-days {
+  font-size: .75rem;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: rgba(255,255,255,.55);
+  font-weight: 700;
+}
+.slot-hours {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1;
+  font-family: 'Barlow', sans-serif;
+}
+.slot-gym-inline {
+  display: inline-block;
+  margin-top: .35rem;
+  font-size: .82rem;
+  color: #c084fc;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color .2s;
+}
+.slot-gym-inline:hover { color: #fff; }
+
+.schedule-bg-note {
+  font-size: .82rem;
+  color: rgba(255,255,255,.55);
+  line-height: 1.6;
+  margin: 0;
+  border-top: 1px solid rgba(255,255,255,.1);
+  padding-top: 1rem;
+}
+
+/* ============================================================
+   RESPONSIVE — schedule bg cards
+   ============================================================ */
+@media (max-width: 900px) {
+  .schedules-bg-grid { grid-template-columns: 1fr; }
+  .schedule-bg-card { min-height: 320px; }
+}
+
+/* ============================================================
+   SCHEDULE ROW BG — riga orizzontale con foto di sfondo
+   ============================================================ */
+.schedule-row-bg {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+}
+.schedules-stack .schedule-row-bg:first-child { border-radius: 20px 20px 0 0; }
+.schedules-stack .schedule-row-bg:last-child  { border-radius: 0 0 20px 20px; }
+
+.schedule-row-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: var(--row-photo);
+  background-size: cover;
+  background-position: center;
+  transition: transform .5s;
+  z-index: 0;
+}
+.schedule-row-bg:hover::before { transform: scale(1.03); }
+
+.schedule-row-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(50,10,90,.82);
+  z-index: 1;
+}
+
+.schedule-row-bg-content {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  grid-template-rows: auto auto;
+  padding: 2.5rem 2.8rem;
+  text-shadow: 0 1px 3px rgba(0,0,0,.7), 0 2px 16px rgba(0,0,0,.5);
+}
+.schedule-row-bg-content .slot-hours { color: #fff; }
+.schedule-row-bg-content .slot-days  { color: rgba(255,255,255,.75); }
+.schedule-row-bg-content .slot-gym-name { color: #fff; }
+.schedule-row-bg-content .slot-gym-address { color: #c084fc; }
+.schedule-row-bg-content .schedule-row-label h3 { color: #fff; }
+
+.schedule-row-bg-content .schedule-row-label {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+  padding-right: 2rem;
+  border-right: 1px solid rgba(255,255,255,.12);
+}
+.schedule-row-bg-content .schedule-row-slots {
+  padding-left: 2.5rem;
+}
+.schedule-row-bg-content .schedule-row-note {
+  grid-column: 2 / 3;
+  padding-left: 2.5rem;
+  padding-top: 1rem;
+  font-size: .83rem;
+  color: rgba(255,255,255,.5);
+  line-height: 1.6;
+  font-style: italic;
+  border-top: 1px solid rgba(255,255,255,.08);
+  margin-top: .8rem;
+}
+
+@media (max-width: 768px) {
+  .schedule-row-bg-content {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.5rem;
+  }
+  .schedule-row-bg-content .schedule-row-label {
+    flex-direction: row;
+    align-items: center;
+    border-right: none;
+    border-bottom: 1px solid rgba(255,255,255,.1);
+    padding-right: 0;
+    padding-bottom: 1rem;
+    margin-bottom: 1.2rem;
+  }
+  .schedule-row-bg-content .schedule-row-slots { padding-left: 0; }
+  .schedule-row-bg-content .schedule-row-note { grid-column: 1; padding-left: 0; }
+  .schedule-row-bg-overlay {
+    background: rgba(50,10,90,.82);
+  }
+}
+
+/* ============================================================
+   DOT GRID PATTERN — applicato a tutte le sezioni scure
+   ============================================================ */
+.section-join-intro,
+.section-all-schedules,
+.section-contact-cta,
+.section-bring,
+.section-faq,
+.section-contact,
+.section-about-full,
+.section-dodgeball-preview,
+.section-news-preview,
+.section-schedule,
+.page-hero,
+footer {
+  background-image: radial-gradient(rgba(123,47,190,.18) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* ============================================================
+   ARTICLE LAYOUT (dodgeball-ravenna e simili)
+   ============================================================ */
+.section-article {
+  padding: 5rem 0;
+  background: var(--black);
+}
+.article-body {
+  max-width: 720px;
+  margin: 0 auto 2rem;
+}
+.article-lead {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: var(--cream);
+  margin-bottom: 2rem;
+}
+.article-body p {
+  font-size: 1.05rem;
+  line-height: 1.85;
+  color: var(--gray);
+  margin-bottom: 1.6rem;
+}
+.article-body strong { color: #fff; }
+.article-closing {
+  font-size: 1.1rem !important;
+  color: var(--cream) !important;
+  font-style: italic;
+  border-left: 3px solid var(--purple);
+  padding-left: 1.2rem;
+  margin-top: 2.5rem !important;
+}
+
+.article-quote {
+  max-width: 720px;
+  margin: 0 auto 3rem;
+  padding: 2rem 2.5rem;
+  background: rgba(123,47,190,.1);
+  border-left: 4px solid var(--purple);
+  border-radius: 0 12px 12px 0;
+}
+.article-quote p {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #e0d0ff;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ============================================================
+   HERO CONTACTS — contatti rapidi nella hero di unisciti
+   ============================================================ */
+.hero-contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem;
+  margin-top: 2rem;
+}
+.hero-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .6rem;
+  padding: .7rem 1.4rem;
+  border-radius: 10px;
+  font-size: .88rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform .2s, box-shadow .2s;
+}
+.hero-contact-btn--wa {
+  background: linear-gradient(135deg, #25d366, #128c47);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(37,211,102,.3);
+}
+.hero-contact-btn--wa:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(37,211,102,.45); }
+.hero-contact-btn--email {
+  background: rgba(255,255,255,.08);
+  color: #fff;
+  border: 1px solid rgba(255,255,255,.2);
+}
+.hero-contact-btn--email:hover { transform: translateY(-2px); background: rgba(255,255,255,.14); }
+
+/* ============================================================
+   JOIN BOX SOCIAL
+   ============================================================ */
+.join-box-social {
+  border-top: 1px solid rgba(255,255,255,.1);
+  margin-top: 2rem;
+  padding-top: 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+.join-box-social-label {
+  font-size: .85rem;
+  color: var(--gray);
+  margin-bottom: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  font-weight: 600;
+}
+.join-box-social-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .8rem;
+}
+.join-social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  padding: .55rem 1.1rem;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 8px;
+  color: var(--gray);
+  font-size: .82rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background .2s, border-color .2s, color .2s, transform .2s;
+}
+.join-social-btn svg { width: 16px; height: 16px; flex-shrink: 0; }
+.join-social-btn:hover {
+  background: rgba(123,47,190,.18);
+  border-color: rgba(123,47,190,.45);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+  .hero-contacts { flex-direction: column; }
+  .join-box-social-links { gap: .5rem; }
+  .join-social-btn span { display: none; }
+  .join-social-btn { padding: .6rem .9rem; }
+  .join-social-btn svg { width: 20px; height: 20px; }
+}
+
+/* ============================================================
+   SECTION SIDEBAR — navigazione sezioni (solo desktop)
+   ============================================================ */
+.section-sidebar {
+  position: fixed;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 100;
+  display: none; /* nascosta su mobile */
+}
+.section-sidebar ul {
+  list-style: none;
+  margin: 0; padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.section-sidebar li {
+  position: relative;
+}
+
+/* La linea verticale continua */
+.section-sidebar li::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: rgba(255,255,255,.12);
+}
+.section-sidebar li:first-child::before { top: 50%; }
+.section-sidebar li:last-child::before  { bottom: 50%; }
+
+.sidebar-dot {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  padding: .55rem 0;
+  text-decoration: none;
+  color: var(--gray);
+  position: relative;
+}
+
+/* Il pallino */
+.sidebar-dot::before {
+  content: '';
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.2);
+  border: 2px solid rgba(255,255,255,.2);
+  flex-shrink: 0;
+  transition: background .25s, border-color .25s, transform .25s;
+  position: relative;
+  z-index: 1;
+}
+
+/* Label a destra del pallino */
+.sidebar-label {
+  font-size: .72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  opacity: 0;
+  transform: translateX(-6px);
+  transition: opacity .2s, transform .2s;
+  white-space: nowrap;
+  color: #fff;
+  pointer-events: none;
+}
+
+/* Hover — mostra label e illumina pallino */
+.sidebar-dot:hover::before {
+  background: rgba(123,47,190,.6);
+  border-color: var(--purple);
+  transform: scale(1.2);
+}
+.sidebar-dot:hover .sidebar-label {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Sezione attiva */
+.sidebar-dot.active::before {
+  background: var(--purple);
+  border-color: #c084fc;
+  transform: scale(1.25);
+  box-shadow: 0 0 10px rgba(123,47,190,.7);
+}
+.sidebar-dot.active .sidebar-label {
+  opacity: 1;
+  transform: translateX(0);
+  color: #c084fc;
+}
+
+/* Solo su schermi larghi */
+@media (min-width: 1200px) {
+  .section-sidebar { display: block; }
+}
+
+/* ============================================================
+   MOBILE PROGRESS BAR
+   ============================================================ */
+.mobile-progress-bar {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--purple), var(--blue));
+  z-index: 9999;
+  transition: width .1s linear;
+  border-radius: 0 2px 2px 0;
+}
+
+/* ============================================================
+   MOBILE PAGE INDICATOR
+   ============================================================ */
+.mobile-page-indicator {
+  display: none;
+  align-items: center;
+  gap: .5rem;
+  padding: .45rem 1.2rem;
+  background: rgba(8,8,16,.95);
+  border-bottom: 1px solid rgba(123,47,190,.2);
+  font-size: .75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+  color: var(--gray);
+}
+.mpi-home { font-size: .9rem; }
+.mpi-sep {
+  color: rgba(123,47,190,.6);
+  font-size: 1rem;
+  font-weight: 400;
+}
+.mpi-label { color: #c084fc; }
+
+@media (max-width: 768px) {
+  .mobile-progress-bar { display: block; }
+  .mobile-page-indicator { display: flex; }
 }

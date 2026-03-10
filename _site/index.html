@@ -123,26 +123,60 @@
       </div>
     </a>
     <ul class="nav-links">
-      <li><a href="/#chi-siamo">La Squadra</a></li>
-      <li><a href="/#allenamenti">Allenamenti</a></li>
-      <li><a href="/#lo-sport">Il Dodgeball</a></li>
-      <li><a href="/news/">News</a></li>
-      <li><a href="/unisciti/" class="nav-cta">Unisciti ⚡</a></li>
+      <li class="nav-dropdown">
+        <a href="/squadra/" >La Squadra ▾</a>
+        <ul class="nav-dropdown-menu">
+          <li><a href="/squadra/" >Chi siamo</a></li>
+          <li><a href="/unisciti/" >Allenamenti</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown">
+        <a href="/dodgeball/" >Il Dodgeball ▾</a>
+        <ul class="nav-dropdown-menu">
+          <li><a href="/dodgeball/" >Cos'è il Dodgeball</a></li>
+          <li><a href="/dodgeball-ravenna/" >Dodgeball a Ravenna</a></li>
+        </ul>
+      </li>
+      <li><a href="/news/" >News</a></li>
+      <li><a href="/#faq">FAQ</a></li>
+      <li><a href="/unisciti/" class="nav-cta ">Contatti ⚡</a></li>
     </ul>
     <button class="nav-burger" id="burger" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
   </div>
   <div class="nav-mobile" id="mobileMenu">
-    <a href="/#chi-siamo">La Squadra</a>
-    <a href="/#allenamenti">Allenamenti</a>
-    <a href="/#lo-sport">Il Dodgeball</a>
-    <a href="/news/">News</a>
-    <a href="/unisciti/">Unisciti ⚡</a>
+    <a href="/squadra/" >La Squadra</a>
+    <a href="/dodgeball/" >Cos'è il Dodgeball</a>
+    <a href="/dodgeball-ravenna/" >Dodgeball a Ravenna</a>
+    <a href="/news/" >News</a>
+    <a href="/unisciti/">Contatti ⚡</a>
   </div>
 </nav>
 
-  <!-- HERO -->
+<!-- PROGRESS BAR (mobile) -->
+<div class="mobile-progress-bar" id="mobileProgressBar"></div>
+
+<!-- PAGE INDICATOR (mobile) -->
+<div class="mobile-page-indicator">
+  
+    <span class="mpi-home">🏠</span><span class="mpi-label">Home</span>
+  
+</div>
+
+  <!-- SIDEBAR NAVIGAZIONE SEZIONI (solo desktop) -->
+<nav class="section-sidebar" id="sectionSidebar" aria-label="Navigazione sezioni">
+  <ul>
+    <li><a href="#hero"       class="sidebar-dot" data-section="hero">      <span class="sidebar-line"></span><span class="sidebar-label">Inizio</span>     </a></li>
+    <li><a href="#chi-siamo"  class="sidebar-dot" data-section="chi-siamo"> <span class="sidebar-line"></span><span class="sidebar-label">Chi siamo</span>   </a></li>
+    <li><a href="#allenamenti"class="sidebar-dot" data-section="allenamenti"><span class="sidebar-line"></span><span class="sidebar-label">Allenamenti</span> </a></li>
+    <li><a href="#lo-sport"   class="sidebar-dot" data-section="lo-sport">  <span class="sidebar-line"></span><span class="sidebar-label">Il Dodgeball</span></a></li>
+    <li><a href="#news"       class="sidebar-dot" data-section="news">       <span class="sidebar-line"></span><span class="sidebar-label">News</span>        </a></li>
+    <li><a href="#faq"        class="sidebar-dot" data-section="faq">        <span class="sidebar-line"></span><span class="sidebar-label">FAQ</span>         </a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
 <section id="hero" class="hero">
   <div class="hero-bg"></div>
   <div class="hero-photo" style="background-image: url('/assets/images/dodgeball-ravenna-grizzlies-hero.webp')"></div>
@@ -154,7 +188,7 @@
     <p class="hero-sub" data-reveal data-delay="2">Dynamo Grizzly ASD · Campionato Nazionale FIGeST · Ravenna</p>
     <div class="hero-cta" data-reveal data-delay="3">
       <a href="/unisciti/" class="btn btn-primary">Entra nella tana ⚡</a>
-      <a href="/allenamenti/" class="btn btn-outline">Vedi gli allenamenti</a>
+      <a href="#allenamenti" class="btn btn-outline">Orari e sedi ↓</a>
     </div>
   </div>
   <div class="hero-scroll" id="scrollIndicator">
@@ -197,7 +231,7 @@
           <span class="badge badge-gold">🏆 Campioni Europei</span>
         </div>
         <div style="margin-top: 2rem;">
-          <a href="/squadra/" class="btn btn-outline">Scopri la squadra →</a>
+          <a href="/squadra/" class="btn btn-primary">Conosci i Grizzlies →</a>
         </div>
       </div>
       <div class="about-visual" data-reveal data-delay="1">
@@ -259,7 +293,7 @@
       </div>
     </div>
     <div style="text-align:center; margin-top: 2.5rem;" data-reveal>
-      <a href="/unisciti/" class="btn btn-outline">Unisciti ai Grizzlies →</a>
+      <a href="/unisciti/" class="btn btn-primary">Orari, sedi e come iniziare →</a>
     </div>
   </div>
 </section>
@@ -273,7 +307,7 @@
         <h2>NON HAI MAI<br>GIOCATO?</h2>
         <div class="divider"></div>
         <p>Il Dodgeball è veloce, adrenalinico e aperto a tutti. Non serve esperienza pregressa — in poche sessioni sei già in campo con noi.</p>
-        <a href="/dodgeball/" class="btn btn-outline" style="margin-top:1.5rem">Scopri cos'è il Dodgeball →</a>
+        <a href="/dodgeball/" class="btn btn-primary" style="margin-top:1.5rem">Scopri come funziona →</a>
       </div>
       <div class="dodgeball-preview-links">
         <a href="/dodgeball/" class="preview-card">
@@ -306,7 +340,7 @@
 </section>
 
 <!-- ULTIME NEWS -->
-<section class="section-news-preview">
+<section id="news" class="section-news-preview">
   <div class="container">
     <div class="section-header" data-reveal>
       <span class="section-tag">Aggiornamenti</span>
@@ -335,7 +369,7 @@
       
     </div>
     <div style="text-align:center; margin-top: 2.5rem;" data-reveal>
-      <a href="/news/" class="btn btn-outline">Tutte le news →</a>
+      <a href="/news/" class="btn btn-primary">Tutte le news →</a>
     </div>
   </div>
 </section>
@@ -349,71 +383,115 @@
       <div class="divider"></div>
     </div>
     <div class="faq-list" data-reveal>
+
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">Come posso iniziare a giocare a Dodgeball a Ravenna?<span class="faq-icon">+</span></button>
-        <div class="faq-answer"><p>Contattaci via email a <a href="mailto:dynamo.grizzly@gmail.com">dynamo.grizzly@gmail.com</a> o su WhatsApp al <a href="tel:+393289472121">328 947 2121</a>. Gli allenamenti adulti si tengono martedì e giovedì alle 21:00 — i primi allenamenti sono gratuiti!</p></div>
+        <button class="faq-question" aria-expanded="false">Devo avere esperienza per giocare?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>No. Gli allenamenti sono aperti anche a chi non ha mai toccato una palla da dodgeball. Le prime sessioni partono dai fondamentali — regole, postura, lancio, schivata. Puoi iniziare da zero senza problemi.</p></div>
       </div>
+
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">Il Dodgeball è adatto ai principianti assoluti?<span class="faq-icon">+</span></button>
-        <div class="faq-answer"><p>Assolutamente sì! Accogliamo atleti di ogni livello. Non serve nessuna esperienza pregressa — i nostri allenatori ti insegneranno tutto dall'inizio.</p></div>
+        <button class="faq-question" aria-expanded="false">Posso venire a provare un allenamento?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Sì, e te lo consigliamo. Il primo allenamento è gratuito e senza impegno — vieni, gioca, conosci il gruppo. È il modo più diretto per capire se il dodgeball fa per te.</p></div>
       </div>
+
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">C'è una squadra femminile di Dodgeball a Ravenna?<span class="faq-icon">+</span></button>
-        <div class="faq-answer"><p>Sì! La nostra squadra femminile compete in <strong>Serie A Femminile</strong> con campionesse europee. Allenamenti il <strong>martedì dalle 17:00 alle 18:30</strong> alla Palestra Mattei di Marina di Ravenna.</p></div>
+        <button class="faq-question" aria-expanded="false">Posso venire anche solo a guardare?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Certo. Se vuoi farti un'idea prima di scendere in campo, passa a vedere un allenamento. Nessun obbligo, nessuna pressione.</p></div>
       </div>
+
       <div class="faq-item">
-        <button class="faq-question" aria-expanded="false">Cos'è il Dodgeball e come si gioca?<span class="faq-icon">+</span></button>
-        <div class="faq-answer"><p>Il Dodgeball è uno sport di squadra in cui due squadre si fronteggiano lanciandosi delle palle morbide. Veloce e adrenalinico! <a href="/dodgeball/">Scopri di più →</a></p></div>
+        <button class="faq-question" aria-expanded="false">Che cos'è il Dodgeball?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>È uno sport di squadra veloce e imprevedibile: due squadre si affrontano cercando di eliminare gli avversari colpendoli con la palla o intercettando i loro lanci. Velocità, riflessi e tattica — ogni partita è diversa. <a href="/dodgeball/">Scopri di più →</a></p></div>
       </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Serve una preparazione atletica particolare?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>No. Il dodgeball è accessibile a tutti i livelli di forma fisica. Con il tempo alleni naturalmente resistenza, coordinazione e riflessi — ma non serve arrivarci già allenato.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Che età bisogna avere?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Abbiamo un settore giovanile (U13, U15, U18) e squadre adulte aperte dai 16 anni in su. I giovani più promettenti vengono invitati ad allenarsi anche con gli adulti. Nessun limite massimo.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Serve attrezzatura speciale?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>No. Ti bastano abbigliamento sportivo e scarpe da palestra. Le palle da gioco le forniamo noi.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Il Dodgeball è pericoloso?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>I palloni usati nel dodgeball sportivo sono morbidi e progettati per essere sicuri. Come in qualsiasi sport di contatto indiretto esiste un minimo rischio fisico, ma gli allenamenti si svolgono in modo controllato. Impari gradualmente a tirare, schivare e prendere in modo corretto.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Dove si svolgono gli allenamenti?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>A Ravenna e Marina di Ravenna, in palestre diverse a seconda della squadra. Tutti gli indirizzi, i giorni e gli orari aggiornati li trovi nella <a href="/unisciti/">pagina Contatti</a>.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Non conosco nessuno nella squadra — è un problema?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Per niente. La maggior parte delle persone è arrivata da sola al primo allenamento. Il dodgeball è uno sport che costruisce gruppo in fretta — dopo poche sessioni conosci tutti.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">E se non sono molto bravo con gli sport?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Non è un problema. Ogni giocatore contribuisce in modo diverso — c'è chi schiva bene, chi lancia preciso, chi prende al volo. Con un po' di allenamento tutti migliorano, e il bello è che lo si vede in fretta.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Ho paura di essere colpito troppo forte…<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>È normale come prima preoccupazione. I palloni da dodgeball sportivo sono morbidi e studiati apposta per questo. Durante gli allenamenti si lavora gradualmente sulla tecnica di lancio — nessuno arriva e tira a tutta forza dal primo giorno.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question" aria-expanded="false">Come posso unirmi alla squadra?<span class="faq-icon">+</span></button>
+        <div class="faq-answer"><p>Il modo più semplice è venire a un allenamento di prova. Se lo sport ti piace e vuoi continuare, lo staff ti spiega come formalizzare l'iscrizione. <a href="/unisciti/">Tutti i dettagli qui →</a></p></div>
+      </div>
+
     </div>
   </div>
 </section>
 
 <!-- CONTATTI CTA -->
-<section id="contatti" class="section-contact">
+<section class="section-contact">
   <div class="container">
-    <div class="section-header" data-reveal>
-      <span class="section-tag">Unisciti a noi</span>
-      <h2>ENTRA NELLA<br>TANA</h2>
-      <div class="divider"></div>
-      <p>Sei di Ravenna e vuoi provare il Dodgeball?<br>Che tu sia principiante o atleta esperto, c'è posto per te.</p>
-    </div>
-    <div class="contact-grid" data-reveal>
-      <div class="contact-item">
-        <span class="contact-icon">📧</span>
-        <span class="contact-label">Email</span>
-        <div class="contact-value"><a href="mailto:dynamo.grizzly@gmail.com">dynamo.grizzly@gmail.com</a></div>
-      </div>
-      <div class="contact-item">
-        <span class="contact-icon">📱</span>
-        <span class="contact-label">Telefono / WhatsApp</span>
-        <div class="contact-value"><a href="tel:+393289472121">328 947 2121</a></div>
-      </div>
-      <div class="contact-item">
-        <span class="contact-icon">📍</span>
-        <span class="contact-label">Dove siamo</span>
-        <div class="contact-value">Ravenna e Marina di Ravenna</div>
-      </div>
-      <div class="contact-item">
-        <span class="contact-icon">📲</span>
-        <span class="contact-label">Seguici</span>
-        <div class="contact-value contact-socials">
-          <a href="https://www.instagram.com/ravenna.grizzlies" target="_blank" rel="noopener">Instagram</a>
-          <span>·</span>
-          <a href="https://www.facebook.com/DynamoGrizzlyASD" target="_blank" rel="noopener">Facebook</a>
-        </div>
-      </div>
-    </div>
     <div class="join-box" data-reveal>
       <div class="join-box-inner">
         <img src="/assets/images/logo.png" alt="Grizzlies" class="join-logo">
         <div class="join-text">
-          <h3>VUOI PROVARE?</h3>
-          <p>Vieni a un allenamento di prova — gratuito, senza impegno.<br>Ti aspettiamo in palestra!</p>
+          <h3>COSA ASPETTI?</h3>
+          <p>Il primo allenamento è gratuito. Vieni a vedere com'è — poi decidi tu.</p>
           <div class="join-actions">
-            <a href="mailto:dynamo.grizzly@gmail.com" class="btn btn-white">Scrivici ✉️</a>
-            <a href="tel:+393289472121" class="btn btn-outline-white">Chiamaci 📱</a>
+            <a href="/unisciti/" class="btn btn-white">Scrivici ✉️</a>
+            <a href="tel:+393289472121" class="btn btn-primary">Chiamaci 📱</a>
           </div>
+        </div>
+      </div>
+      <!-- SOCIAL -->
+      <div class="join-box-social">
+        <p class="join-box-social-label">Vuoi vedere cosa facciamo ad allenamento?</p>
+        <div class="join-box-social-links">
+          <a href="https://www.instagram.com/dodgeball_grizzlies/" target="_blank" rel="noopener" class="join-social-btn" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            <span>Instagram</span>
+          </a>
+          <a href="https://www.tiktok.com/@dodgeball_grizzlies" target="_blank" rel="noopener" class="join-social-btn" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+            <span>TikTok</span>
+          </a>
+          <a href="https://www.youtube.com/@Dodgeball_Grizzlies" target="_blank" rel="noopener" class="join-social-btn" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+            <span>YouTube</span>
+          </a>
+          <a href="https://www.twitch.tv/dodgeball_insight" target="_blank" rel="noopener" class="join-social-btn" aria-label="Twitch">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/></svg>
+            <span>Twitch</span>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61564466342455" target="_blank" rel="noopener" class="join-social-btn" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            <span>Facebook</span>
+          </a>
         </div>
       </div>
     </div>
@@ -434,9 +512,25 @@
         <a href="/unisciti/">Unisciti</a>
       </p>
     </div>
+    <div class="footer-socials">
+      <a href="https://www.instagram.com/dodgeball_grizzlies/" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61564466342455" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@dodgeball_grizzlies" target="_blank" rel="noopener" class="footer-social-btn" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+      </a>
+      <a href="https://www.twitch.tv/dodgeball_insight" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Twitch">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z"/></svg>
+      </a>
+      <a href="https://www.youtube.com/@Dodgeball_Grizzlies" target="_blank" rel="noopener" class="footer-social-btn" aria-label="YouTube">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/></svg>
+      </a>
+    </div>
   </div>
 </footer>
-
 
   <script src="/assets/js/main.js"></script>
 </body>
