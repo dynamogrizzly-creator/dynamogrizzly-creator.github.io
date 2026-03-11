@@ -41,21 +41,3 @@
 
 <!-- PROGRESS BAR (mobile) -->
 <div class="mobile-progress-bar" id="mobileProgressBar"></div>
-
-<!-- PAGE INDICATOR (mobile) -->
-<div class="mobile-page-indicator">
-  {% if page.permalink == '/' or page.permalink == nil %}
-  {% elsif page.permalink == '/squadra/' %}
-    <span class="mpi-sep">‹</span><span class="mpi-label">La Squadra</span>
-  {% elsif page.permalink == '/dodgeball/' %}
-    <span class="mpi-sep">‹</span><span class="mpi-label">Il Dodgeball</span>
-  {% elsif page.permalink == '/dodgeball-ravenna/' %}
-    <span class="mpi-sep">‹</span><span class="mpi-label">Dodgeball a Ravenna</span>
-  {% elsif page.permalink == '/unisciti/' %}
-    <span class="mpi-sep">‹</span><span class="mpi-label">Contatti</span>
-  {% elsif page.permalink == '/news/' %}
-    <span class="mpi-sep">‹</span><span class="mpi-label">News</span>
-  {% else %}
-    <span class="mpi-sep">‹</span><span class="mpi-label">{{ page.title }}</span>
-  {% endif %}
-</div>

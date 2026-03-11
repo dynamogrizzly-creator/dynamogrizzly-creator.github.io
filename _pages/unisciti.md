@@ -162,7 +162,7 @@ permalink: /unisciti/
               </a>
             </div>
           </div>
-          <p class="schedule-row-note">U13, U15 e U18 si allenano tutti insieme. I più promettenti vengono invitati anche agli adulti.</p>
+          <p class="schedule-row-note">U12, U15 e U18 si allenano tutti insieme. I più promettenti vengono invitati anche agli adulti.</p>
         </div>
       </div>
 

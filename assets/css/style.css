@@ -196,7 +196,6 @@ p {
 .nav-logo {
   display: flex;
   align-items: center;
-  margin-top: 6px;
   gap: 0.75rem;
 }
 
@@ -2467,27 +2466,6 @@ footer {
 /* ============================================================
    MOBILE PAGE INDICATOR
    ============================================================ */
-.mobile-page-indicator {
-  display: none;
-  align-items: center;
-  gap: .5rem;
-  padding: .45rem 1.2rem;
-  background: rgba(8,8,16,.95);
-  border-bottom: 1px solid rgba(123,47,190,.2);
-  font-size: .75rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: .1em;
-  color: var(--gray);
-}
-.mpi-home { font-size: .9rem; }
-.mpi-sep {
-  color: rgba(123,47,190,.6);
-  font-size: 1rem;
-  font-weight: 400;
-}
-.mpi-label { color: #c084fc; }
-
 @media (max-width: 768px) {
   .mobile-progress-bar { display: block; }
   .mobile-page-indicator { display: flex; }
