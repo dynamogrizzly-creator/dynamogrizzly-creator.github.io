@@ -5,8 +5,13 @@
     "@type": ["SportsOrganization", "SportsClub"],
     "@id": "{{ site.url }}/#organization",
     "name": "Ravenna Grizzlies – Dynamo Grizzly ASD",
-    "alternateName": ["Ravenna Grizzlies", "Dynamo Grizzly ASD", "Grizzlies Ravenna"],
+    "alternateName": [
+      "Ravenna Grizzlies",
+      "Dynamo Grizzly ASD",
+      "Grizzlies Ravenna"
+    ],
     "url": "{{ site.url }}/",
+    "mainEntityOfPage": "{{ site.url }}/",
     "logo": {
       "@type": "ImageObject",
       "url": "{{ site.url }}/assets/images/logo.png",
@@ -19,11 +24,29 @@
       "width": 1920,
       "height": 1080
     },
-    "description": "{{ site.description }}",
+    "description": "{{ site.description | escape }}",
     "foundingDate": "2024",
     "sport": "Dodgeball",
+
+    "knowsAbout": [
+      "Dodgeball",
+      "Allenamento Dodgeball",
+      "Sport di squadra",
+      "Dodgeball competitivo"
+    ],
+
     "email": "{{ site.author.email }}",
     "telephone": "+393289472121",
+
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer support",
+      "email": "{{ site.author.email }}",
+      "telephone": "+393289472121",
+      "areaServed": "IT",
+      "availableLanguage": ["Italian"]
+    },
+
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "Via G. Marconi 11",
@@ -32,11 +55,74 @@
       "postalCode": "48121",
       "addressCountry": "IT"
     },
+
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Ravenna"
+      },
+      {
+        "@type": "City",
+        "name": "Cesena"
+      }
+    ],
+
+    "foundingLocation": {
+      "@type": "Place",
+      "name": "Ravenna",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Ravenna",
+        "addressRegion": "Emilia-Romagna",
+        "addressCountry": "IT"
+      }
+    },
+
+    "memberOf": {
+      "@type": "SportsOrganization",
+      "name": "FIGeST",
+      "memberOf": [
+        {
+          "@type": "SportsOrganization",
+          "name": "World Dodgeball Federation"
+        },
+        {
+          "@type": "SportsOrganization",
+          "name": "European Dodgeball Federation"
+        }
+      ]
+    },
+
+  "location": {
+    "@type": "Place",
+    "name": "Palestre di allenamento a Ravenna",
     "geo": {
       "@type": "GeoCoordinates",
       "latitude": 44.4184,
       "longitude": 12.2035
     },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ravenna",
+      "addressRegion": "Emilia-Romagna",
+      "addressCountry": "IT"
+    }
+  },
+
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Attività sportive",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Allenamenti di Dodgeball"
+          }
+        }
+      ]
+    },
+
     "sameAs": [
       "{{ site.social.instagram }}",
       "{{ site.social.facebook }}",
@@ -51,7 +137,7 @@
     "@id": "{{ site.url }}/#website",
     "url": "{{ site.url }}/",
     "name": "{{ site.title }}",
-    "description": "{{ site.description }}",
+    "description": "{{ site.description | escape }}",
     "inLanguage": "it-IT",
     "publisher": {
       "@id": "{{ site.url }}/#organization"

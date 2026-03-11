@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Il Dodgeball a Ravenna | Ravenna Grizzlies"
+title: "Dodgeball a Ravenna – Storia e Squadra Ravenna Grizzlies"
 description: "La storia del dodgeball a Ravenna: dalle prime partite tra appassionati ai Ravenna Grizzlies, punto di riferimento locale per chi vuole scoprire questo sport."
 keywords: "dodgeball Ravenna, storia dodgeball Ravenna, sport Ravenna, Ravenna Grizzlies"
 og_image: "/assets/images/dodgeball-ravenna-grizzlies-hero.webp"
