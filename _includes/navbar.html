@@ -44,7 +44,8 @@
 
 <!-- PAGE INDICATOR (mobile) -->
 <div class="mobile-page-indicator">
-  {% if page.permalink == '/squadra/' %}
+  {% if page.permalink == '/' or page.permalink == nil %}
+  {% elsif page.permalink == '/squadra/' %}
     <span class="mpi-sep">‹</span><span class="mpi-label">La Squadra</span>
   {% elsif page.permalink == '/dodgeball/' %}
     <span class="mpi-sep">‹</span><span class="mpi-label">Il Dodgeball</span>
