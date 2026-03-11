@@ -257,7 +257,7 @@ permalink: /unisciti/
           <span class="faq-icon">+</span>
         </button>
         <div class="faq-answer">
-          <p>Il settore giovanile è un unico gruppo — U13, U15 e U18 si allenano tutti insieme. Gli atleti più promettenti vengono invitati anche agli allenamenti adulti. Nessun limite massimo di età.</p>
+          <p>Il settore giovanile è un unico gruppo — U12, U15 e U18 si allenano tutti insieme. Gli atleti più promettenti vengono invitati anche agli allenamenti adulti. Nessun limite massimo di età.</p>
         </div>
       </div>
       <div class="faq-item">
