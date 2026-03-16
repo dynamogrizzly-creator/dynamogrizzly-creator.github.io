@@ -28,6 +28,9 @@ google_site_verification: "s3NSOQPORbTNdWezPvpsnldC3tiyUoQpa-GV9bZSYfg"
 # Immagine default OG
 og_image: "/assets/images/dodgeball-ravenna-grizzlies-hero.webp"
 
+sass:
+  style: compressed
+
 # Jekyll
 markdown:    kramdown
 permalink:   "/:categories/:title/"
@@ -36,7 +39,6 @@ permalink:   "/:categories/:title/"
 # Plugin supportati da GitHub Pages
 plugins:
   - jekyll-sitemap
-  - jekyll-seo-tag
 
 # Escludi dalla build
 exclude:

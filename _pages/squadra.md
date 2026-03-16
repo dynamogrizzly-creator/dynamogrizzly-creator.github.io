@@ -1,5 +1,6 @@
 ---
 layout: default
+hero_image: "/assets/images/gallery/dodgeball-ravenna-grizzlies-team-huddle.webp"
 title: "La Squadra | Ravenna Grizzlies Dodgeball"
 description: "Scopri i Ravenna Grizzlies – Dynamo Grizzly ASD: storia, risultati, atleti nazionali e campioni europei. La squadra di Dodgeball di Ravenna."
 keywords: "Ravenna Grizzlies squadra, Dynamo Grizzly ASD, atleti dodgeball Ravenna, risultati dodgeball Ravenna"

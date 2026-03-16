@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="it" prefix="og: https://ogp.me/ns#">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- ═══ SEO PRIMARIO ═══ -->
   <title>News | Ravenna Grizzlies</title>
-  <meta name="description" content="Tutte le ultime notizie dai Ravenna Grizzlies – risultati, eventi, aggiornamenti dal mondo del dodgeball a Ravenna.">
+  <meta name="description"
+    content="Tutte le ultime notizie dai Ravenna Grizzlies – risultati, eventi, aggiornamenti dal mondo del dodgeball a Ravenna.">
+  
   <meta name="keywords" content="news dodgeball ravenna, risultati ravenna grizzlies, eventi dodgeball ravenna">
-  <meta name="author"  content="Dynamo Grizzly ASD">
+  <meta name="author" content="Dynamo Grizzly ASD">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#7B2FBE">
   <link rel="canonical" href="http://localhost:4000/news/">
@@ -17,28 +20,37 @@
   <meta name="google-site-verification" content="s3NSOQPORbTNdWezPvpsnldC3tiyUoQpa-GV9bZSYfg" />
 
   <!-- ═══ GOOGLE ANALYTICS ═══ -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-G9768Q9BNT"></script>
   <script>
+    window.addEventListener('load', function () {
+      var s = document.createElement('script');
+      s.src = 'https://www.googletagmanager.com/gtag/js?id=G-G9768Q9BNT';
+      s.async = true;
+      document.head.appendChild(s);
+    });
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-G9768Q9BNT');
   </script>
 
   <!-- ═══ OPEN GRAPH ═══ -->
-  <meta property="og:type"        content="website">
-  <meta property="og:url"         content="http://localhost:4000/news/">
-  <meta property="og:title"       content="News">
-  <meta property="og:description" content="Tutte le ultime notizie dai Ravenna Grizzlies – risultati, eventi, aggiornamenti dal mondo del dodgeball a Ravenna.">
-  <meta property="og:image"       content="http://localhost:4000/assets/images/dodgeball-ravenna-grizzlies-hero.webp">
-  <meta property="og:locale"      content="it_IT">
-  <meta property="og:site_name"   content="Ravenna Grizzlies – Dodgeball Ravenna">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://localhost:4000/news/">
+  <meta property="og:title" content="News">
+  <meta property="og:description"
+    content="Tutte le ultime notizie dai Ravenna Grizzlies – risultati, eventi, aggiornamenti dal mondo del dodgeball a Ravenna.">
+  <meta property="og:image"
+    content="http://localhost:4000/assets/images/dodgeball-ravenna-grizzlies-hero.webp">
+  <meta property="og:locale" content="it_IT">
+  <meta property="og:site_name" content="Ravenna Grizzlies – Dodgeball Ravenna">
 
   <!-- ═══ TWITTER CARD ═══ -->
-  <meta name="twitter:card"        content="summary_large_image">
-  <meta name="twitter:title"       content="News">
-  <meta name="twitter:description" content="Tutte le ultime notizie dai Ravenna Grizzlies – risultati, eventi, aggiornamenti dal mondo del dodgeball a Ravenna.">
-  <meta name="twitter:image"       content="http://localhost:4000/assets/images/dodgeball-ravenna-grizzlies-hero.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="News">
+  <meta name="twitter:description"
+    content="Tutte le ultime notizie dai Ravenna Grizzlies – risultati, eventi, aggiornamenti dal mondo del dodgeball a Ravenna.">
+  <meta name="twitter:image"
+    content="http://localhost:4000/assets/images/dodgeball-ravenna-grizzlies-hero.webp">
 
   <!-- ═══ SCHEMA MARKUP JSON-LD ═══ -->
   <script type="application/ld+json">
@@ -190,15 +202,16 @@
 </script>
 
   <!-- ═══ FAVICON ═══ -->
-<link rel="icon" type="image/png" href="/assets/images/favicon.png">
-<link rel="apple-touch-icon" href="/assets/images/logoOriginal.png">
+  <link rel="icon" type="image/png" href="/assets/images/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/images/logoOriginal.png">
 
+  
+
+  
   <!-- ═══ FONT & CSS ═══ -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:ital,wght@0,400;0,600;0,700;0,900;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
+
 <body>
 
   <nav id="navbar">
@@ -206,7 +219,7 @@
     <a href="/" class="nav-logo">
       <picture>
         <source srcset="/assets/images/logo.webp" type="image/webp">
-        <img src="/assets/images/logo.png" alt="Ravenna Grizzlies Logo">
+        <img src="/assets/images/logo.png" alt="Ravenna Grizzlies Logo" width="46" height="46">
       </picture>
       <div class="nav-logo-text">
         Ravenna Grizzlies
@@ -292,7 +305,7 @@
   <div class="footer-inner">
     <picture>
       <source srcset="/assets/images/logo.webp" type="image/webp">
-      <img src="/assets/images/logo.png" alt="Ravenna Grizzlies" class="footer-logo">
+      <img src="/assets/images/logo.png" alt="Ravenna Grizzlies" class="footer-logo" width="43" height="48">
     </picture>
     <div class="footer-text">
       <p><strong>Ravenna Grizzlies</strong> · Dynamo Grizzly ASD · Dodgeball a Ravenna · Est. 2024</p>
@@ -347,4 +360,5 @@
 
   <script src="/assets/js/main.js"></script>
 </body>
+
 </html>

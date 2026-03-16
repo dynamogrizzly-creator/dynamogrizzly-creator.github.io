@@ -1,8 +1,56 @@
+---
+---
 /* ============================================
    RAVENNA GRIZZLIES — style.css
    Dynamo Grizzly ASD | dodgeball Ravenna
    ============================================ */
+@font-face {
+  font-display: swap;
+  font-family: 'Bebas Neue';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/bebas-neue-v16-latin-regular.woff2') format('woff2');
+}
 
+@font-face {
+  font-display: swap;
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/assets/fonts/barlow-v13-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Barlow';
+  font-style: italic;
+  font-weight: 400;
+  src: url('/assets/fonts/barlow-v13-latin-italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/assets/fonts/barlow-v13-latin-600.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/assets/fonts/barlow-v13-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Barlow';
+  font-style: normal;
+  font-weight: 900;
+  src: url('/assets/fonts/barlow-v13-latin-900.woff2') format('woff2');
+}
 /* --- VARIABLES --- */
 :root {
   --purple-dark:   #1E0A3C;
@@ -436,7 +484,6 @@ p {
 }
 
 .hero-logo {
-  width: min(260px, 50vw);
   margin: 0 auto 2rem;
   filter: drop-shadow(0 0 50px rgba(123,47,190,0.9)) drop-shadow(0 0 100px rgba(74,111,227,0.4));
   animation: logoFloat 5s ease-in-out infinite;
@@ -902,7 +949,6 @@ p {
 }
 
 .join-logo {
-  width: 120px;
   filter: drop-shadow(0 0 20px rgba(255,255,255,0.3));
 }
 
