@@ -1,9 +1,6 @@
 ---
 ---
-/* ============================================
-   RAVENNA GRIZZLIES — style.css
-   Dynamo Grizzly ASD | dodgeball Ravenna
-   ============================================ */
+
 @font-face {
   font-display: swap;
   font-family: 'Bebas Neue';
@@ -51,6 +48,12 @@
   font-weight: 900;
   src: url('/assets/fonts/barlow-v13-latin-900.woff2') format('woff2');
 }
+
+/* ============================================
+   RAVENNA GRIZZLIES — style.css
+   Dynamo Grizzly ASD | dodgeball Ravenna
+   ============================================ */
+   
 /* --- VARIABLES --- */
 :root {
   --purple-dark:   #1E0A3C;
