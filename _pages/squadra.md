@@ -56,7 +56,10 @@ permalink: /squadra/
         </div>
       </div>
       <div class="about-visual">
-        <img src="{{ site.baseurl }}/assets/images/logo.png" alt="Ravenna Grizzlies Dodgeball" class="about-logo">
+        <picture>
+          <source srcset="{{ site.baseurl }}/assets/images/logo.webp" type="image/webp">
+          <img src="{{ site.baseurl }}/assets/images/logo.png" alt="Ravenna Grizzlies Dodgeball" class="about-logo">
+        </picture>
         <div class="about-glow"></div>
       </div>
     </div>
