@@ -33,6 +33,12 @@
       </li>
       <li><a href="{{ site.baseurl }}/news/" {% if page.permalink=='/news/' %}class="nav-active" {% endif %}>News</a>
       </li>
+      <li>
+      <a href="{{ site.baseurl }}/album/" 
+          {% if page.permalink=='/album/' %}class="nav-active"{% endif %}>
+          Album
+        </a>
+      </li>
       <li><a href="{{ site.baseurl }}/#faq">FAQ</a></li>
       <li><a href="{{ site.baseurl }}/unisciti/"
           class="nav-cta {% if page.permalink == '/unisciti/' %}nav-cta--active{% endif %}">Contatti ⚡</a></li>
@@ -49,6 +55,10 @@
     <a href="{{ site.baseurl }}/dodgeball-ravenna/" {% if page.permalink=='/dodgeball-ravenna/' %}class="nav-active" {%
       endif %}>Dodgeball a Ravenna</a>
     <a href="{{ site.baseurl }}/news/" {% if page.permalink=='/news/' %}class="nav-active" {% endif %}>News</a>
+    <a href="{{ site.baseurl }}/album/" 
+   {% if page.permalink=='/album/' %}class="nav-active"{% endif %}>
+   Album
+</a>
     <a href="{{ site.baseurl }}/unisciti/">Contatti ⚡</a>
   </div>
 </nav>

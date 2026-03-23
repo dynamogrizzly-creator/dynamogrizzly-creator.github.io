@@ -34,7 +34,6 @@ sass:
 # Jekyll
 markdown:    kramdown
 permalink:   "/:categories/:title/"
-# timezone: Europe/Rome  # rimossa per compatibilità Windows
 
 # Plugin supportati da GitHub Pages
 plugins:

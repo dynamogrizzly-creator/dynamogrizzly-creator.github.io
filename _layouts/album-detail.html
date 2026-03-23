@@ -1,0 +1,470 @@
+---
+layout: default
+---
+
+<style>
+/* ============================================================
+   ALBUM DETAIL — hero + griglia + lightbox
+   ============================================================ */
+
+/* HERO */
+.album-detail-hero {
+  position: relative;
+  height: 55vh;
+  min-height: 340px;
+  max-height: 560px;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+}
+.album-detail-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  filter: saturate(.7);
+  transform: scale(1.04);
+}
+.album-detail-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(8,8,16,.2) 0%,
+    rgba(8,8,16,.5) 40%,
+    rgba(8,8,16,.92) 100%
+  );
+}
+.album-detail-hero__content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  padding: 0 0 3rem;
+}
+.album-detail-hero__back {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.5);
+  text-decoration: none;
+  transition: color .2s;
+  margin-bottom: 1rem;
+  display: block;
+}
+.album-detail-hero__back:hover { color: var(--purple-light); }
+.album-detail-hero__back svg { width: 13px; height: 13px; vertical-align: middle; margin-right: .2rem; }
+.album-detail-hero__cat {
+  display: inline-block;
+  background: rgba(123,47,190,.25);
+  border: 1px solid rgba(123,47,190,.5);
+  color: var(--purple-light);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: .3rem .9rem;
+  border-radius: 100px;
+  margin-bottom: .8rem;
+}
+.album-detail-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 7vw, 5.5rem);
+  letter-spacing: 4px;
+  line-height: .95;
+  color: var(--white);
+  margin: 0 0 .8rem;
+}
+.album-detail-hero__meta {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.album-detail-hero__date {
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+.album-detail-hero__count {
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--purple-mid);
+}
+
+/* GRIGLIA FOTO */
+.section-album-photos {
+  padding: 4rem 0 7rem;
+}
+.album-photos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: .75rem;
+}
+.album-photo-item {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border-radius: 8px;
+  cursor: pointer;
+  background: rgba(123,47,190,.08);
+}
+.album-photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s cubic-bezier(.4,0,.2,1);
+}
+.album-photo-item:hover img {
+  transform: scale(1.07);
+}
+.album-photo-item__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(8,8,16,.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity .3s;
+}
+.album-photo-item:hover .album-photo-item__overlay { opacity: 1; }
+.album-photo-item__overlay svg {
+  width: 28px; height: 28px;
+  color: #fff;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,.5));
+}
+
+/* LIGHTBOX */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(4,4,10,.96);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease;
+}
+.lightbox.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Immagine */
+.lightbox__img-wrap {
+  position: relative;
+  max-width: 90vw;
+  max-height: 88vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lightbox__img {
+  max-width: 90vw;
+  max-height: 82vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 6px;
+  box-shadow: 0 24px 80px rgba(0,0,0,.7);
+  transition: opacity .25s ease;
+  display: block;
+}
+.lightbox__img.loading { opacity: 0; }
+
+/* Spinner caricamento */
+.lightbox__spinner {
+  position: absolute;
+  width: 36px; height: 36px;
+  border: 3px solid rgba(123,47,190,.25);
+  border-top-color: var(--purple);
+  border-radius: 50%;
+  animation: spin .7s linear infinite;
+  display: none;
+}
+.lightbox__spinner.visible { display: block; }
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Alt / caption */
+.lightbox__caption {
+  position: absolute;
+  bottom: -2rem;
+  left: 0; right: 0;
+  text-align: center;
+  font-size: .78rem;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+/* Bottone chiudi */
+.lightbox__close {
+  position: fixed;
+  top: 1.5rem; right: 1.5rem;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.15);
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .2s, transform .2s;
+  z-index: 2;
+  line-height: 1;
+}
+.lightbox__close:hover {
+  background: rgba(123,47,190,.4);
+  transform: rotate(90deg);
+}
+
+/* Frecce prev/next */
+.lightbox__prev,
+.lightbox__next {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.07);
+  border: 1px solid rgba(255,255,255,.12);
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background .2s, transform .2s;
+  z-index: 2;
+}
+.lightbox__prev { left: 1.2rem; }
+.lightbox__next { right: 1.2rem; }
+.lightbox__prev:hover { background: rgba(123,47,190,.4); transform: translateY(-50%) translateX(-3px); }
+.lightbox__next:hover { background: rgba(123,47,190,.4); transform: translateY(-50%) translateX(3px); }
+.lightbox__prev svg,
+.lightbox__next svg { width: 22px; height: 22px; }
+
+/* Contatore */
+.lightbox__counter {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: rgba(255,255,255,.35);
+  z-index: 2;
+}
+
+/* Empty state */
+.album-photos-empty {
+  text-align: center;
+  padding: 6rem 2rem;
+  color: var(--text-muted);
+}
+.album-photos-empty-icon { font-size: 3.5rem; display: block; margin-bottom: 1rem; opacity: .3; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .album-photos-grid { grid-template-columns: repeat(3, 1fr); gap: .5rem; }
+  .lightbox__prev { left: .4rem; }
+  .lightbox__next { right: .4rem; }
+  .lightbox__prev, .lightbox__next { width: 42px; height: 42px; }
+}
+@media (max-width: 480px) {
+  .album-photos-grid { grid-template-columns: repeat(2, 1fr); }
+  .album-detail-hero { height: 45vh; }
+}
+</style>
+
+{% assign cover_thumb = page.cover | replace: '/upload/', '/upload/w_1400,q_auto/' %}
+
+<!-- HERO -->
+<header class="album-detail-hero">
+  {% if page.cover %}
+  <div class="album-detail-hero__bg" style="background-image: url('{{ cover_thumb }}')"></div>
+  {% endif %}
+  <div class="album-detail-hero__overlay"></div>
+  <div class="album-detail-hero__content">
+    <div class="container">
+      <a href="{{ site.baseurl }}/album/{{ page.anno }}/" class="album-detail-hero__back">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Album {{ page.anno }}
+      </a>
+      {% if page.categoria %}
+      <span class="album-detail-hero__cat">{{ page.categoria }}</span>
+      {% endif %}
+      <h1 class="album-detail-hero__title">{{ page.title }}</h1>
+      <div class="album-detail-hero__meta">
+        <span class="album-detail-hero__date">{{ page.data | date: "%d %B %Y" }}</span>
+        {% if page.foto %}
+        <span class="album-detail-hero__count">📸 {{ page.foto.size }} foto</span>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- GRIGLIA FOTO -->
+<section class="section-album-photos">
+  <div class="container">
+
+    {% if page.foto and page.foto.size > 0 %}
+    <div class="album-photos-grid" id="photoGrid">
+      {% for foto in page.foto %}
+      {% assign thumb = foto.url | replace: '/upload/', '/upload/w_600,q_auto/' %}
+      {% assign full  = foto.url | replace: '/upload/', '/upload/w_1920,q_auto/' %}
+      <div class="album-photo-item"
+           data-index="{{ forloop.index0 }}"
+           data-full="{{ full }}"
+           data-alt="{{ foto.alt | default: page.title }}">
+        <img src="{{ thumb }}"
+             alt="{{ foto.alt | default: page.title }}"
+             loading="{% if forloop.index <= 8 %}eager{% else %}lazy{% endif %}">
+        <div class="album-photo-item__overlay">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+          </svg>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    {% else %}
+    <div class="album-photos-empty">
+      <span class="album-photos-empty-icon">📷</span>
+      <p>Le foto di questo album arrivano presto.</p>
+    </div>
+    {% endif %}
+
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ingrandita">
+  <button class="lightbox__close" id="lbClose" aria-label="Chiudi">✕</button>
+  <button class="lightbox__prev" id="lbPrev" aria-label="Foto precedente">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M15 18l-6-6 6-6"/>
+    </svg>
+  </button>
+  <div class="lightbox__img-wrap">
+    <div class="lightbox__spinner" id="lbSpinner"></div>
+    <img class="lightbox__img" id="lbImg" src="" alt="">
+    <span class="lightbox__caption" id="lbCaption"></span>
+  </div>
+  <button class="lightbox__next" id="lbNext" aria-label="Foto successiva">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 18l6-6-6-6"/>
+    </svg>
+  </button>
+  <span class="lightbox__counter" id="lbCounter"></span>
+</div>
+
+<script>
+(function () {
+  var items = Array.from(document.querySelectorAll('.album-photo-item'));
+  if (!items.length) return;
+
+  var lb       = document.getElementById('lightbox');
+  var lbImg    = document.getElementById('lbImg');
+  var lbCaption= document.getElementById('lbCaption');
+  var lbCounter= document.getElementById('lbCounter');
+  var lbSpinner= document.getElementById('lbSpinner');
+  var lbClose  = document.getElementById('lbClose');
+  var lbPrev   = document.getElementById('lbPrev');
+  var lbNext   = document.getElementById('lbNext');
+  var current  = 0;
+  var total    = items.length;
+
+  function loadPhoto(index) {
+    var item = items[index];
+    var url  = item.dataset.full;
+    var alt  = item.dataset.alt;
+
+    lbImg.classList.add('loading');
+    lbSpinner.classList.add('visible');
+    lbCaption.textContent = alt;
+    lbCounter.textContent = (index + 1) + ' / ' + total;
+
+    var tmp = new Image();
+    tmp.onload = function () {
+      lbImg.src = url;
+      lbImg.alt = alt;
+      lbImg.classList.remove('loading');
+      lbSpinner.classList.remove('visible');
+    };
+    tmp.src = url;
+    current = index;
+  }
+
+  function open(index) {
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    loadPhoto(index);
+  }
+
+  function close() {
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+    lbImg.src = '';
+  }
+
+  function prev() { loadPhoto((current - 1 + total) % total); }
+  function next() { loadPhoto((current + 1) % total); }
+
+  // Click su foto
+  items.forEach(function (item) {
+    item.addEventListener('click', function () {
+      open(parseInt(item.dataset.index));
+    });
+  });
+
+  // Controlli lightbox
+  lbClose.addEventListener('click', close);
+  lbPrev.addEventListener('click', prev);
+  lbNext.addEventListener('click', next);
+
+  // Click fuori dall'immagine → chiudi
+  lb.addEventListener('click', function (e) {
+    if (e.target === lb) close();
+  });
+
+  // Tastiera
+  document.addEventListener('keydown', function (e) {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape')     close();
+    if (e.key === 'ArrowLeft')  prev();
+    if (e.key === 'ArrowRight') next();
+  });
+
+  // Swipe touch
+  var touchStartX = 0;
+  lb.addEventListener('touchstart', function (e) {
+    touchStartX = e.changedTouches[0].screenX;
+  }, { passive: true });
+  lb.addEventListener('touchend', function (e) {
+    var diff = touchStartX - e.changedTouches[0].screenX;
+    if (Math.abs(diff) > 50) { diff > 0 ? next() : prev(); }
+  }, { passive: true });
+})();
+</script>

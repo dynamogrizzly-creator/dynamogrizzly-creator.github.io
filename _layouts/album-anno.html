@@ -1,0 +1,279 @@
+---
+layout: default
+---
+
+<style>
+/* ============================================================
+   PAGINA ANNO — hero + griglia eventi
+   ============================================================ */
+
+.album-year-page-hero {
+  padding: 8rem 0 5rem;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(123,47,190,.2);
+}
+.album-year-page-hero__photo {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: .1;
+  z-index: 0;
+  filter: saturate(.5);
+}
+.album-year-page-hero .container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: flex-end;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.album-year-page-hero__year {
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 16vw, 14rem);
+  line-height: .88;
+  letter-spacing: 6px;
+  color: rgba(255,255,255,.06);
+  user-select: none;
+  flex-shrink: 0;
+}
+.album-year-page-hero__info {
+  padding-bottom: 1rem;
+}
+.album-year-page-hero__info h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  letter-spacing: 3px;
+  color: var(--white);
+  margin: .4rem 0 .8rem;
+  line-height: 1;
+}
+.album-year-page-hero__info h1 span { color: var(--purple-light); }
+.album-year-page-hero__back {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color .2s;
+  margin-bottom: 1rem;
+}
+.album-year-page-hero__back:hover { color: var(--purple-light); }
+.album-year-page-hero__back svg { width: 14px; height: 14px; }
+
+/* Griglia eventi */
+.section-album-events {
+  padding: 4rem 0 7rem;
+}
+.album-events-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Card evento */
+.album-event-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: var(--dark-card);
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform .35s cubic-bezier(.4,0,.2,1), border-color .25s, box-shadow .35s;
+}
+.album-event-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(123,47,190,.45);
+  box-shadow: 0 16px 48px rgba(0,0,0,.5);
+}
+
+/* Cover QUADRATA 1:1 */
+.album-event-card__cover {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: rgba(123,47,190,.08);
+}
+.album-event-card__cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .55s cubic-bezier(.4,0,.2,1);
+}
+.album-event-card:hover .album-event-card__cover img {
+  transform: scale(1.08);
+}
+.album-event-card__cover--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  background: linear-gradient(135deg, rgba(123,47,190,.12), rgba(74,111,227,.08));
+}
+
+/* Badge categoria */
+.album-event-card__cat {
+  position: absolute;
+  top: .7rem; left: .7rem;
+  background: rgba(8,8,16,.78);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(123,47,190,.35);
+  color: var(--purple-light);
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: .25rem .7rem;
+  border-radius: 100px;
+  z-index: 1;
+}
+
+/* Overlay hover */
+.album-event-card__cover-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(8,8,16,.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity .3s;
+}
+.album-event-card:hover .album-event-card__cover-overlay { opacity: 1; }
+.album-event-card__cover-overlay span {
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  background: rgba(123,47,190,.85);
+  backdrop-filter: blur(8px);
+  padding: .5rem 1.1rem;
+  border-radius: 100px;
+}
+
+/* Body card */
+.album-event-card__body {
+  padding: 1rem 1.1rem 1.2rem;
+}
+.album-event-card__date {
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--purple-mid);
+  display: block;
+  margin-bottom: .25rem;
+}
+.album-event-card__title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: var(--white);
+  line-height: 1.15;
+  margin: 0 0 .35rem;
+}
+.album-event-card__photos {
+  font-size: .75rem;
+  color: var(--text-muted);
+}
+
+/* Empty state anno */
+.album-events-empty {
+  grid-column: 1/-1;
+  text-align: center;
+  padding: 5rem 2rem;
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  .album-events-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+  .album-year-page-hero { padding: 7rem 0 3.5rem; }
+  .album-year-page-hero__year { font-size: clamp(4rem, 22vw, 8rem); }
+}
+@media (max-width: 360px) {
+  .album-events-grid { grid-template-columns: 1fr; }
+}
+</style>
+
+{% assign all_albums = site.pages | where: "layout", "album-detail" %}
+{% assign albums_anno = all_albums | where: "anno", page.anno | sort: "data" | reverse %}
+{% assign primo = albums_anno | first %}
+
+<!-- HERO ANNO -->
+<header class="album-year-page-hero">
+  {% if primo.cover %}
+  <div class="album-year-page-hero__photo" style="background-image: url('{{ primo.cover }}')"></div>
+  {% endif %}
+  <div class="container">
+    <span class="album-year-page-hero__year" aria-hidden="true">{{ page.anno }}</span>
+    <div class="album-year-page-hero__info">
+      <a href="{{ site.baseurl }}/album/" class="album-year-page-hero__back">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+             stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Tutti gli anni
+      </a>
+      <h1>ALBUM <span>{{ page.anno }}</span></h1>
+      <span class="section-tag">
+        {{ albums_anno.size }} {% if albums_anno.size == 1 %}evento{% else %}eventi{% endif %}
+      </span>
+    </div>
+  </div>
+</header>
+
+<!-- GRIGLIA EVENTI -->
+<section class="section-album-events">
+  <div class="container">
+    <div class="album-events-grid">
+
+      {% if albums_anno.size == 0 %}
+      <div class="album-events-empty">
+        <p>Nessun album per questo anno.</p>
+      </div>
+
+      {% else %}
+      {% for album in albums_anno %}
+
+      <a href="{{ site.baseurl }}{{ album.url }}" class="album-event-card">
+
+        <div class="album-event-card__cover{% unless album.cover %} album-event-card__cover--placeholder{% endunless %}">
+          {% if album.cover %}
+            <img src="{{ album.cover }}" alt="{{ album.title }}" loading="lazy">
+          {% else %}
+            <span>📸</span>
+          {% endif %}
+          {% if album.categoria %}
+          <span class="album-event-card__cat">{{ album.categoria }}</span>
+          {% endif %}
+          <div class="album-event-card__cover-overlay">
+            <span>Guarda →</span>
+          </div>
+        </div>
+
+        <div class="album-event-card__body">
+          <span class="album-event-card__date">{{ album.data | date: "%d %B %Y" }}</span>
+          <h2 class="album-event-card__title">{{ album.title }}</h2>
+          {% if album.foto_count %}
+          <span class="album-event-card__photos">📸 {{ album.foto_count }} foto</span>
+          {% endif %}
+        </div>
+
+      </a>
+
+      {% endfor %}
+      {% endif %}
+
+    </div>
+  </div>
+</section>

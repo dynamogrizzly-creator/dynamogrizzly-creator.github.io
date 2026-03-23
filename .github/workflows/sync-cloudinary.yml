@@ -1,0 +1,39 @@
+name: Sync Cloudinary Photos
+
+on:
+  workflow_dispatch:  # eseguibile manualmente dal pannello Actions
+  push:
+    paths:
+      - '_pages/album-*.md'  # si attiva quando aggiungi/modifichi un album
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests cloudinary pyyaml
+
+      - name: Sync photos from Cloudinary
+        env:
+          CLOUDINARY_CLOUD_NAME: doyffhy7d
+          CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
+          CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
+        run: python .github/scripts/sync_cloudinary.py
+
+      - name: Commit updated albums
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
+          git add _pages/album-*.md
+          git diff --staged --quiet || git commit -m "chore: sync foto Cloudinary"
+          git push
