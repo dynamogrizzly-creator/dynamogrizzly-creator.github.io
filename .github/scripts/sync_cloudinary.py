@@ -1,12 +1,8 @@
 #!/usr/bin/env python3
-"""
-Sync Cloudinary photos into Jekyll album .md files.
-"""
-
 import os
-import re
 import glob
 import requests
+import yaml
 
 CLOUD_NAME = os.environ["CLOUDINARY_CLOUD_NAME"]
 API_KEY    = os.environ["CLOUDINARY_API_KEY"]
@@ -26,36 +22,27 @@ def cloudinary_search(folder: str) -> list:
     return resp.json().get("resources", [])
 
 
-def parse_front_matter(content: str):
-    match = re.match(r"^---\n(.*?)\n---\s*\n?(.*)", content, re.DOTALL)
-    if not match:
-        return None, content
-    return match.group(1), match.group(2)
-
-
 def update_album_file(filepath: str) -> bool:
     with open(filepath, "r", encoding="utf-8") as f:
         content = f.read()
 
-    fm, body = parse_front_matter(content)
-    if fm is None:
-        print(f"  ⚠️  {filepath}: nessun front matter, skip.")
+    # Separa front matter e body
+    parts = content.split("---", 2)
+    if len(parts) < 3:
+        print(f"  ⚠️  {filepath}: front matter non trovato, skip.")
         return False
 
-    # Cerca cloudinary_folder
-    folder_match = re.search(r'^cloudinary_folder:\s*["\']?(.+?)["\']?\s*$', fm, re.MULTILINE)
-    if not folder_match:
+    fm = yaml.safe_load(parts[1])
+    body = parts[2]
+
+    if not fm or "cloudinary_folder" not in fm:
         print(f"  ⏭️  {filepath}: nessun cloudinary_folder, skip.")
         return False
 
-    folder = folder_match.group(1).strip()
+    folder = fm["cloudinary_folder"]
+    title  = fm.get("title", "Foto")
     print(f"  📁 {filepath}: sincronizo cartella '{folder}'...")
 
-    # Titolo per alt text
-    title_match = re.search(r'^title:\s*["\']?(.+?)["\']?\s*$', fm, re.MULTILINE)
-    title = title_match.group(1).strip() if title_match else "Foto"
-
-    # Fetch foto
     try:
         resources = cloudinary_search(folder)
     except requests.HTTPError as e:
@@ -64,28 +51,37 @@ def update_album_file(filepath: str) -> bool:
 
     print(f"  ✅ Trovate {len(resources)} foto.")
 
-    # Rimuovi blocchi foto: e foto_count: esistenti
-    fm_clean = re.sub(r'^foto_count:.*$\n?', '', fm, flags=re.MULTILINE)
-    fm_clean = re.sub(r'^foto:.*?(?=^\w|\Z)', '', fm_clean, flags=re.MULTILINE | re.DOTALL)
-    fm_clean = fm_clean.rstrip()
+    # Aggiorna il front matter
+    fm["foto_count"] = len(resources)
+    fm["foto"] = [{"url": r["secure_url"], "alt": title} for r in resources]
 
-    # Costruisci nuovo blocco foto
-    foto_lines = [f"foto_count: {len(resources)}", "foto:"]
-    for r in resources:
-        foto_lines.append(f'  - url: "{r["secure_url"]}"')
-        foto_lines.append(f'    alt: "{title}"')
+    # Riscrivi il file manualmente (non con yaml.dump per preservare la formattazione)
+    lines = ["---"]
+    # Campi semplici nell'ordine originale
+    simple_keys = ["layout", "title", "permalink", "cloudinary_folder", 
+                   "data", "anno", "categoria", "descrizione", "cover", "og_image"]
+    for key in simple_keys:
+        if key in fm:
+            val = fm[key]
+            if isinstance(val, str):
+                lines.append(f'{key}: "{val}"')
+            else:
+                lines.append(f"{key}: {val}")
 
-    new_fm = fm_clean + "\n" + "\n".join(foto_lines)
-    new_content = f"---\n{new_fm}\n---\n{body}"
+    lines.append(f"foto_count: {len(resources)}")
+    lines.append("foto:")
+    for foto in fm["foto"]:
+        lines.append(f'  - url: "{foto["url"]}"')
+        lines.append(f'    alt: "{foto["alt"]}"')
+    lines.append("---")
+    lines.append(body.lstrip("\n"))
 
-    if new_content == content:
-        print(f"  ✨ Nessuna modifica necessaria.")
-        return False
+    new_content = "\n".join(lines)
 
     with open(filepath, "w", encoding="utf-8") as f:
         f.write(new_content)
 
-    print(f"  💾 File aggiornato con {len(resources)} foto.")
+    print(f"  💾 Scritte {len(resources)} foto in {filepath}.")
     return True
 
 
@@ -102,10 +98,6 @@ def main():
             changed += 1
 
     print(f"\n✅ Completato. {changed}/{len(files)} file aggiornati.")
-    
-    with open(filepath, "r", encoding="utf-8") as f:
-        preview = f.read(500)
-    print(f"  🔍 Preview:\n{preview[:500]}")
 
 
 if __name__ == "__main__":
