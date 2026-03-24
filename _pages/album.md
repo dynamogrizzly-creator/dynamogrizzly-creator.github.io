@@ -221,8 +221,8 @@ permalink: /album/
 </header>
 
 <!-- HERO STACK ANNI -->
-{% assign all_albums = site.albums %}
-{% if all_albums == null %}{% assign all_albums = "" | split: "" %}{% endif %}
+{% assign all_albums = site.pages | where: "layout", "album-detail" %}
+{% assign anni = all_albums | map: "anno" | uniq | sort | reverse %}
 
 {% if all_albums.size == 0 %}
 
