@@ -2857,3 +2857,140 @@ footer {
   .album-hero { padding: 7rem 0 3.5rem; }
   .album-filters { top: 56px; }
 }
+/* ============================================================
+   SECTION ALBUM PREVIEW — homepage
+   ============================================================ */
+.section-album-preview {
+  padding: 6rem 0;
+  background: #0d0d1a;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.album-preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.album-preview-card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  background: var(--dark-card);
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform .35s cubic-bezier(.4,0,.2,1), border-color .25s, box-shadow .35s;
+}
+.album-preview-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(123,47,190,.45);
+  box-shadow: 0 16px 48px rgba(0,0,0,.5);
+}
+
+/* Cover quadrata */
+.album-preview-card__cover {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: rgba(123,47,190,.08);
+}
+.album-preview-card__cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .55s cubic-bezier(.4,0,.2,1);
+}
+.album-preview-card:hover .album-preview-card__cover img {
+  transform: scale(1.07);
+}
+.album-preview-card__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  background: linear-gradient(135deg, rgba(123,47,190,.12), rgba(74,111,227,.08));
+}
+
+/* Overlay hover */
+.album-preview-card__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(8,8,16,.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity .3s;
+}
+.album-preview-card:hover .album-preview-card__overlay { opacity: 1; }
+.album-preview-card__overlay span {
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #fff;
+  background: rgba(123,47,190,.85);
+  backdrop-filter: blur(8px);
+  padding: .55rem 1.2rem;
+  border-radius: 100px;
+}
+
+/* Badge categoria */
+.album-preview-card__cat {
+  position: absolute;
+  top: .75rem; left: .75rem;
+  background: rgba(8,8,16,.78);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(123,47,190,.35);
+  color: var(--purple-light);
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: .25rem .7rem;
+  border-radius: 100px;
+  z-index: 1;
+}
+
+/* Body */
+.album-preview-card__body {
+  padding: 1rem 1.2rem 1.2rem;
+}
+.album-preview-card__date {
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--purple-mid);
+  display: block;
+  margin-bottom: .25rem;
+}
+.album-preview-card__title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  color: var(--white);
+  line-height: 1.15;
+  margin: 0 0 .3rem;
+}
+.album-preview-card__count {
+  font-size: .75rem;
+  color: var(--text-muted);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .album-preview-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 769px) and (max-width: 1024px) {
+  .album-preview-grid { grid-template-columns: repeat(2, 1fr); }
+}

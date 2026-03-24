@@ -18,6 +18,10 @@ og_image: "/assets/images/dodgeball-ravenna-grizzlies-hero.webp"
           class="sidebar-label">Allenamenti</span> </a></li>
     <li><a href="#lo-sport" class="sidebar-dot" data-section="lo-sport"> <span class="sidebar-line"></span><span
           class="sidebar-label">Il Dodgeball</span></a></li>
+    <li><a href="#album" class="sidebar-dot" data-section="album">
+        <span class="sidebar-line"></span>
+        <span class="sidebar-label">Foto</span>
+      </a></li>
     <li><a href="#news" class="sidebar-dot" data-section="news"> <span class="sidebar-line"></span><span
           class="sidebar-label">News</span> </a></li>
     <li><a href="#faq" class="sidebar-dot" data-section="faq"> <span class="sidebar-line"></span><span
@@ -196,6 +200,56 @@ og_image: "/assets/images/dodgeball-ravenna-grizzlies-hero.webp"
         </a>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ANTEPRIMA ALBUM FOTOGRAFICI -->
+<section id="album" class="section-album-preview">
+  <div class="container">
+    <div class="section-header" data-reveal>
+      <span class="section-tag">Memorie</span>
+      <h2>ALBUM<br>FOTOGRAFICI</h2>
+      <div class="divider"></div>
+      <p>I momenti più belli dai nostri eventi, partite e allenamenti.</p>
+    </div>
+
+    {% assign all_albums = site.pages | where: "layout", "album-detail" %}
+    {% assign latest_albums = all_albums | sort: "data" | reverse | limit: 3 %}
+
+    {% if all_albums.size > 0 %}
+    <div class="album-preview-grid" data-reveal>
+      {% for album in latest_albums %}
+      {% assign cover_thumb = album.cover | replace: '/upload/', '/upload/w_600,q_auto,f_auto/' %}
+      <a href="{{ site.baseurl }}{{ album.url }}" class="album-preview-card">
+        <div class="album-preview-card__cover">
+          {% if album.cover %}
+          <img src="{{ cover_thumb }}" alt="{{ album.title }}" loading="lazy" decoding="async">
+          {% else %}
+          <div class="album-preview-card__placeholder">📸</div>
+          {% endif %}
+          <div class="album-preview-card__overlay">
+            <span>Guarda →</span>
+          </div>
+          {% if album.categoria %}
+          <span class="album-preview-card__cat">{{ album.categoria }}</span>
+          {% endif %}
+        </div>
+        <div class="album-preview-card__body">
+          <span class="album-preview-card__date">{{ album.data | date: "%d %B %Y" }}</span>
+          <h3 class="album-preview-card__title">{{ album.title }}</h3>
+          {% if album.foto_count %}
+          <span class="album-preview-card__count">📸 {{ album.foto_count }} foto</span>
+          {% endif %}
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+
+    <div style="text-align:center; margin-top: 2.5rem;" data-reveal>
+      <a href="{{ site.baseurl }}/album/" class="btn btn-primary">Tutti gli album →</a>
+    </div>
+
+    {% endif %}
   </div>
 </section>
 
