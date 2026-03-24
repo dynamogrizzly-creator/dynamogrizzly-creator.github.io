@@ -1,0 +1,67 @@
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="{{ site.baseurl }}/" class="nav-logo">
+      <picture>
+        <source srcset="{{ site.baseurl }}/assets/images/logo.webp" type="image/webp">
+        <img src="/assets/images/logo.png" alt="Ravenna Grizzlies Logo" width="46" height="46">
+      </picture>
+      <div class="nav-logo-text">
+        Ravenna Grizzlies
+        <span>Dynamo Grizzly ASD</span>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li class="nav-dropdown">
+        <a href="{{ site.baseurl }}/squadra/" {% if page.permalink=='/squadra/' %}class="nav-active" {% endif %}>La
+          Squadra ▾</a>
+        <ul class="nav-dropdown-menu">
+          <li><a href="{{ site.baseurl }}/squadra/" {% if page.permalink=='/squadra/' %}class="nav-active" {% endif
+              %}>Chi siamo</a></li>
+          <li><a href="{{ site.baseurl }}/unisciti/" {% if page.permalink=='/unisciti/' %}class="nav-active" {% endif
+              %}>Allenamenti</a></li>
+        </ul>
+      </li>
+      <li class="nav-dropdown">
+        <a href="{{ site.baseurl }}/dodgeball/" {% if page.permalink=='/dodgeball/' or
+          page.permalink=='/dodgeball-ravenna/' %}class="nav-active" {% endif %}>Il Dodgeball ▾</a>
+        <ul class="nav-dropdown-menu">
+          <li><a href="{{ site.baseurl }}/dodgeball/" {% if page.permalink=='/dodgeball/' %}class="nav-active" {% endif
+              %}>Cos'è il Dodgeball</a></li>
+          <li><a href="{{ site.baseurl }}/dodgeball-ravenna/" {% if page.permalink=='/dodgeball-ravenna/'
+              %}class="nav-active" {% endif %}>Dodgeball a Ravenna</a></li>
+        </ul>
+      </li>
+      <li><a href="{{ site.baseurl }}/news/" {% if page.permalink=='/news/' %}class="nav-active" {% endif %}>News</a>
+      </li>
+      <li>
+      <a href="{{ site.baseurl }}/album/" 
+          {% if page.permalink=='/album/' %}class="nav-active"{% endif %}>
+          Album
+        </a>
+      </li>
+      <li><a href="{{ site.baseurl }}/#faq">FAQ</a></li>
+      <li><a href="{{ site.baseurl }}/unisciti/"
+          class="nav-cta {% if page.permalink == '/unisciti/' %}nav-cta--active{% endif %}">Contatti ⚡</a></li>
+    </ul>
+    <button class="nav-burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="nav-mobile" id="mobileMenu">
+    <a href="{{ site.baseurl }}/squadra/" {% if page.permalink=='/squadra/' %}class="nav-active" {% endif %}>La
+      Squadra</a>
+    <a href="{{ site.baseurl }}/dodgeball/" {% if page.permalink=='/dodgeball/' %}class="nav-active" {% endif %}>Cos'è
+      il Dodgeball</a>
+    <a href="{{ site.baseurl }}/dodgeball-ravenna/" {% if page.permalink=='/dodgeball-ravenna/' %}class="nav-active" {%
+      endif %}>Dodgeball a Ravenna</a>
+    <a href="{{ site.baseurl }}/news/" {% if page.permalink=='/news/' %}class="nav-active" {% endif %}>News</a>
+    <a href="{{ site.baseurl }}/album/" 
+   {% if page.permalink=='/album/' %}class="nav-active"{% endif %}>
+   Album
+</a>
+    <a href="{{ site.baseurl }}/unisciti/">Contatti ⚡</a>
+  </div>
+</nav>
+
+<!-- PROGRESS BAR (mobile) -->
+<div class="mobile-progress-bar" id="mobileProgressBar"></div>

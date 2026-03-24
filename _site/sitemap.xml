@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>http://localhost:4000/annunci/benvenuti-sul-nuovo-sito/</loc>
+<lastmod>2026-03-09T00:00:00+01:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/album/2026-08-12-grizzcup/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/album/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/dodgeball-ravenna/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/dodgeball/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/album/2026/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/news/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/squadra/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/unisciti/</loc>
+</url>
+</urlset>
