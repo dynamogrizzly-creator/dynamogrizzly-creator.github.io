@@ -102,6 +102,10 @@ def main():
             changed += 1
 
     print(f"\n✅ Completato. {changed}/{len(files)} file aggiornati.")
+    
+    with open(filepath, "r", encoding="utf-8") as f:
+        preview = f.read(500)
+    print(f"  🔍 Preview:\n{preview[:500]}")
 
 
 if __name__ == "__main__":
