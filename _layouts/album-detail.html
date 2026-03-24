@@ -42,9 +42,7 @@ layout: default
   padding: 0 0 3rem;
 }
 .album-detail-hero__back {
-  display: inline-flex;
-  align-items: center;
-  gap: .4rem;
+  display: block;
   font-size: .72rem;
   font-weight: 700;
   letter-spacing: 2px;
@@ -53,7 +51,6 @@ layout: default
   text-decoration: none;
   transition: color .2s;
   margin-bottom: 1rem;
-  display: block;
 }
 .album-detail-hero__back:hover { color: var(--purple-light); }
 .album-detail-hero__back svg { width: 13px; height: 13px; vertical-align: middle; margin-right: .2rem; }
@@ -123,9 +120,7 @@ layout: default
   display: block;
   transition: transform .5s cubic-bezier(.4,0,.2,1);
 }
-.album-photo-item:hover img {
-  transform: scale(1.07);
-}
+.album-photo-item:hover img { transform: scale(1.07); }
 .album-photo-item__overlay {
   position: absolute;
   inset: 0;
@@ -161,8 +156,6 @@ layout: default
   opacity: 1;
   pointer-events: all;
 }
-
-/* Immagine */
 .lightbox__img-wrap {
   position: relative;
   max-width: 90vw;
@@ -183,8 +176,6 @@ layout: default
   display: block;
 }
 .lightbox__img.loading { opacity: 0; }
-
-/* Spinner caricamento */
 .lightbox__spinner {
   position: absolute;
   width: 36px; height: 36px;
@@ -197,41 +188,43 @@ layout: default
 .lightbox__spinner.visible { display: block; }
 @keyframes spin { to { transform: rotate(360deg); } }
 
-/* Alt / caption */
-.lightbox__caption {
-  position: absolute;
-  bottom: -2rem;
-  left: 0; right: 0;
-  text-align: center;
-  font-size: .78rem;
-  color: var(--text-muted);
-  letter-spacing: 1px;
-}
-
-/* Bottone chiudi */
-.lightbox__close {
+/* Toolbar in alto: chiudi + download */
+.lightbox__toolbar {
   position: fixed;
-  top: 1.5rem; right: 1.5rem;
+  top: 1.2rem;
+  right: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+  z-index: 2;
+}
+.lightbox__close,
+.lightbox__download {
   width: 44px; height: 44px;
   border-radius: 50%;
   background: rgba(255,255,255,.08);
   border: 1px solid rgba(255,255,255,.15);
   color: #fff;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: background .2s, transform .2s;
-  z-index: 2;
-  line-height: 1;
+  text-decoration: none;
 }
 .lightbox__close:hover {
-  background: rgba(123,47,190,.4);
+  background: rgba(220,50,50,.4);
   transform: rotate(90deg);
 }
+.lightbox__download:hover {
+  background: rgba(123,47,190,.5);
+  transform: translateY(-2px);
+}
+.lightbox__download svg,
+.lightbox__close svg { width: 18px; height: 18px; }
 
-/* Frecce prev/next */
+/* Frecce */
 .lightbox__prev,
 .lightbox__next {
   position: fixed;
@@ -290,12 +283,12 @@ layout: default
 }
 </style>
 
-{% assign cover_thumb = page.cover | replace: '/upload/', '/upload/w_1400,q_auto/' %}
+{% assign cover_bg = page.cover | replace: '/upload/', '/upload/w_1400,q_auto,f_auto/' %}
 
 <!-- HERO -->
 <header class="album-detail-hero">
   {% if page.cover %}
-  <div class="album-detail-hero__bg" style="background-image: url('{{ cover_thumb }}')"></div>
+  <div class="album-detail-hero__bg" style="background-image: url('{{ cover_bg }}')"></div>
   {% endif %}
   <div class="album-detail-hero__overlay"></div>
   <div class="album-detail-hero__content">
@@ -328,22 +321,29 @@ layout: default
     {% if page.foto and page.foto.size > 0 %}
     <div class="album-photos-grid" id="photoGrid">
       {% for foto in page.foto %}
-      {% assign thumb = foto.url | replace: '/upload/', '/upload/w_600,q_auto/' %}
-      {% assign full  = foto.url | replace: '/upload/', '/upload/w_1920,q_auto/' %}
-      <div class="album-photo-item"
-           data-index="{{ forloop.index0 }}"
-           data-full="{{ full }}"
-           data-alt="{{ foto.alt | default: page.title }}">
-        <img src="{{ thumb }}"
-             alt="{{ foto.alt | default: page.title }}"
-             loading="{% if forloop.index <= 8 %}eager{% else %}lazy{% endif %}">
-        <div class="album-photo-item__overlay">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
-               stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
-          </svg>
+        {% assign thumb_sm   = foto.url | replace: '/upload/', '/upload/w_300,q_auto,f_auto/' %}
+        {% assign thumb_md   = foto.url | replace: '/upload/', '/upload/w_600,q_auto,f_auto/' %}
+        {% assign full_url   = foto.url | replace: '/upload/', '/upload/w_1920,q_auto,f_auto/' %}
+        {% assign dl_url     = foto.url | replace: '/upload/', '/upload/fl_attachment,q_auto/' %}
+        <div class="album-photo-item"
+             data-index="{{ forloop.index0 }}"
+             data-full="{{ full_url }}"
+             data-download="{{ dl_url }}"
+             data-alt="{{ foto.alt | default: page.title }}">
+          <img
+            src="{{ thumb_md }}"
+            srcset="{{ thumb_sm }} 300w, {{ thumb_md }} 600w"
+            sizes="(max-width:480px) calc(50vw - 0.5rem), (max-width:768px) calc(33vw - 0.4rem), 220px"
+            alt="{{ foto.alt | default: page.title }}"
+            loading="{% if forloop.index <= 6 %}eager{% else %}lazy{% endif %}"
+            decoding="async">
+          <div class="album-photo-item__overlay">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+            </svg>
+          </div>
         </div>
-      </div>
       {% endfor %}
     </div>
 
@@ -359,24 +359,45 @@ layout: default
 
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Foto ingrandita">
-  <button class="lightbox__close" id="lbClose" aria-label="Chiudi">✕</button>
+
+  <!-- Toolbar chiudi + download -->
+  <div class="lightbox__toolbar">
+    <a class="lightbox__download" id="lbDownload" href="#" download aria-label="Scarica foto originale">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+        <polyline points="7 10 12 15 17 10"/>
+        <line x1="12" y1="15" x2="12" y2="3"/>
+      </svg>
+    </a>
+    <button class="lightbox__close" id="lbClose" aria-label="Chiudi">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+  </div>
+
   <button class="lightbox__prev" id="lbPrev" aria-label="Foto precedente">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
       <path d="M15 18l-6-6 6-6"/>
     </svg>
   </button>
+
   <div class="lightbox__img-wrap">
     <div class="lightbox__spinner" id="lbSpinner"></div>
     <img class="lightbox__img" id="lbImg" src="" alt="">
-    <span class="lightbox__caption" id="lbCaption"></span>
   </div>
+
   <button class="lightbox__next" id="lbNext" aria-label="Foto successiva">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
          stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
       <path d="M9 18l6-6-6-6"/>
     </svg>
   </button>
+
   <span class="lightbox__counter" id="lbCounter"></span>
 </div>
 
@@ -385,35 +406,36 @@ layout: default
   var items = Array.from(document.querySelectorAll('.album-photo-item'));
   if (!items.length) return;
 
-  var lb       = document.getElementById('lightbox');
-  var lbImg    = document.getElementById('lbImg');
-  var lbCaption= document.getElementById('lbCaption');
-  var lbCounter= document.getElementById('lbCounter');
-  var lbSpinner= document.getElementById('lbSpinner');
-  var lbClose  = document.getElementById('lbClose');
-  var lbPrev   = document.getElementById('lbPrev');
-  var lbNext   = document.getElementById('lbNext');
-  var current  = 0;
-  var total    = items.length;
+  var lb         = document.getElementById('lightbox');
+  var lbImg      = document.getElementById('lbImg');
+  var lbCounter  = document.getElementById('lbCounter');
+  var lbSpinner  = document.getElementById('lbSpinner');
+  var lbClose    = document.getElementById('lbClose');
+  var lbPrev     = document.getElementById('lbPrev');
+  var lbNext     = document.getElementById('lbNext');
+  var lbDownload = document.getElementById('lbDownload');
+  var current    = 0;
+  var total      = items.length;
 
   function loadPhoto(index) {
-    var item = items[index];
-    var url  = item.dataset.full;
-    var alt  = item.dataset.alt;
+    var item     = items[index];
+    var fullUrl  = item.dataset.full;
+    var dlUrl    = item.dataset.download;
+    var alt      = item.dataset.alt;
 
     lbImg.classList.add('loading');
     lbSpinner.classList.add('visible');
-    lbCaption.textContent = alt;
     lbCounter.textContent = (index + 1) + ' / ' + total;
+    lbDownload.href = dlUrl;
 
     var tmp = new Image();
     tmp.onload = function () {
-      lbImg.src = url;
+      lbImg.src = fullUrl;
       lbImg.alt = alt;
       lbImg.classList.remove('loading');
       lbSpinner.classList.remove('visible');
     };
-    tmp.src = url;
+    tmp.src = fullUrl;
     current = index;
   }
 
@@ -432,24 +454,20 @@ layout: default
   function prev() { loadPhoto((current - 1 + total) % total); }
   function next() { loadPhoto((current + 1) % total); }
 
-  // Click su foto
   items.forEach(function (item) {
     item.addEventListener('click', function () {
       open(parseInt(item.dataset.index));
     });
   });
 
-  // Controlli lightbox
   lbClose.addEventListener('click', close);
   lbPrev.addEventListener('click', prev);
   lbNext.addEventListener('click', next);
 
-  // Click fuori dall'immagine → chiudi
   lb.addEventListener('click', function (e) {
     if (e.target === lb) close();
   });
 
-  // Tastiera
   document.addEventListener('keydown', function (e) {
     if (!lb.classList.contains('open')) return;
     if (e.key === 'Escape')     close();
@@ -457,7 +475,6 @@ layout: default
     if (e.key === 'ArrowRight') next();
   });
 
-  // Swipe touch
   var touchStartX = 0;
   lb.addEventListener('touchstart', function (e) {
     touchStartX = e.changedTouches[0].screenX;
