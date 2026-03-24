@@ -37,12 +37,63 @@ permalink: /album/
   -webkit-text-stroke: 2px var(--purple-light);
 }
 
+/* Back home link */
+.album-lobby-back {
+  display: inline-flex;
+  align-items: center;
+  gap: .4rem;
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color .2s;
+  margin-bottom: 1.5rem;
+}
+.album-lobby-back:hover { color: var(--purple-light); }
+.album-lobby-back svg { width: 14px; height: 14px; }
+
 /* ============================================================
    HERO STACK — un blocco full-width per anno
    ============================================================ */
 .album-year-stack {
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+/* Indicatore scroll — appare solo su mobile se ci sono 2+ anni */
+.album-scroll-hint {
+  display: none;
+  position: sticky;
+  bottom: 1.2rem;
+  left: 0; right: 0;
+  z-index: 10;
+  justify-content: center;
+  pointer-events: none;
+}
+.album-scroll-hint__pill {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  background: rgba(8,8,16,.85);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(123,47,190,.4);
+  color: var(--purple-light);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: .55rem 1.2rem;
+  border-radius: 100px;
+  box-shadow: 0 4px 20px rgba(0,0,0,.4);
+  animation: hintBounce 2s ease-in-out infinite;
+}
+.album-scroll-hint__pill svg { width: 14px; height: 14px; }
+@keyframes hintBounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-5px); }
 }
 
 .album-year-hero {
@@ -68,22 +119,24 @@ permalink: /album/
   transition: transform .7s cubic-bezier(.4,0,.2,1);
   will-change: transform;
 }
-.album-year-hero:hover .album-year-hero__bg {
+.album-year-hero:hover .album-year-hero__bg,
+.album-year-hero:focus .album-year-hero__bg {
   transform: scale(1.04);
 }
 
-/* Overlay: parte da .52 e va a .80 sull'hover */
+/* Overlay */
 .album-year-hero__overlay {
   position: absolute;
   inset: 0;
   background: rgba(8,8,16,.52);
   transition: background .45s ease;
 }
-.album-year-hero:hover .album-year-hero__overlay {
+.album-year-hero:hover .album-year-hero__overlay,
+.album-year-hero:focus .album-year-hero__overlay {
   background: rgba(8,8,16,.80);
 }
 
-/* Striscia viola in basso che scorre sull'hover */
+/* Striscia viola bottom */
 .album-year-hero__stripe {
   position: absolute;
   bottom: 0; left: 0; right: 0;
@@ -94,7 +147,8 @@ permalink: /album/
   transition: transform .5s cubic-bezier(.4,0,.2,1);
   z-index: 3;
 }
-.album-year-hero:hover .album-year-hero__stripe {
+.album-year-hero:hover .album-year-hero__stripe,
+.album-year-hero:focus .album-year-hero__stripe {
   transform: scaleX(1);
 }
 
@@ -111,7 +165,7 @@ permalink: /album/
   z-index: 2;
 }
 
-/* Anno enorme al centro */
+/* Anno enorme */
 .album-year-hero__year {
   font-family: var(--font-display);
   font-size: clamp(6rem, 18vw, 16rem);
@@ -127,7 +181,7 @@ permalink: /album/
   transform: scale(.94);
 }
 
-/* Contatore eventi — appare sull'hover */
+/* Contatore eventi */
 .album-year-hero__sub {
   font-size: .8rem;
   font-weight: 700;
@@ -144,7 +198,7 @@ permalink: /album/
   transform: translateY(0);
 }
 
-/* Freccia in basso a destra */
+/* CTA desktop */
 .album-year-hero__cta {
   position: absolute;
   bottom: 1.8rem;
@@ -162,17 +216,32 @@ permalink: /album/
   transition: opacity .35s ease .2s, transform .35s ease .2s, color .2s;
   z-index: 2;
 }
-.album-year-hero__cta svg {
-  width: 16px; height: 16px;
-  transition: transform .25s;
-}
+.album-year-hero__cta svg { width: 16px; height: 16px; transition: transform .25s; }
 .album-year-hero:hover .album-year-hero__cta {
   opacity: 1;
   transform: translateX(0);
   color: var(--purple-light);
 }
-.album-year-hero:hover .album-year-hero__cta svg {
-  transform: translateX(5px);
+.album-year-hero:hover .album-year-hero__cta svg { transform: translateX(5px); }
+
+/* CTA mobile — sempre visibile */
+.album-year-hero__mobile-cta {
+  display: none;
+  position: absolute;
+  bottom: 1.4rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  background: linear-gradient(135deg, var(--purple), var(--blue));
+  color: #fff;
+  font-size: .75rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: .6rem 1.4rem;
+  border-radius: 100px;
+  box-shadow: 0 4px 20px rgba(123,47,190,.4);
+  white-space: nowrap;
 }
 
 /* Fallback senza foto */
@@ -200,19 +269,46 @@ permalink: /album/
 .album-lobby-empty a { color: var(--purple-light); }
 
 /* ============================================================
-   RESPONSIVE
+   MOBILE
    ============================================================ */
 @media (max-width: 768px) {
-  .album-year-hero { height: 45vh; min-height: 240px; max-height: 380px; }
+  .album-year-hero {
+    height: 45vh;
+    min-height: 260px;
+    max-height: 380px;
+  }
+
+  /* Su mobile mostra sempre anno + sub + bottone */
+  .album-year-hero__sub {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .album-year-hero__year {
+    font-size: clamp(4.5rem, 22vw, 8rem);
+  }
+
+  /* Nascondi CTA desktop, mostra quello mobile */
   .album-year-hero__cta { display: none; }
-  .album-year-hero:hover .album-year-hero__year { letter-spacing: 10px; }
+  .album-year-hero__mobile-cta { display: block; }
+
+  /* Riduci altezza header */
   .album-lobby-header { padding: 7rem 0 3rem; }
+
+  /* Mostra hint scroll se ci sono 2+ anni */
+  .album-scroll-hint { display: flex; }
 }
 </style>
 
 <!-- HEADER PAGINA -->
 <header class="album-lobby-header">
   <div class="container">
+    <a href="{{ site.baseurl }}/" class="album-lobby-back">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+           stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      Home
+    </a>
     <span class="section-tag">Memorie</span>
     <h1>ALBUM<br><span>FOTOGRAFICI</span></h1>
     <div class="divider"></div>
@@ -222,7 +318,6 @@ permalink: /album/
 
 <!-- HERO STACK ANNI -->
 {% assign all_albums = site.pages | where: "layout", "album-detail" %}
-{% assign anni = all_albums | map: "anno" | uniq | sort | reverse %}
 
 {% if all_albums.size == 0 %}
 
@@ -237,7 +332,7 @@ permalink: /album/
 
 {% assign anni = all_albums | map: "anno" | uniq | sort | reverse %}
 
-<div class="album-year-stack">
+<div class="album-year-stack" id="yearStack">
   {% for anno in anni %}
 
     {% assign albums_anno = all_albums | where: "anno", anno | sort: "data" | reverse %}
@@ -247,18 +342,12 @@ permalink: /album/
        class="album-year-hero{% unless primo_album.cover %} album-year-hero--no-photo{% endunless %}"
        aria-label="Album {{ anno }} — {{ albums_anno.size }} {% if albums_anno.size == 1 %}evento{% else %}eventi{% endif %}">
 
-      <!-- BG con la cover del primo album dell'anno -->
       <div class="album-year-hero__bg"
         {% if primo_album.cover %}style="background-image: url('{{ primo_album.cover }}')"{% endif %}>
       </div>
-
-      <!-- Overlay scurente -->
       <div class="album-year-hero__overlay"></div>
-
-      <!-- Striscia accent bottom -->
       <div class="album-year-hero__stripe"></div>
 
-      <!-- Anno + contatore -->
       <div class="album-year-hero__content">
         <span class="album-year-hero__year">{{ anno }}</span>
         <span class="album-year-hero__sub">
@@ -266,7 +355,7 @@ permalink: /album/
         </span>
       </div>
 
-      <!-- Freccia CTA desktop -->
+      <!-- CTA desktop -->
       <span class="album-year-hero__cta" aria-hidden="true">
         Guarda gli album
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
@@ -275,9 +364,44 @@ permalink: /album/
         </svg>
       </span>
 
+      <!-- CTA mobile — sempre visibile -->
+      <span class="album-year-hero__mobile-cta" aria-hidden="true">
+        Guarda gli album →
+      </span>
+
     </a>
 
   {% endfor %}
 </div>
+
+<!-- Hint scroll — appare su mobile solo se ci sono 2+ anni -->
+{% if anni.size > 1 %}
+<div class="album-scroll-hint" id="scrollHint">
+  <span class="album-scroll-hint__pill">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 5v14M5 12l7 7 7-7"/>
+    </svg>
+    Scorri per altri anni
+  </span>
+</div>
+
+<script>
+(function() {
+  var hint = document.getElementById('scrollHint');
+  if (!hint) return;
+  // Nascondi l'hint dopo che l'utente ha scrollato un po'
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 120) {
+      hint.style.opacity = '0';
+      hint.style.transition = 'opacity .4s';
+      hint.style.pointerEvents = 'none';
+    } else {
+      hint.style.opacity = '1';
+    }
+  }, { passive: true });
+})();
+</script>
+{% endif %}
 
 {% endif %}
