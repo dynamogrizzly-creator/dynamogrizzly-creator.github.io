@@ -330,12 +330,12 @@ permalink: /album/
 
 {% else %}
 
-{% assign anni = all_albums | map: "anno" | uniq | sort: "date" | reverse %}
+{% assign anni = all_albums | map: "anno" | uniq | sort | reverse %}
 
 <div class="album-year-stack" id="yearStack">
   {% for anno in anni %}
 
-    {% assign albums_anno = all_albums | where: "anno", anno | sort: "data" | reverse %}
+    {% assign albums_anno = all_albums | where: "anno", anno | sort: "date" | reverse %}
     {% assign primo_album = albums_anno | first %}
 
     <a href="{{ site.baseurl }}/album/{{ anno }}/"
