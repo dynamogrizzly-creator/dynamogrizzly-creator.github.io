@@ -4,7 +4,7 @@ title: "Tappa Ravenna Campionato Nazionale"
 permalink: "/album/2026-Ravenna-Campionato-nazionale/"
 cloudinary_folder: "2026/tappa ravenna 2026"
 data: 2026-02-22
-anno: 2026
+anno: "2026"
 categoria: "Tappa Campionato"
 descrizione: "La Tappa giocata a Ravenna il 22/02/2026 con la Femminile, la Maschile e la open dei Ravenna Grizzlies."
 cover: "https://res.cloudinary.com/doyffhy7d/image/upload/v1774297863/dodgeball-ravenna-femminile-attacco_y9rnhs.webp"
