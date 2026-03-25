@@ -330,14 +330,7 @@ permalink: /album/
 
 {% else %}
 
-{% assign anni = all_albums | map: "anno" | uniq %}
-
-{% assign anni_numeric = "" | split: "" %}
-{% for a in anni %}
-  {% assign anni_numeric = anni_numeric | push: a | plus: 0 %}
-{% endfor %}
-
-{% assign anni = anni_numeric | sort | reverse %}
+{% assign anni = all_albums | map: "anno" | uniq | sort | reverse %}
 
 <div class="album-year-stack" id="yearStack">
   {% for anno in anni %}
