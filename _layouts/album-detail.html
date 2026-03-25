@@ -305,7 +305,7 @@ layout: default
       {% endif %}
       <h1 class="album-detail-hero__title">{{ page.title }}</h1>
       <div class="album-detail-hero__meta">
-        <span class="album-detail-hero__date">{{ page.data | date: "%d %B %Y" }}</span>
+        <span class="album-detail-hero__date">{{ page.date | date: "%d %B %Y" }}</span>
         {% if page.foto %}
         <span class="album-detail-hero__count">📸 {{ page.foto.size }} foto</span>
         {% endif %}
