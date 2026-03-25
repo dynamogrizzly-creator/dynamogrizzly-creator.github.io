@@ -6,7 +6,7 @@
 # ================================================================
 
 # LAYOUT — non modificare
-layout: album-detail
+layout: (album-detail) Togliere le parentesi
 
 # TITOLO DELL'ALBUM
 # Es: "GrizzCup", "Serie A – Bologna", "Allenamento Aperto"
