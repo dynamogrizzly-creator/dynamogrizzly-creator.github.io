@@ -3,7 +3,6 @@ layout: "album-detail"
 title: "Tappa Ravenna Campionato Nazionale"
 permalink: "/album/2026-Ravenna-Campionato-nazionale/"
 cloudinary_folder: "2026/tappa ravenna 2026"
-date: 2026-02-22
 anno: 2026
 categoria: "Tappa Campionato"
 descrizione: "La Tappa giocata a Ravenna il 22/02/2026 con la Femminile, la Maschile e la open dei Ravenna Grizzlies."
