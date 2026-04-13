@@ -46,3 +46,5 @@ Le squadre **maschile** e **open** hanno conquistato la vittoria con due splendi
 Abbiamo già caricato alcune foto scattate dai Penguins durante la giornata:
 
 [Guarda l'album completo](https://dodgeballravenna.it/album/tappa-padova-2026/)
+
+Un grande **grazie ai Padova Penguins** per gli scatti e per averci dato la possibilità di condividerli!
