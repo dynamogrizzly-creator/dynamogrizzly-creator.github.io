@@ -1,62 +1,166 @@
 ---
-# ================================================================
-#  TEMPLATE ALBUM FOTOGRAFICO — Ravenna Grizzlies
-#  Copia questo file, rinominalo e compila i campi qui sotto.
-#  NON modificare le righe che iniziano con #
-# ================================================================
-
-# LAYOUT — non modificare
-layout: album-detail
-
-# TITOLO DELL'ALBUM
-# Es: "GrizzCup", "Serie A – Bologna", "Allenamento Aperto"
+layout: "album-detail"
 title: "Tappa Campionato Padova"
-
-# PERMALINK — l'URL della pagina
-# Formato: /album/ANNO-MESE-GIORNO-nome-evento/
-# Usa solo lettere minuscole, numeri e trattini. Niente spazi o accenti.
-# Es: /album/2026-03-15-serie-a-bologna/
-permalink: /album/tappa-padova-2026/
-
-# CARTELLA CLOUDINARY
-# Il percorso della cartella su Cloudinary dove hai caricato le foto.
-# Es: "2026/serie-a-bologna" oppure "2026/grizzcup"
-# Questo campo è usato dal sistema automatico per importare le foto.
+permalink: "/album/tappa-padova-2026/"
 cloudinary_folder: "2026/tappa padova 2026"
-
-# DATA DELL'EVENTO
-# Formato: ANNO-MESE-GIORNO
-# Es: 2026-03-15
 data: 2026-04-11
-
-# ANNO — deve corrispondere all'anno nella data
-# Es: 2026
 anno: 2026
-
-# CATEGORIA
-# Una breve etichetta che descrive il tipo di evento.
-# Es: "Campionato", "Torneo", "Amichevole", "Allenamento", "Evento"
 categoria: "Campionato"
-
-# DESCRIZIONE BREVE
-# Una frase che descrive l'evento. Appare nei risultati Google.
-# Es: "Prima giornata del campionato nazionale Serie A Maschile a Bologna."
 descrizione: "Tappa a padova del campionato nazionale Maschile, Femminile, Open"
-
-# FOTO DI COPERTINA
-# L'URL della foto che vuoi usare come copertina dell'album.
-# Copiala da Cloudinary: apri la foto → Copy URL
-# Es: "https://res.cloudinary.com/doyffhy7d/image/upload/v123456/2026/evento/cover.jpg"
 cover: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104175/PD3_0033_fjru2q.jpg"
-
-# OG IMAGE — immagine per i social (Facebook, WhatsApp, ecc.)
-# Di solito è la stessa della cover. Non modificare la parte w_1200,q_auto/
 og_image: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104175/PD3_0033_fjru2q.jpg"
-
-# FOTO — lista delle foto dell'album
-# Viene aggiornata AUTOMATICAMENTE dal sistema ogni notte.
-# Non serve modificarla a mano — basta caricare le foto su Cloudinary
-# nella cartella indicata in cloudinary_folder qui sopra.
-foto_count: 0
-foto: []
+foto_count: 76
+foto:
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104184/PD1_0003_fhagks.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104255/PD1_0004_pdfkqw.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104256/PD1_0010_bmmbl9.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104184/PD1_0011_vnorqc.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104258/PD1_0039_lxfqjj.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104152/PD1_0040_q74exl.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104131/PD1_0132_ft357s.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104133/PD1_0133_w9tyl3.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104152/PD1_0134_hkvpqh.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104131/PD1_0135_qbkkme.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104134/PD1_0136_linkki.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104155/PD1_0137_dm6yei.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104159/PD1_0138_hu3fgs.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104194/PD1_0139_vhaz1r.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104193/PD1_0140_sisy0g.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104137/PD1_0186_cezpd6.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104138/PD1_0187_m8ektv.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104144/PD1_0188_qi2d2v.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104190/PD1_0253_wgszi6.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104196/PD1_0254_h95y0k.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104143/PD1_0255_rgnh0f.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104144/PD1_0256_lrxfrz.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104200/PD1_0257_kfbl1i.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104200/PD1_0359_qz6fyi.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104144/PD1_0366_dba9nk.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104148/PD1_0367_b44bxb.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104197/PD1_0368_hzhmjf.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104202/PD1_0369_vdi3zd.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104204/PD1_0370_joobcr.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104216/PD1_0401_gjmjzh.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104152/PD1_0402_heszwp.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104214/PD1_0403_papds5.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104204/PD2_0276_rpe0bz.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104223/PD2_0277_bfgipy.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104213/PD2_0278_w8vhyk.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104211/PD2_0298_sgsx0o.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104153/PD2_0336_hjiisy.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104159/PD2_0337_xzcr90.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104174/PD2_0476_nxursx.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104159/PD2_0477_tvpnaq.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104211/PD2_0478_c42kvk.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104216/PD2_0501_cmqqjm.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104220/PD2_0502_ii6xxa.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104233/PD2_0503_fevut5.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104235/PD2_0504_ucew7o.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104227/PD2_0505_c3puen.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104224/PD2_0506_ooz9eu.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104232/PD2_0507_rdf2zn.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104241/PD2_0508_fbuuvw.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104224/PD2_0509_xm7ldj.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104237/PD2_0510_p9123u.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104224/PD2_0511_ulnuf6.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104159/PD3_0001_ymg0xb.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104168/PD3_0023_upfhp8.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104166/PD3_0024_yqjsli.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104165/PD3_0025_cf7hhf.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104237/PD3_0026_fojr9q.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104169/PD3_0030_ovbcgh.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104169/PD3_0031_zo50ao.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104171/PD3_0032_plxvo0.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104175/PD3_0033_fjru2q.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104239/PD3_0034_fhwyuq.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104184/PD3_0035_jkgl3n.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104176/PD3_0036_gh6jyd.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104255/PD3_0037_y6qqcu.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104181/PD3_0038_qz8noq.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104241/PD3_0066_n6kpjl.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104243/PD3_0067_lnwtqe.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104249/PD3_0073_rubohe.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104255/PD3_0074_lcno2x.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104177/PD3_0075_bn3kpc.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104185/PD3_0076_glypka.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104248/PD3_0077_xwi9ki.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104187/PD3_0097_pwey7e.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104252/PD3_0098_xnakel.jpg"
+    alt: "Tappa Campionato Padova"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1776104252/PD3_0099_jfcgh7.jpg"
+    alt: "Tappa Campionato Padova"
 ---
