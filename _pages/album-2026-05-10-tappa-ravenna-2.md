@@ -1,5 +1,5 @@
 ---
-layout: "(album-detail) Togliere le parentesi"
+layout: "album-detail"
 title: "2° Tappa Ravenna"
 permalink: "/album/2026-5-10-Tappa-Ravenna-2/"
 cloudinary_folder: "2026/tappa ravenna 2 2026"
