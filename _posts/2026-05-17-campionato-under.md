@@ -10,7 +10,7 @@ layout: post
 
 # TITOLO DELLA NEWS
 # Es: "Vittoria al campionato di Bologna", "Nuovi allenamenti estivi"
-title: "Grinta e testa alta nell'ultima giornata di Campionato Nazionale Under 12-15-18 FIGeST"
+title: "Grinta e testa alta nell'ultima giornata di Campionato Nazionale Under 15-18 FIGeST"
 
 # DATA DI PUBBLICAZIONE
 # Formato: ANNO-MESE-GIORNO HH:MM:SS +0200
@@ -27,11 +27,11 @@ category: "Risultati"
 # Deve essere nella cartella assets/images/ del sito.
 # Es: "/assets/images/nome-foto.webp"
 # Se non hai un'immagine, elimina questa riga.
-image: "/assets/images/gallery/u18grizzlies2526.jpg"
+image: "/assets/images/gallery/u15grizzliesdodgeball2526.jpg"
 
 # DESCRIZIONE BREVE (per Google e social)
 # Una frase di massimo 160 caratteri che riassume la news.
-description: "Risultati dei Wild Bears e Wild Grizzlies a Capannori nell'ultima giornata del Campionato Nazionale under 12-15-18. Una giornata di grande sport."
+description: "Risultati dei Wild Bears e Wild Grizzlies a Capannori nell'ultima giornata del Campionato Nazionale under 15-18. Una giornata di grande sport."
 
 # IMMAGINE SOCIAL (Facebook, WhatsApp, ecc.)
 # Di solito uguale a image. Percorso completo.
@@ -71,7 +71,7 @@ og_image: "/assets/images/gallery/u18grizzlies2526.jpg"
   </div>
 
   <div style="flex: 1; min-width: 260px; text-align: center;">
-    <img src="{{ site.baseurl }}/assets/images/gallery/u15grizzlies2526.jpg" 
+    <img src="{{ site.baseurl }}/assets/images/gallery/u15grizzliesdodgeball2526.jpg" 
          alt="Wild Bears Under 15"
          style="max-width: 100%; height: auto; border-radius: 10px;" />
   </div>
