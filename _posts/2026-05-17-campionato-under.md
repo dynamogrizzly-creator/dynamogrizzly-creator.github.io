@@ -71,7 +71,7 @@ og_image: "/assets/images/gallery/u18grizzlies2526.jpg"
   </div>
 
   <div style="flex: 1; min-width: 260px; text-align: center;">
-    <img src="{{ site.baseurl }}/assets/images/gallery/u15grizzliesdodgeball2526.jpg" 
+    <img src="{{ site.baseurl }}/assets/images/gallery/u15grizzliesdodgeball2526.jpg"
          alt="Wild Bears Under 15"
          style="max-width: 100%; height: auto; border-radius: 10px;" />
   </div>
