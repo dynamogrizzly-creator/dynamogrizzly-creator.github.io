@@ -2,7 +2,7 @@
 layout: "album-detail"
 title: "Finali Campionato"
 permalink: "/album/2026-5-31-Finali-Roma/"
-cloudinary_folder: "ANNO/tappa roma 2026"
+cloudinary_folder: "2026/tappa roma 2026"
 data: 2026-05-31
 anno: 2026
 categoria: "Finali Campionato"
