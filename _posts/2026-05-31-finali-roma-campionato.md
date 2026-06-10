@@ -41,7 +41,7 @@ og_image: "/assets/images/foto-gruppo-orsa-minore-roma.jpg"
 <!-- ORSA MAGGIORE -->
 <div style="display: flex; gap: 24px; align-items: center; margin-bottom: 30px; flex-wrap: wrap;">
   <div style="flex: 1; min-width: 260px;">
-    <h3>🐻 ORSA MAGGIORE (Categoria Open)</h3>
+    <h3>🐻 ORSA MAGGIORE (Categoria Maschile)</h3>
     <p>
       <strong>Vs Hydra Fire:</strong> Una sfida ad altissima intensità contro la compagine toscana. Il verdetto si è deciso solo all'ultimo set nel <em>Sudden Death - No Blocking</em>, fissando il risultato su un sudato pareggio.
     </p>
