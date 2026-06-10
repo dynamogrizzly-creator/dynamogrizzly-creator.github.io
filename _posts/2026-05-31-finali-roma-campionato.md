@@ -3,9 +3,9 @@ layout: post
 title: "Finali Campionato Nazionale FIGeST a Roma: i risultati dei nostri Orsi"
 date: 2026-06-01 10:00:00 +0200
 category: "Eventi"
-image: "/assets/images/foto-gruppo-orsa-minore-roma.webp"
+image: "/assets/images/foto-gruppo-orsa-minore-roma.jpg"
 description: "Rivivi l'intenso weekend delle finali di campionato a Roma e scopri tutti i risultati di Orsa Maggiore, Orsa Minore e Le Grizzlies."
-og_image: "/assets/images/foto-gruppo-orsa-minore-roma.webp"
+og_image: "/assets/images/foto-gruppo-orsa-minore-roma.jpg"
 ---
 
 <p>
