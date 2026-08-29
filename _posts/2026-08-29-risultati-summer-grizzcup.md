@@ -64,6 +64,9 @@ og_image: "/assets/images/foto-gruppo-grizzcup-2026.webp"
       Sul secondo gradino del podio sale <strong>BAGNINI FUORI SERVIZIO</strong>, squadra "mista" nata dalla collaborazione con la compagine
       <a href="https://www.instagram.com/dodgeball_velletri/" target="_blank">@dodgeball_velletri</a> della Pegasus Galaxia.
     </p>
+    <p> 
+        Un percorso sempre affiatato, in cui non hanno mai dato una partita per persa: tra rimonte incredibili e sfide decise al cardiopalma, hanno saputo ribaltare più di un pronostico pur di arrivare fino in fondo. 
+    </p>
     <p>
       In campo: Daniele Caprara, Sofia Crea, Angelica Latini e Filippo Laghi (il nostro Orso di casa).
     </p>
