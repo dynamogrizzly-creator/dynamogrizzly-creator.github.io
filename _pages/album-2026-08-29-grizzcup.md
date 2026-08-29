@@ -1,62 +1,88 @@
 ---
-# ================================================================
-#  TEMPLATE ALBUM FOTOGRAFICO — Ravenna Grizzlies
-#  Copia questo file, rinominalo e compila i campi qui sotto.
-#  NON modificare le righe che iniziano con #
-# ================================================================
-
-# LAYOUT — non modificare
-layout: album-detail
-
-# TITOLO DELL'ALBUM
-# Es: "GrizzCup", "Serie A – Bologna", "Allenamento Aperto"
+layout: "album-detail"
 title: "GRIZZCUP 2026"
-
-# PERMALINK — l'URL della pagina
-# Formato: /album/ANNO-MESE-GIORNO-nome-evento/
-# Usa solo lettere minuscole, numeri e trattini. Niente spazi o accenti.
-# Es: /album/2026-03-15-serie-a-bologna/
-permalink: /album/2026-29-08-GRIZZCUP/
-
-# CARTELLA CLOUDINARY
-# Il percorso della cartella su Cloudinary dove hai caricato le foto.
-# Es: "2026/serie-a-bologna" oppure "2026/grizzcup"
-# Questo campo è usato dal sistema automatico per importare le foto.
+permalink: "/album/2026-29-08-GRIZZCUP/"
 cloudinary_folder: "2026/torneo grizzcup"
-
-# DATA DELL'EVENTO
-# Formato: ANNO-MESE-GIORNO
-# Es: 2026-03-15
 data: 2026-08-23
-
-# ANNO — deve corrispondere all'anno nella data
-# Es: 2026
 anno: 2026
-
-# CATEGORIA
-# Una breve etichetta che descrive il tipo di evento.
-# Es: "Campionato", "Torneo", "Amichevole", "Allenamento", "Evento"
 categoria: "Torneo"
-
-# DESCRIZIONE BREVE
-# Una frase che descrive l'evento. Appare nei risultati Google.
-# Es: "Prima giornata del campionato nazionale Serie A Maschile a Bologna."
 descrizione: "terza edizione della Summer GrizzCup – Torneo Mare, l'evento dedicato al dodgeball che si è svolto al Bagno Nariz di Punta Marina."
-
-# FOTO DI COPERTINA
-# L'URL della foto che vuoi usare come copertina dell'album.
-# Copiala da Cloudinary: apri la foto → Copy URL
-# Es: "https://res.cloudinary.com/doyffhy7d/image/upload/v123456/2026/evento/cover.jpg"
 cover: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788010037/foto-gruppo-grizzcup-2026_qvqfvu.webp"
-
-# OG IMAGE — immagine per i social (Facebook, WhatsApp, ecc.)
-# Di solito è la stessa della cover. Non modificare la parte w_1200,q_auto/
 og_image: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788010037/foto-gruppo-grizzcup-2026_qvqfvu.webp"
-
-# FOTO — lista delle foto dell'album
-# Viene aggiornata AUTOMATICAMENTE dal sistema ogni notte.
-# Non serve modificarla a mano — basta caricare le foto su Cloudinary
-# nella cartella indicata in cloudinary_folder qui sopra.
-foto_count: 0
-foto: []
+foto_count: 37
+foto:
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009932/109200e3-4830-480a-a2dd-a41af180f762.jpg_indhz9.jpg"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009931/23ccbbce-ee18-4c53-9e46-b74d0a40befa.jpg_gxmntv.jpg"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009931/443a4711-6076-4136-8806-cf71e23bfcd5.jpg_xcn8eh.jpg"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009930/4b310c0a-cc3e-4ee7-b01f-95bf8cd48944.jpg_abmakn.jpg"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009931/5fe129ca-302e-49a6-9d5c-9a26fbe816f4.jpg_q0qvr1.jpg"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009931/8c3eda93-7900-4c93-b9ff-3f8de400f54b.jpg_npkhp0.jpg"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009923/IMG_4390_z1ihnv.heic"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009924/IMG_4398_hcqsmc.heic"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009924/IMG_4403_cbjpln.heic"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009922/IMG_4411_ls3dnm.heic"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009926/IMG_4417_mvbtgp.heic"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009927/IMG_4424_d0tqdz.heic"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009925/IMG_4431_tkdn1t.heic"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009927/IMG_4436_oi4alz.heic"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009926/IMG_4459_fjeafx.heic"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009926/IMG_4460_hvmnkh.heic"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009927/IMG_4464_dzqshy.heic"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009928/IMG_4470_wninsk.heic"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009930/IMG_4482_notwwz.heic"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009929/IMG_4492_c822xg.heic"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009929/IMG_4500_upviaq.heic"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009930/IMG_4510_bkqd8z.heic"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009934/IMG_4540_lwktzh.heic"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009931/IMG_4570_wdujjc.heic"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009931/IMG_4648_uvhtyz.heic"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009932/WhatsApp_Image_2026-08-23_at_20.39.08_stzisz.jpg"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009932/WhatsApp_Image_2026-08-23_at_20.39.23_ipdnmu.jpg"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009932/WhatsApp_Image_2026-08-23_at_20.39.25_1_umaxve.jpg"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009938/WhatsApp_Image_2026-08-23_at_20.39.25_2_acpmbd.jpg"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009938/WhatsApp_Image_2026-08-23_at_20.39.26_1_akz343.jpg"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009938/WhatsApp_Image_2026-08-23_at_20.39.26_4_p3k7hl.jpg"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009938/WhatsApp_Image_2026-08-23_at_20.39.26_5_y2j3ha.jpg"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009938/WhatsApp_Image_2026-08-23_at_20.39.27_3_thfndh.jpg"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009939/WhatsApp_Image_2026-08-23_at_20.39.27_dxtyrc.jpg"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009944/WhatsApp_Image_2026-08-24_at_13.14.10_4_i4l37w.jpg"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788009932/b685d7b4-bb71-40a1-b2ca-75855a70aea1.jpg_lpn50k.jpg"
+    alt: "GRIZZCUP 2026"
+  - url: "https://res.cloudinary.com/doyffhy7d/image/upload/v1788010037/foto-gruppo-grizzcup-2026_qvqfvu.webp"
+    alt: "GRIZZCUP 2026"
 ---
