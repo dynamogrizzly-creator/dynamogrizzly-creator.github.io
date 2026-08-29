@@ -3,17 +3,16 @@ layout: post
 title: "Summer GrizzCup 2026: si chiude la terza edizione"
 date: 2026-08-23 18:00:00 +0200
 category: "Eventi"
-image: "/assets/images/los-pollos-grizzcup-2026.webp"
+image: "/assets/images/foto-gruppo-grizzcup-2026.webp"
 description: "Il resoconto della terza edizione della Summer GrizzCup 2026: squadre, podio e ringraziamenti a tutti i partecipanti."
 og_image: "/assets/images/foto-gruppo-grizzcup-2026.webp"
 ---
-
+<p>
+      Anche quest'anno i Grizzlies hanno organizzato la terza edizione della <strong>Summer GrizzCup – Torneo Mare</strong>, l'evento dedicato al dodgeball che si è svolto al Bagno Nariz di Punta Marina.
+</p>
 <div style="display: flex; gap: 24px; align-items: center; margin-bottom: 30px; flex-wrap: wrap;">
 
-  <div style="flex: 1; min-width: 260px;">
-    <p>
-      Anche quest'anno i Grizzlies hanno organizzato la terza edizione della <strong>Summer GrizzCup – Torneo Mare</strong>, l'evento dedicato al dodgeball che si è svolto al Bagno Nariz di Punta Marina.
-    </p>
+  <div style="flex: 1; min-width: 260px;">    
     <p>
       Due giornate di competizioni hanno richiamato squadre da diverse regioni italiane, in un torneo di buon livello tecnico che ha saputo mantenere al centro lo spirito di partecipazione e il divertimento, aperto sia a squadre già strutturate sia a chi si avvicinava per la prima volta a questo sport.
     </p>
@@ -66,7 +65,7 @@ og_image: "/assets/images/foto-gruppo-grizzcup-2026.webp"
       <a href="https://www.instagram.com/dodgeball_velletri/" target="_blank">@dodgeball_velletri</a> della Pegasus Galaxia.
     </p>
     <p>
-      In campo: Daniele Caprara, Sofia Crea, Filippo Laghi e Angelica Latini (il nostro Orso di casa).
+      In campo: Daniele Caprara, Sofia Crea, Angelica Latini e Filippo Laghi (il nostro Orso di casa).
     </p>
   </div>
 
