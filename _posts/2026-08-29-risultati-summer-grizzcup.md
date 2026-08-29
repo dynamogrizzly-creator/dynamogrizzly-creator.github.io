@@ -126,6 +126,7 @@ og_image: "/assets/images/foto-gruppo-grizzcup-2026.webp"
   <a href="https://www.instagram.com/hydra_dodgeball_viareggio/" target="_blank">@hydra_dodgeball_viareggio</a>,
   <a href="https://www.instagram.com/dodgeball.corridonia/" target="_blank">@dodgeball.corridonia</a>,
   <a href="https://www.instagram.com/wyvernsdodgeball/" target="_blank">@wyvernsdodgeball</a>,
+  <a href="https://www.instagram.com/dodgeball_velletri/" target="_blank">@dodgeball_velletri</a>
   <a href="https://www.instagram.com/padovadodgeball/" target="_blank">@padovadodgeball</a> e
   <a href="https://www.instagram.com/hemaravenna/" target="_blank">@hemaravenna</a>.
 </p>
