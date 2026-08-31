@@ -3004,3 +3004,17 @@ footer {
   gap: 0.5rem 1.5rem;
   margin-bottom: 0.75rem;
 }
+.training-slot--compact {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.slot-times-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.4rem 1.5rem;
+  margin-bottom: 0.6rem;
+}
+.slot-time-item {
+  display: flex;
+  flex-direction: column;
+}
