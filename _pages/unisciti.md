@@ -91,7 +91,7 @@ permalink: /unisciti/
           <div class="schedule-row-slots">
             <div class="schedule-slot">
               <div class="slot-time-block">
-                <span class="slot-days">Martedì &amp; Giovedì</span>
+                <span class="slot-days">Lunedì, Martedì &amp; Giovedì</span>
                 <span class="slot-hours">21:00 – 23:00</span>
               </div>
               <a href="https://www.google.com/maps/place/?q=place_id:ChIJoQKbpUv5fUcR0kr6QBPEe5E" target="_blank" rel="noopener" class="slot-gym">
@@ -118,7 +118,7 @@ permalink: /unisciti/
             <div class="schedule-slot">
               <div class="slot-time-block">
                 <span class="slot-days">Martedì</span>
-                <span class="slot-hours">17:00 – 18:30</span>
+                <span class="slot-hours">18:30 – 20:00</span>
               </div>
               <a href="https://www.google.com/maps/place/?q=place_id:ChIJc3b9NfT7fUcRtuBO0MWw0M8" target="_blank" rel="noopener" class="slot-gym">
                 <span class="slot-gym-name">Palestra Mattei</span>
@@ -143,26 +143,46 @@ permalink: /unisciti/
           <div class="schedule-row-slots">
             <div class="schedule-slot">
               <div class="slot-time-block">
-                <span class="slot-days">Lunedì</span>
-                <span class="slot-hours">18:00 – 19:30</span>
+                <span class="slot-days">Lunedì — Under 8 (avviamento)</span>
+                <span class="slot-hours">17:00 – 18:30</span>
               </div>
-              <a href="https://www.google.com/maps/place/?q=place_id:ChIJEab5EGH5fUcRCwMxUXROxKY" target="_blank" rel="noopener" class="slot-gym">
-                <span class="slot-gym-name">Liceo Classico</span>
-                <span class="slot-gym-address">Via Nino Bixio 29, Ravenna ↗</span>
+              <a href="https://www.google.com/maps/place/?q=place_id:ChIJoTtELQD5fUcRfrC4u1-Taks" target="_blank" rel="noopener" class="slot-gym">
+                <span class="slot-gym-name">Palestra Novello A</span>
+                <span class="slot-gym-address">Via A. De Gasperi 4 ↗</span>
               </a>
             </div>
             <div class="schedule-slot">
               <div class="slot-time-block">
-                <span class="slot-days">Giovedì</span>
-                <span class="slot-hours">17:30 – 19:00</span>
+                <span class="slot-days">Lunedì — Under 12/15</span>
+                <span class="slot-hours">18:30 – 20:00</span>
               </div>
               <a href="https://www.google.com/maps/place/?q=place_id:ChIJoTtELQD5fUcRfrC4u1-Taks" target="_blank" rel="noopener" class="slot-gym">
-                <span class="slot-gym-name">Palestra Novello</span>
-                <span class="slot-gym-address">Via A. De Gasperi 4, 1° piano ↗</span>
+                <span class="slot-gym-name">Palestra Novello A</span>
+                <span class="slot-gym-address">Via A. De Gasperi 4 ↗</span>
+              </a>
+            </div>
+            <div class="schedule-slot">
+              <div class="slot-time-block">
+                <span class="slot-days">Giovedì — Agonisti Under 18</span>
+                <span class="slot-hours">17:00 – 18:30</span>
+              </div>
+              <a href="https://www.google.com/maps/place/?q=place_id:ChIJoTtELQD5fUcRfrC4u1-Taks" target="_blank" rel="noopener" class="slot-gym">
+                <span class="slot-gym-name">Palestra Novello A</span>
+                <span class="slot-gym-address">Via A. De Gasperi 4 ↗</span>
+              </a>
+            </div>
+            <div class="schedule-slot">
+              <div class="slot-time-block">
+                <span class="slot-days">Giovedì — Under 12/15</span>
+                <span class="slot-hours">18:30 – 20:00</span>
+              </div>
+              <a href="https://www.google.com/maps/place/?q=place_id:ChIJoTtELQD5fUcRfrC4u1-Taks" target="_blank" rel="noopener" class="slot-gym">
+                <span class="slot-gym-name">Palestra Novello A</span>
+                <span class="slot-gym-address">Via A. De Gasperi 4 ↗</span>
               </a>
             </div>
           </div>
-          <p class="schedule-row-note">U12, U15 e U18 si allenano tutti insieme. I più promettenti vengono invitati anche agli adulti.</p>
+          <p class="schedule-row-note">U8 avviamento, U12/U15 e agonisti U18 — gruppi divisi per fascia. I più promettenti vengono invitati anche agli adulti.</p>
         </div>
       </div>
 
