@@ -3002,20 +3002,23 @@ footer {
 .slot-times-group {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 0.3rem 1rem;
+  gap: 0.8rem 1rem;
   margin-bottom: 0.5rem;
   width: 100%;
 }
 .slot-time-item {
   display: flex;
   flex-direction: column;
-  line-height: 1.2;
+  gap: 0.2rem;
+  line-height: 1.15;
 }
 .slot-time-item .slot-day {
-  font-size: 0.7rem;
+  font-size: 0.62rem;
+  letter-spacing: 0.5px;
   white-space: nowrap;
 }
 .slot-time-item .slot-time {
-  font-size: 1rem;      /* invece del font enorme ereditato */
+  font-size: 0.95rem;
+  letter-spacing: 0;
   font-weight: 700;
 }
