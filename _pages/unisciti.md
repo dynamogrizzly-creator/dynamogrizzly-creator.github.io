@@ -141,40 +141,24 @@ permalink: /unisciti/
             <h3>GIOVANILE</h3>
           </div>
           <div class="schedule-row-slots">
-            <div class="schedule-slot">
-              <div class="slot-time-block">
-                <span class="slot-days">Lunedì — Under 8 (avviamento)</span>
-                <span class="slot-hours">17:00 – 18:30</span>
-              </div>
-              <a href="https://www.google.com/maps/place/?q=place_id:ChIJoTtELQD5fUcRfrC4u1-Taks" target="_blank" rel="noopener" class="slot-gym">
-                <span class="slot-gym-name">Palestra Novello A</span>
-                <span class="slot-gym-address">Via A. De Gasperi 4 ↗</span>
-              </a>
-            </div>
-            <div class="schedule-slot">
-              <div class="slot-time-block">
-                <span class="slot-days">Lunedì — Under 12/15</span>
-                <span class="slot-hours">18:30 – 20:00</span>
-              </div>
-              <a href="https://www.google.com/maps/place/?q=place_id:ChIJoTtELQD5fUcRfrC4u1-Taks" target="_blank" rel="noopener" class="slot-gym">
-                <span class="slot-gym-name">Palestra Novello A</span>
-                <span class="slot-gym-address">Via A. De Gasperi 4 ↗</span>
-              </a>
-            </div>
-            <div class="schedule-slot">
-              <div class="slot-time-block">
-                <span class="slot-days">Giovedì — Agonisti Under 18</span>
-                <span class="slot-hours">17:00 – 18:30</span>
-              </div>
-              <a href="https://www.google.com/maps/place/?q=place_id:ChIJoTtELQD5fUcRfrC4u1-Taks" target="_blank" rel="noopener" class="slot-gym">
-                <span class="slot-gym-name">Palestra Novello A</span>
-                <span class="slot-gym-address">Via A. De Gasperi 4 ↗</span>
-              </a>
-            </div>
-            <div class="schedule-slot">
-              <div class="slot-time-block">
-                <span class="slot-days">Giovedì — Under 12/15</span>
-                <span class="slot-hours">18:30 – 20:00</span>
+            <div class="schedule-slot schedule-slot--compact">
+              <div class="slot-times-group">
+                <div class="slot-time-block">
+                  <span class="slot-days">Lunedì — Under 8 (avviamento)</span>
+                  <span class="slot-hours">17:00 – 18:30</span>
+                </div>
+                <div class="slot-time-block">
+                  <span class="slot-days">Lunedì — Under 12/15</span>
+                  <span class="slot-hours">18:30 – 20:00</span>
+                </div>
+                <div class="slot-time-block">
+                  <span class="slot-days">Giovedì — Agonisti Under 18</span>
+                  <span class="slot-hours">17:00 – 18:30</span>
+                </div>
+                <div class="slot-time-block">
+                  <span class="slot-days">Giovedì — Under 12/15</span>
+                  <span class="slot-hours">18:30 – 20:00</span>
+                </div>
               </div>
               <a href="https://www.google.com/maps/place/?q=place_id:ChIJoTtELQD5fUcRfrC4u1-Taks" target="_blank" rel="noopener" class="slot-gym">
                 <span class="slot-gym-name">Palestra Novello A</span>
@@ -182,7 +166,7 @@ permalink: /unisciti/
               </a>
             </div>
           </div>
-          <p class="schedule-row-note">U8 avviamento, U12/U15 e agonisti U18 — gruppi divisi per fascia. I più promettenti vengono invitati anche agli adulti.</p>
+          <p class="schedule-row-note">U8 avviamento, U12/U15 e agonisti U18 — gruppi divisi per fascia, stessa palestra. I più promettenti vengono invitati anche agli adulti.</p>
         </div>
       </div>
 

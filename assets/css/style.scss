@@ -2994,3 +2994,13 @@ footer {
 @media (min-width: 769px) and (max-width: 1024px) {
   .album-preview-grid { grid-template-columns: repeat(2, 1fr); }
 }
+.schedule-slot--compact {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.slot-times-group {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem 1.5rem;
+  margin-bottom: 0.75rem;
+}
