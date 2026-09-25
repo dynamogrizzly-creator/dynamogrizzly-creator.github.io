@@ -10,24 +10,24 @@ layout: post
 
 # TITOLO DELLA NEWS
 # Es: "Vittoria al campionato di Bologna", "Nuovi allenamenti estivi"
-title: "TITOLO DELLA NEWS"
+title: "Video Maurizio Merluzzo"
 
 # DATA DI PUBBLICAZIONE
 # Formato: ANNO-MESE-GIORNO HH:MM:SS +0200
 # Es: 2026-03-15 10:00:00 +0200
-date: ANNO-MESE-GIORNO 10:00:00 +0200
+date: 2026-09-25 10:00:00 +0200
 
 # CATEGORIA
 # Una parola che classifica la news.
 # Es: "Risultati", "Annunci", "Allenamenti", "Eventi", "Squadra"
-category: "CATEGORIA"
+category: "Eventi"
 
 # IMMAGINE PRINCIPALE
 # Il percorso dell'immagine che appare in cima all'articolo e nella card.
 # Deve essere nella cartella assets/images/ del sito.
 # Es: "/assets/images/nome-foto.webp"
 # Se non hai un'immagine, elimina questa riga.
-image: "/assets/images/NOME-FOTO.webp"
+image: "/assets/images/copertina-maurizio-merluzzo.png"
 
 # DESCRIZIONE BREVE (per Google e social)
 # Una frase di massimo 160 caratteri che riassume la news.
