@@ -120,9 +120,9 @@ permalink: /unisciti/
                 <span class="slot-days">Martedì</span>
                 <span class="slot-hours">18:30 – 20:00</span>
               </div>
-              <a href="https://www.google.com/maps/place/?q=place_id:ChIJc3b9NfT7fUcRtuBO0MWw0M8" target="_blank" rel="noopener" class="slot-gym">
-                <span class="slot-gym-name">Palestra Mattei</span>
-                <span class="slot-gym-address">Marina di Ravenna ↗</span>
+              <a href="https://maps.app.goo.gl/AP68J4yP8dQyR4Fh8" target="_blank" rel="noopener" class="slot-gym">
+                <span class="slot-gym-name">Palestra Liceo Classico</span>
+                <span class="slot-gym-address">Via Nino Bixio 9 ↗</span>
               </a>
             </div>
           </div>
@@ -144,7 +144,7 @@ permalink: /unisciti/
             <div class="schedule-slot schedule-slot--compact">
               <div class="slot-times-group">
                 <div class="slot-time-block">
-                  <span class="slot-days">Lunedì — Under 8 (avviamento)</span>
+                  <span class="slot-days">Lunedì — Under 12</span>
                   <span class="slot-hours">17:00 – 18:30</span>
                 </div>
                 <div class="slot-time-block">
@@ -166,7 +166,9 @@ permalink: /unisciti/
               </a>
             </div>
           </div>
-          <p class="schedule-row-note">U8 avviamento, U12/U15 e agonisti U18 — gruppi divisi per fascia, stessa palestra. I più promettenti vengono invitati anche agli adulti.</p>
+          <p class="schedule-row-note">
+          U12, U12/U15 e agonisti U18 — gruppi divisi per fascia, stessa palestra. I più promettenti vengono invitati anche agli adulti.
+          </p>
         </div>
       </div>
 
