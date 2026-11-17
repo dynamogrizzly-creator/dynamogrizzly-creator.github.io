@@ -120,9 +120,9 @@ permalink: /unisciti/
                 <span class="slot-days">Martedì</span>
                 <span class="slot-hours">18:30 – 20:00</span>
               </div>
-              <a href="https://maps.app.goo.gl/AP68J4yP8dQyR4Fh8" target="_blank" rel="noopener" class="slot-gym">
+              <a href="https://maps.app.goo.gl/BwJ71rkn6trf61c66" target="_blank" rel="noopener" class="slot-gym">
                 <span class="slot-gym-name">Palestra Liceo Classico</span>
-                <span class="slot-gym-address">Via Nino Bixio 9 ↗</span>
+                <span class="slot-gym-address">Via Nino Bixio 29 ↗</span>
               </a>
             </div>
           </div>
